@@ -46,16 +46,24 @@ export function Navigation() {
       }`}
     >
       <Container>
-        <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center group">
+        <div className="flex items-center justify-between h-20 md:h-[72px]">
+          <Link href="/" className="flex items-center gap-3 group">
             <Image
-              src="/logos/MSV Logo + Title @ Side (Transparent).png"
-              alt="Mining Services Vietnam"
-              width={200}
-              height={60}
+              src="/logos/MSV Logo Only (Transparent).png"
+              alt="MSV Logo"
+              width={56}
+              height={56}
               priority
-              className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+              className="h-14 w-auto transition-transform duration-300 group-hover:scale-105"
             />
+            <div className="hidden sm:flex flex-col">
+              <span className="text-lg font-bold text-msv-dark-2 leading-tight tracking-tight group-hover:text-msv-blue transition-colors">
+                Mining Services Vietnam
+              </span>
+              <span className="text-xs font-medium text-slate-500 tracking-wide">
+                Technical Excellence
+              </span>
+            </div>
           </Link>
 
           <div className="hidden md:flex items-center space-x-1">

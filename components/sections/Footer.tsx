@@ -27,13 +27,18 @@ export function Footer() {
       <Container className="py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.3fr_0.7fr_1fr_1.2fr] gap-12 lg:gap-8">
           <div className="lg:col-span-1">
-            <Image
-              src="/logos/MSV Logo + Title @ Side (Transparent).png"
-              alt="Mining Services Vietnam"
-              width={180}
-              height={54}
-              className="h-10 w-auto mb-6 brightness-0 invert"
-            />
+            <div className="flex items-center gap-3 mb-6">
+              <Image
+                src="/logos/MSV Logo Only (Transparent).png"
+                alt="MSV Logo"
+                width={48}
+                height={48}
+                className="h-12 w-auto brightness-0 invert"
+              />
+              <span className="text-lg font-bold text-white leading-tight">
+                Mining Services Vietnam
+              </span>
+            </div>
             <p className="text-slate-300 text-sm leading-relaxed mb-6">
               Practical, high-quality mining solutions across Southeast Asia. 
               Western standards, local expertise.

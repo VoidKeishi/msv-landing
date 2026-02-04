@@ -40,20 +40,20 @@ const phases = [
 export function ServicesContent() {
   return (
     <>
-      <section className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-msv-blue/20 via-transparent to-transparent" />
         <Container className="relative">
           <AnimatedSection className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-8 border border-white/10">
+            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 md:mb-8 border border-white/10">
               <span className="text-sm font-medium text-white/90">Our Services</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">
               Integrated Mining<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-msv-gold via-amber-400 to-msv-gold">
                 Services
               </span>
             </h1>
-            <p className="text-xl text-slate-300 leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-300 leading-relaxed">
               Full project lifecycle support from exploration through to steady-state operations
             </p>
           </AnimatedSection>
@@ -67,7 +67,7 @@ export function ServicesContent() {
         return (
           <section 
             key={service.id} 
-            className={`py-24 ${isEven ? 'bg-white' : 'bg-slate-50'}`}
+            className={`py-16 md:py-24 ${isEven ? 'bg-white' : 'bg-slate-50'}`}
           >
             <Container>
               <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${!isEven ? 'lg:grid-flow-dense' : ''}`}>
@@ -103,7 +103,7 @@ export function ServicesContent() {
         )
       })}
 
-      <section className="py-24 bg-gradient-to-br from-msv-light-2/30 to-white">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-msv-light-2/30 to-white">
         <Container>
           <AnimatedSection className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-msv-blue/10 rounded-full px-4 py-2 mb-6">
@@ -166,7 +166,7 @@ export function ServicesContent() {
         </Container>
       </section>
 
-      <section className="py-24 bg-gradient-to-br from-msv-blue to-msv-cyan text-white relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-msv-blue to-msv-cyan text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent" />
         
         <Container className="relative">

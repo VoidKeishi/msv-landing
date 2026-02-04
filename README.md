@@ -1,157 +1,36 @@
-# MSV Landing Page
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Static landing page for Mining Services Vietnam (MSV) company profile.
+## Getting Started
 
-## Tech Stack
+First, run the development server:
 
-- **Framework**: Next.js 16 (App Router)
-- **Styling**: TailwindCSS 4
-- **Language**: TypeScript
-- **Font**: Montserrat (Google Fonts)
-- **Icons**: Lucide React
-- **Hosting**: Vercel
-
-## Project Structure
-
-```
-/
-├── app/                    # Next.js App Router pages
-│   ├── layout.tsx         # Root layout with Navigation & Footer
-│   ├── page.tsx           # Home page
-│   ├── about/             # About page
-│   ├── services/          # Services page
-│   ├── team/              # Team page
-│   ├── projects/          # Projects page
-│   ├── contact/           # Contact page
-│   └── sitemap.ts         # SEO sitemap
-├── components/
-│   ├── ui/                # Base UI components (Button, Card, Container)
-│   └── sections/          # Page section components
-├── data/                  # Static data files (team, services, projects)
-├── lib/                   # Utility functions
-├── public/                # Static assets
-│   ├── team/              # Team member photos
-│   └── logos/             # MSV logo variants
-├── Context/               # Source content documents
-├── References/            # Brand assets
-└── THEME.md               # Brand guidelines
-
-## Development
-
-### Install Dependencies
-
-\`\`\`bash
-npm install
-\`\`\`
-
-### Run Development Server
-
-\`\`\`bash
+```bash
 npm run dev
-\`\`\`
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Build for Production
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-\`\`\`bash
-npm run build
-\`\`\`
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-### Run Production Server Locally
+## Learn More
 
-\`\`\`bash
-npm run start
-\`\`\`
+To learn more about Next.js, take a look at the following resources:
 
-### Lint Code
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-\`\`\`bash
-npm run lint
-\`\`\`
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deployment to Vercel
+## Deploy on Vercel
 
-### Option 1: Connect GitHub Repository (Recommended)
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-1. Push your code to GitHub
-2. Go to [Vercel Dashboard](https://vercel.com/dashboard)
-3. Click "Add New Project"
-4. Import your GitHub repository
-5. Vercel will auto-detect Next.js and configure build settings
-6. Click "Deploy"
-
-### Option 2: Deploy via Vercel CLI
-
-\`\`\`bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Deploy
-vercel
-\`\`\`
-
-Follow the prompts to complete deployment.
-
-### Custom Domain Configuration
-
-1. In Vercel Dashboard, go to your project
-2. Navigate to "Settings" → "Domains"
-3. Add your custom domain: `www.dma-msv.com`
-4. Configure DNS records as instructed by Vercel:
-
-\`\`\`
-A Record:     @ → 76.76.21.21
-CNAME:        www → cname.vercel-dns.com
-\`\`\`
-
-## SEO Features
-
-✅ Meta titles and descriptions on all pages  
-✅ Open Graph tags for social sharing  
-✅ Semantic HTML markup  
-✅ Auto-generated sitemap.xml  
-✅ robots.txt configuration  
-✅ Mobile-responsive design  
-✅ Fast load times with Next.js optimizations  
-✅ Image optimization with next/image  
-✅ Clean URL structure  
-
-## Brand Colors
-
-| Color | Hex | Usage |
-|-------|-----|-------|
-| MSV Blue | `#3494BA` | Primary brand, CTAs |
-| MSV Dark-2 | `#373545` | Body text |
-| MSV Light-2 | `#CEDBE6` | Subtle backgrounds |
-| MSV Cyan | `#58B6C0` | Secondary highlights |
-| MSV Mint | `#75BDA7` | Success states |
-| MSV Green | `#6B9F25` | Links, positive actions |
-| MSV Gold | `#D8A337` | Warnings, attention |
-
-## Pages
-
-- **Home** (`/`) - Hero, company overview, services snapshot, projects
-- **About** (`/about`) - Company story, vision, capabilities
-- **Services** (`/services`) - Detailed service descriptions, delivery models
-- **Team** (`/team`) - Leadership profiles with photos
-- **Projects** (`/projects`) - Current mining projects
-- **Contact** (`/contact`) - Contact form, office information
-
-## Content Sources
-
-Content extracted from:
-- `/Context/CompanyOverview.md`
-- `/Context/LeadershipAndKeyPersonnel.md`
-- `/Context/CoreCompetencies.md`
-- `/Context/ServiceDeliveryModel.md`
-- `/Context/PresentationExtraction.md`
-- `/Context/ContactPage.md`
-
-Brand assets from:
-- `/References/Logos/` - MSV logo variants
-- `/References/KeyPersonnel/` - Team headshots
-
-## License
-
-© 2025 Mining Services Vietnam JSC. All rights reserved.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

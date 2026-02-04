@@ -1,0 +1,4 @@
+- New guideline added. Review it to see if anything needs to change: /home/keishi/Code/MSV-Landing/GUIDELINES.md. It's a more detailed version of the previous design document.
+- Add new personnel in /home/keishi/Code/MSV-Landing/Context/LeadershipAndKeyPersonnel.md
+- Client feedback: Main logo on top left need to be bigger or more prominent. Might need to separate the logo and the name "Mining Services Vietnam" a bit more. Consider increasing the size of the logo or adjusting the layout to enhance visibility.
+- Enhance mobile mode, especially team tab. Overall review all mobile mode carefully and sync with the design document.

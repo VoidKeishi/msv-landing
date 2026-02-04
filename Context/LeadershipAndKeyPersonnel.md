@@ -59,3 +59,11 @@ Image: References/KeyPersonnel/HungNguyenPhuc.png
 - **Tien Dinh Van** – Executive Management & Snr Project Manager
 Construction and civil works professional with a Master’s degree in Transport Works Engineering and a strong background in infrastructure, transport, and civil design. Extensive experience in project and contract management, including delivery of multi-million-dollar construction contracts under FIDIC forms, management of consultants across Pre-FS, FS, detailed and construction design phases, and oversight of contractors and subcontractors during construction execution.
 Image: References/KeyPersonnel/TienDinhVan.png
+
+<!-- TODO: Add new personnels -->
+- **PhD. Minh Dinh Huu** – Regional Geology Expert
+Senior exploration and project evaluation professional with over 40 years’ experience across a broad range of commodities, including nickel–copper (PGE), gold, copper–gold, copper, tin, and mineral sands. Extensive experience in technical review, peer evaluation, and academic supervision, including guidance of undergraduate and MSc theses and service as an examining and review board member for PhD and Master’s research in gold and non-ferrous mineral systems.
+Image: References/KeyPersonnel/PhdDinhMinhHuu.png
+- **Hung Tran Huu** – EHS & Sustainability 
+Experienced EHS & Sustainability professional with 15 years’ experience in electronics, electric vehicle, industrial real estate, metal mining & processing sectors. Highly proficient in international environmental and social (E&S) standards, including IFC Performance Standards, OECD guidance, ISO standards, as well as North American, European, and Vietnamese regulations.
+Image: References/KeyPersonnel/HungTranHuu.png

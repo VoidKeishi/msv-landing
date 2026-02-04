@@ -10,7 +10,7 @@ Requirement by client
 - Full admin access (need clarification, for now it's just like deliver setup guide, the site is still static)
 
 Developement preference from me
-- NextJS
+- NextJS, use context7 and setup with command first before coding. Refer to /home/keishi/Code/MSV-Landing/skills/vercel-react-best-practices and /home/keishi/Code/MSV-Landing/skills/web-design-guidelines.
 - TailwindCSS for styling
 - Vercel for hosting
 - Read context docs to extract content at /Context folder
