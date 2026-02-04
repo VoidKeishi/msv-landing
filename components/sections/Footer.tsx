@@ -124,15 +124,15 @@ export function Footer() {
             <p className="text-sm text-slate-400">
               &copy; {new Date().getFullYear()} Mining Services Vietnam JSC. All rights reserved.
             </p>
-            <div className="flex items-center gap-6 text-sm text-slate-400">
+            <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm text-slate-400">
               <span>Vietnam</span>
-              <span className="text-slate-600">|</span>
+              <span className="hidden sm:inline text-slate-600">|</span>
               <span>Cambodia</span>
-              <span className="text-slate-600">|</span>
+              <span className="hidden sm:inline text-slate-600">|</span>
               <span>Laos</span>
-              <span className="text-slate-600">|</span>
+              <span className="hidden sm:inline text-slate-600">|</span>
               <span>Thailand</span>
-              <span className="text-slate-600">|</span>
+              <span className="hidden sm:inline text-slate-600">|</span>
               <span>Malaysia</span>
             </div>
           </div>

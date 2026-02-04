@@ -23,9 +23,15 @@
   --color-msv-link-visited: #9f6715;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -62,10 +68,6 @@ a:not([class]):hover {
     padding-left: 2rem;
     padding-right: 2rem;
   }
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 ::selection {

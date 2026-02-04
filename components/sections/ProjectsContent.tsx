@@ -89,21 +89,21 @@ export function ProjectsContent() {
           <div className="relative">
             <button
               onClick={scrollPrev}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg border border-slate-100 flex items-center justify-center hover:bg-slate-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed -ml-4 lg:-ml-6"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full shadow-lg border border-slate-100 flex items-center justify-center hover:bg-slate-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed ml-0 sm:-ml-2 lg:-ml-6"
               aria-label="Previous project"
             >
-              <ChevronLeft className="w-6 h-6 text-msv-dark-2" />
+              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-msv-dark-2" />
             </button>
             
             <button
               onClick={scrollNext}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white rounded-full shadow-lg border border-slate-100 flex items-center justify-center hover:bg-slate-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed -mr-4 lg:-mr-6"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full shadow-lg border border-slate-100 flex items-center justify-center hover:bg-slate-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed mr-0 sm:-mr-2 lg:-mr-6"
               aria-label="Next project"
             >
-              <ChevronRight className="w-6 h-6 text-msv-dark-2" />
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-msv-dark-2" />
             </button>
 
-            <div className="overflow-hidden mx-8" ref={emblaRef}>
+            <div className="overflow-hidden mx-4 sm:mx-8" ref={emblaRef}>
               <div className="flex">
                 {projects.map((project) => {
                   const country = countryData[project.country] || { flag: '🌏' }

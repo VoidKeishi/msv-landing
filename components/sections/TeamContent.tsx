@@ -72,7 +72,7 @@ export function TeamContent() {
                     <StaggerItem key={member.name}>
                       <div className="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300 h-full">
                         <div className="flex flex-col sm:flex-row h-full">
-                          <div className="relative w-full sm:w-36 md:w-40 h-48 sm:h-auto flex-shrink-0 bg-gradient-to-br from-slate-100 to-slate-50 overflow-hidden">
+<div className="relative w-full sm:w-36 md:w-40 aspect-[3/4] sm:aspect-auto sm:h-full flex-shrink-0 bg-gradient-to-br from-slate-100 to-slate-50 overflow-hidden">
                             <Image
                               src={member.image}
                               alt={member.name}

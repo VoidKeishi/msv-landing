@@ -47,21 +47,24 @@ export function Navigation() {
     >
       <Container>
         <div className="flex items-center justify-between h-20 md:h-[72px]">
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center gap-2 sm:gap-3 group min-w-0 flex-shrink">
             <Image
               src="/logos/MSV Logo Only (Transparent).png"
               alt="MSV Logo"
               width={56}
               height={56}
               priority
-              className="h-14 w-auto transition-transform duration-300 group-hover:scale-105"
+              className="h-10 sm:h-14 w-auto transition-transform duration-300 group-hover:scale-105 flex-shrink-0"
             />
-            <div className="hidden sm:flex flex-col">
-              <span className="text-lg font-bold text-msv-dark-2 leading-tight tracking-tight group-hover:text-msv-blue transition-colors">
+            <div className="hidden sm:flex flex-col min-w-0">
+              <span className="text-lg font-bold text-msv-blue leading-tight tracking-tight">
                 Mining Services Vietnam
               </span>
-              <span className="text-xs font-medium text-slate-500 tracking-wide">
-                Technical Excellence
+              <span className="text-[10px] font-semibold tracking-[0.15em] uppercase">
+                <span className="text-msv-gold">Uncovering</span>{' '}
+                <span className="text-msv-blue">Potential</span>
+                <span className="text-msv-gold"> · Driving</span>{' '}
+                <span className="text-msv-blue">Progress</span>
               </span>
             </div>
           </Link>
@@ -96,7 +99,7 @@ export function Navigation() {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-msv-dark-2 hover:text-msv-blue hover:bg-msv-blue/5 rounded-md transition-colors"
+            className="md:hidden p-2 text-msv-dark-2 hover:text-msv-blue hover:bg-msv-blue/5 rounded-md transition-colors flex-shrink-0"
             aria-label="Toggle menu"
           >
             <motion.div
