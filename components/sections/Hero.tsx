@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/Button'
 import { Container } from '@/components/ui/Container'
@@ -91,26 +92,45 @@ export function Hero() {
             </motion.div>
           </div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            <h3 className="text-xs font-medium text-white/50 mb-4 uppercase tracking-widest">Our Track Record</h3>
-            <div className="space-y-4">
+            {/* Company Branding */}
+            <div className="flex items-center gap-4 mb-6">
+              <Image
+                src="/logos/MSV Logo Only (Transparent).png"
+                alt="MSV Logo"
+                width={120}
+                height={100}
+                className="w-24 lg:w-28 h-auto"
+                priority
+              />
+              <Image
+                src="/logos/MSV Mining Services Vietnam (Horizontal).png"
+                alt="Mining Services Vietnam"
+                width={500}
+                height={80}
+                className="h-auto w-80 lg:w-[420px] brightness-0 invert"
+              />
+            </div>
+
+            <h3 className="text-xs font-medium text-white/50 mb-3 uppercase tracking-widest">Our Track Record</h3>
+            <div className="space-y-3">
               {stats.map((stat, index) => (
                 <motion.div
                   key={stat.label}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}
-                  className="flex items-center gap-4 bg-white/5 backdrop-blur-sm rounded-xl px-5 py-4 border border-white/10"
+                  className="flex items-center gap-3 bg-white/5 backdrop-blur-sm rounded-xl px-4 py-2.5 border border-white/10"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-msv-blue/30 to-msv-cyan/20 border border-white/10 flex items-center justify-center flex-shrink-0">
-                    <stat.icon className="w-5 h-5 text-msv-gold" />
+                  <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-msv-blue/30 to-msv-cyan/20 border border-white/10 flex items-center justify-center flex-shrink-0">
+                    <stat.icon className="w-4 h-4 text-msv-gold" />
                   </div>
                   <div className="flex items-baseline gap-2">
-                    <span className="font-bold text-xl text-white">{stat.value}</span>
+                    <span className="font-bold text-lg text-white">{stat.value}</span>
                     <span className="text-xs text-slate-400 uppercase tracking-wider">{stat.label}</span>
                   </div>
                 </motion.div>

@@ -2,7 +2,8 @@
 
 import { Container } from '@/components/ui/Container'
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/AnimatedComponents'
-import { Mail, Phone, MapPin, ArrowUpRight, Clock, Send } from 'lucide-react'
+import { ContactForm } from '@/components/sections/ContactForm'
+import { Mail, Phone, MapPin, ArrowUpRight, Clock } from 'lucide-react'
 
 const keyContacts = [
   { name: 'Lon Taranaki', email: 'Lon@dma-msv.com', title: 'General Director' },
@@ -13,18 +14,7 @@ const keyContacts = [
   { name: 'Tien Dinh Van', email: 'Tien.dinh@dma-msv.com', title: 'Senior Project Manager' },
 ]
 
-const services = [
-  { value: 'exploration', label: 'Exploration & Geological Services' },
-  { value: 'resource', label: 'Resource & Reserve Development' },
-  { value: 'epcm', label: 'Project Delivery (EPCM)' },
-  { value: 'operational', label: 'Operational Readiness & Support' },
-  { value: 'general', label: 'General Inquiry' },
-]
-
 export function ContactContent() {
-  const handleQuickEmail = (subject: string) => {
-    window.location.href = `mailto:info@dma-msv.com?subject=${encodeURIComponent(subject)}`
-  }
 
   return (
     <>
@@ -50,51 +40,39 @@ export function ContactContent() {
 
       <section className="py-16 md:py-24 bg-white">
         <Container>
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-            <div className="lg:col-span-3">
-              <AnimatedSection>
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-stretch">
+            <div className="lg:col-span-3 flex flex-col">
+              <AnimatedSection className="flex-1 flex flex-col">
                 <h2 className="text-3xl font-bold text-msv-dark-2 mb-8">Send Us a Message</h2>
-                
-                <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100">
-                  <p className="text-slate-600 mb-8">
-                    Choose your area of interest below or send us a direct email. 
-                    Our team typically responds within 24-48 business hours.
+
+                <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 flex-1 flex flex-col">
+                  <p className="text-slate-600 mb-6">
+                    Fill out the form below and our team will get back to you within 24-48 business hours.
                   </p>
 
-                  <div className="space-y-4 mb-8">
-                    <h3 className="text-sm font-semibold text-msv-dark-2 uppercase tracking-wider mb-4">
-                      Quick Contact by Service
-                    </h3>
-                    {services.map((service) => (
-                      <button
-                        key={service.value}
-                        onClick={() => handleQuickEmail(`Inquiry: ${service.label}`)}
-                        className="w-full flex items-center justify-between p-4 bg-white rounded-xl border border-slate-200 hover:border-msv-blue/30 hover:shadow-md transition-all group"
-                      >
-                        <span className="font-medium text-msv-dark-2">{service.label}</span>
-                        <ArrowUpRight size={18} className="text-msv-blue opacity-0 group-hover:opacity-100 transition-opacity" />
-                      </button>
-                    ))}
+                  <div className="flex-1">
+                    <ContactForm />
                   </div>
 
-                  <div className="pt-6 border-t border-slate-200">
-                    <a 
+                  <div className="pt-6 mt-6 border-t border-slate-200">
+                    <p className="text-sm text-slate-500 text-center mb-3">Or email us directly</p>
+                    <a
                       href="mailto:info@dma-msv.com"
-                      className="inline-flex items-center gap-3 bg-msv-blue text-white px-8 py-4 rounded-xl font-semibold hover:bg-msv-blue/90 transition-all shadow-lg shadow-msv-blue/25 hover:shadow-xl hover:shadow-msv-blue/30 group w-full justify-center"
+                      className="inline-flex items-center gap-2 text-msv-blue hover:text-msv-blue/80 font-medium transition-colors w-full justify-center"
                     >
-                      <Send size={20} />
-                      <span>Email info@dma-msv.com</span>
+                      <Mail size={18} />
+                      <span>info@dma-msv.com</span>
                     </a>
                   </div>
                 </div>
               </AnimatedSection>
             </div>
 
-            <div className="lg:col-span-2">
-              <AnimatedSection delay={0.2}>
+            <div className="lg:col-span-2 flex flex-col">
+              <AnimatedSection delay={0.2} className="flex-1 flex flex-col">
                 <h2 className="text-3xl font-bold text-msv-dark-2 mb-8">Contact Info</h2>
-                
-                <div className="space-y-6">
+
+                <div className="space-y-6 flex-1 flex flex-col">
                   <div className="bg-gradient-to-br from-msv-blue to-msv-cyan rounded-2xl p-6 text-white">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center flex-shrink-0">

@@ -2,135 +2,143 @@
 
 import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
+import { Loader2, CheckCircle, AlertCircle } from 'lucide-react'
+
+const WEB3FORMS_ACCESS_KEY = '85999e51-00ef-42bd-9eea-ae615eb25e42'
 
 export function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: '',
-    company: '',
-    email: '',
-    phone: '',
-    service: '',
-    message: '',
-  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    alert('Thank you for your message. We will get back to you soon!')
-    setFormData({
-      name: '',
-      company: '',
-      email: '',
-      phone: '',
-      service: '',
-      message: '',
-    })
-  }
+    const form = e.currentTarget
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
+    try {
+      const formData = new FormData(form)
+      formData.append('access_key', WEB3FORMS_ACCESS_KEY)
+
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      })
+
+      const data = await response.json()
+
+      if (data.success) {
+        setSubmitStatus('success')
+        form.reset()
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-5">
+      <input type="hidden" name="subject" value="New Contact Form Submission - MSV Website" />
+
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-msv-dark-2 mb-2">
-          Name *
+        <label htmlFor="name" className="block text-sm font-semibold text-msv-dark-2 mb-2">
+          Name <span className="text-red-500">*</span>
         </label>
         <input
           type="text"
           id="name"
           name="name"
           required
-          value={formData.name}
-          onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-msv-blue focus:border-transparent"
+          disabled={isSubmitting}
+          placeholder="Your full name"
+          className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-msv-blue focus:border-transparent transition-all disabled:bg-slate-100 disabled:cursor-not-allowed"
         />
       </div>
 
       <div>
-        <label htmlFor="company" className="block text-sm font-medium text-msv-dark-2 mb-2">
-          Company
-        </label>
-        <input
-          type="text"
-          id="company"
-          name="company"
-          value={formData.company}
-          onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-msv-blue focus:border-transparent"
-        />
-      </div>
-
-      <div>
-        <label htmlFor="email" className="block text-sm font-medium text-msv-dark-2 mb-2">
-          Email *
+        <label htmlFor="email" className="block text-sm font-semibold text-msv-dark-2 mb-2">
+          Email <span className="text-red-500">*</span>
         </label>
         <input
           type="email"
           id="email"
           name="email"
           required
-          value={formData.email}
-          onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-msv-blue focus:border-transparent"
+          disabled={isSubmitting}
+          placeholder="your.email@example.com"
+          className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-msv-blue focus:border-transparent transition-all disabled:bg-slate-100 disabled:cursor-not-allowed"
         />
       </div>
 
       <div>
-        <label htmlFor="phone" className="block text-sm font-medium text-msv-dark-2 mb-2">
-          Phone
-        </label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-msv-blue focus:border-transparent"
-        />
-      </div>
-
-      <div>
-        <label htmlFor="service" className="block text-sm font-medium text-msv-dark-2 mb-2">
-          Service Interest
+        <label htmlFor="service" className="block text-sm font-semibold text-msv-dark-2 mb-2">
+          Service Interest <span className="text-red-500">*</span>
         </label>
         <select
           id="service"
           name="service"
-          value={formData.service}
-          onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-msv-blue focus:border-transparent"
+          required
+          disabled={isSubmitting}
+          defaultValue=""
+          className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-msv-blue focus:border-transparent transition-all disabled:bg-slate-100 disabled:cursor-not-allowed appearance-none bg-white"
         >
-          <option value="">Select a service...</option>
-          <option value="exploration">Exploration & Geological Services</option>
-          <option value="resource">Resource & Reserve Development</option>
-          <option value="epcm">Project Delivery (EPCM)</option>
-          <option value="operational">Operational Readiness & Support</option>
-          <option value="general">General Inquiry</option>
+          <option value="" disabled>Select a service...</option>
+          <option value="Exploration & Geological Services">Exploration & Geological Services</option>
+          <option value="Resource & Reserve Development">Resource & Reserve Development</option>
+          <option value="Project Delivery (EPCM)">Project Delivery (EPCM)</option>
+          <option value="Operational Readiness & Support">Operational Readiness & Support</option>
+          <option value="General Inquiry">General Inquiry</option>
         </select>
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-msv-dark-2 mb-2">
-          Message *
+        <label htmlFor="message" className="block text-sm font-semibold text-msv-dark-2 mb-2">
+          Message <span className="text-red-500">*</span>
         </label>
         <textarea
           id="message"
           name="message"
           required
-          rows={6}
-          value={formData.message}
-          onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-msv-blue focus:border-transparent"
+          disabled={isSubmitting}
+          rows={5}
+          placeholder="Tell us about your project or inquiry..."
+          className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-msv-blue focus:border-transparent transition-all resize-none disabled:bg-slate-100 disabled:cursor-not-allowed"
         />
       </div>
 
-      <Button type="submit" variant="primary" className="w-full">
-        Send Message
+      {submitStatus === 'success' && (
+        <div className="flex items-center gap-3 p-4 bg-green-50 border border-green-200 rounded-xl text-green-700">
+          <CheckCircle className="w-5 h-5 flex-shrink-0" />
+          <p className="text-sm font-medium">Thank you! Your message has been sent. We&apos;ll get back to you within 24-48 hours.</p>
+        </div>
+      )}
+
+      {submitStatus === 'error' && (
+        <div className="flex items-center gap-3 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700">
+          <AlertCircle className="w-5 h-5 flex-shrink-0" />
+          <p className="text-sm font-medium">Something went wrong. Please try again or email us directly.</p>
+        </div>
+      )}
+
+      <Button
+        type="submit"
+        variant="primary"
+        className="w-full py-4"
+        disabled={isSubmitting}
+      >
+        {isSubmitting ? (
+          <span className="flex items-center justify-center gap-2">
+            <Loader2 className="w-5 h-5 animate-spin" />
+            Sending...
+          </span>
+        ) : (
+          'Send Message'
+        )}
       </Button>
     </form>
   )
