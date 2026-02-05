@@ -20,6 +20,12 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://www.dma-msv.com",
   },
+  icons: {
+    icon: [
+      { url: "/logos/favicon.svg", type: "image/svg+xml" },
+      { url: "/logos/favicon.png", type: "image/png" },
+    ],
+  },
 };
 
 export default function RootLayout({
