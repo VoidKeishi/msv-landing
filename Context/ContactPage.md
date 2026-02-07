@@ -9,7 +9,7 @@ Contact Persons:
 Lon Taranaki			Lon@dma-msv.com
 Thanh Nguyen Van		Thanh.nguyen@dma-msv.com
 Hai Nguyen Ngoc		Hai.nguyen@dma-msv.com
-Hoan Le Ti Ngoc 		Hoan.le@dma-msv.com
+Hoan Le Thi Ngoc 		Hoan.le@dma-msv.com
 Hung Nguyen Phuc	Hung.nguyen@dma-msv.com
 Tien Dinh Van		Tien.dinh@dma-msv.com
 

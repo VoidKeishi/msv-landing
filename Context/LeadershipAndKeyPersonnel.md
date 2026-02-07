@@ -24,7 +24,7 @@ Executive Management Team
     • Lon Taranaki
     • Thanh Nguyen Van
     • Hai Nguyen Ngoc
-    • Hoan Le Ti Ngoc 
+    • Hoan Le Thi Ngoc 
     • Hung Nguyen Phuc
     • Tien Dinh Van
 
@@ -39,7 +39,7 @@ Image: References/KeyPersonnel/ThanhNguyenVan.png
 Geologist with a Master of Science in Geology and over 20 years’ experience across exploration and mine geology management. Strong technical capability with proficiency in industry-standard geological software, extensive experience designing and managing EM, DHEM, and 3D IP programs, and a deep understanding of Vietnamese reserve reporting requirements and JORC standards.
 Image: References/KeyPersonnel/HaiNguyenNgoc.png
 - **Jeremy Ayre** – Advisory Board
-Mining, consulting, investment, and entrepreneurial professional with over 35 years’ experience. Founder of AWR Lloyd, a boutique advisory firm servicing the mining sector, and an entrepreneur with a track record of founding investment funds and a renewable energy business.
+Jeremy Ayre brings over 35 years’ experience spanning mining, consulting, investment, and entrepreneurship. He is a co-founder of AWR Lloyd, a boutique strategic consulting and M&A advisory firm operating across South-East Asia, with a strong focus on the energy and mining sectors. He has co-founded a London-listed private equity fund and, more recently, established a remote power generation business. Jeremy’s work centres on strategic advisory, capital structuring, and the development of resilient, long-term businesses.
 Image: References/KeyPersonnel/JeremyAyre.png
 - **Dr. Chris Swindells** – Advisory Board
 Senior engineering and environmental professional with over 40 years’ experience leading technical teams across the mining and infrastructure sectors. Former senior executive at Golder Associates, where he held multiple leadership roles over 32 years, including leading the Mining Services team in Australia and globally.
@@ -50,7 +50,7 @@ Image: Placeholder for now.
 - **Chris Ramsay** – Senior Technical Advisor (JORC & NI43-101 Resources)
 Experienced mineral resource and mine development professional with over 25 years’ global experience across the mining value chain. Expertise includes mineral exploration, resource estimation, project development and evaluation, resource governance, mine geology, and operational management. Recognised Competent Person for JORC and NI43-101 resource reporting.
 Image: References/KeyPersonnel/ChrisRamsay.png
-- **Hoan Le Ti Ngoc** – Executive Management & HR Lead
+- **Hoan Le Thi Ngoc** – Executive Management & HR Lead
 Human Resources professional with a master’s degree in human resources management, providing comprehensive HR services to Vietnamese and international organisations. Extensive experience in organisational design, role and job description development, recruitment and onboarding, development of company-wide HR policies and procedures, and holding senior leadership roles.
 Image: References/KeyPersonnel/HoanLeTiNgoc.png
 - **Hung Nguyen Phuc** – Executive Management & Snr Project Manager

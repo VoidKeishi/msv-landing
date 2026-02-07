@@ -10,7 +10,7 @@ import { ChevronDown, MapPin, Award, Pickaxe } from 'lucide-react'
 const stats = [
   { value: '150,000+', label: 'Metres Drilled', icon: Pickaxe },
   { value: 'JORC & NI43-101', label: 'Certified', icon: Award },
-  { value: '5', label: 'Countries', icon: MapPin },
+  { value: 'Engagements across Southeast Asia', label: 'Active Operations', icon: MapPin },
 ]
 
 export function Hero() {
@@ -98,21 +98,21 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.5 }}
           >
             {/* Company Branding */}
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex flex-col items-center mb-8">
               <Image
                 src="/logos/MSV Logo Only (Transparent).png"
                 alt="MSV Logo"
-                width={120}
-                height={100}
-                className="w-24 lg:w-28 h-auto"
+                width={280}
+                height={220}
+                className="w-52 lg:w-64 h-auto mb-4"
                 priority
               />
               <Image
                 src="/logos/MSV Mining Services Vietnam (Horizontal).png"
                 alt="Mining Services Vietnam"
-                width={500}
-                height={80}
-                className="h-auto w-80 lg:w-[420px] brightness-0 invert"
+                width={600}
+                height={100}
+                className="h-auto w-80 lg:w-[450px] brightness-0 invert"
               />
             </div>
 

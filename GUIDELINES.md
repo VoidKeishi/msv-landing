@@ -246,7 +246,7 @@ background: linear-gradient(
 | Hero Banner | Page title + brief intro |
 | Vision & Mission | Text block với icon/graphic |
 | Our Approach | "Western standards, local expertise" |
-| Key Stats | 150,000+ metres, 5+ countries, 20+ years |
+| Key Stats | 150,000+ metres, Engagements across out Southeast Asia, 20+ years |
 | Geographic Reach | Map: Vietnam, Cambodia, Laos, Malaysia, Thailand |
 
 #### SERVICES Page

@@ -1,10 +1,11 @@
 'use client'
 
+import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import { Container } from '@/components/ui/Container'
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/AnimatedComponents'
-import { teamMembers } from '@/data/team'
-import { Mail, Users, Award, Shield, Briefcase } from 'lucide-react'
+import { teamMembers, type TeamMember } from '@/data/team'
+import { Mail, Users, Award, Shield, Briefcase, X } from 'lucide-react'
 
 const categories = [
   { id: 'board', title: 'Board of Directors', icon: Users, description: 'Leadership team driving MSV\'s strategic vision and operations' },
@@ -13,7 +14,79 @@ const categories = [
   { id: 'executive', title: 'Executive Management Team', icon: Briefcase, description: 'Experienced professionals managing day-to-day operations' },
 ] as const
 
+function MemberModal({ member, onClose }: { member: TeamMember; onClose: () => void }) {
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    if (e.key === 'Escape') onClose()
+  }, [onClose])
+
+  useEffect(() => {
+    document.addEventListener('keydown', handleKeyDown)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      document.body.style.overflow = ''
+    }
+  }, [handleKeyDown])
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      onClick={onClose}
+    >
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+
+      <div
+        className="relative bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-in fade-in zoom-in-95 duration-200"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          type="button"
+          onClick={onClose}
+          className="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-white/90 hover:bg-slate-100 text-slate-500 hover:text-slate-700 transition-colors cursor-pointer shadow-sm"
+          aria-label="Close"
+        >
+          <X size={18} />
+        </button>
+
+        <div className="flex flex-col sm:flex-row">
+          <div className="relative w-full sm:w-56 md:w-64 aspect-[3/4] sm:aspect-auto sm:min-h-[320px] flex-shrink-0 bg-gradient-to-br from-slate-100 to-slate-50 overflow-hidden rounded-t-2xl sm:rounded-l-2xl sm:rounded-tr-none">
+            <Image
+              src={member.image}
+              alt={member.name}
+              fill
+              className="object-cover object-top"
+            />
+          </div>
+
+          <div className="p-6 md:p-8 flex-1 flex flex-col min-w-0">
+            <h3 className="font-bold text-xl md:text-2xl text-msv-dark-2 mb-1 leading-tight">
+              {member.name}
+            </h3>
+            <p className="text-msv-blue font-semibold text-sm md:text-base mb-4">
+              {member.title}
+            </p>
+            <p className="text-sm md:text-base text-slate-600 leading-relaxed mb-5">
+              {member.bio}
+            </p>
+            {member.email && (
+              <a
+                href={`mailto:${member.email}`}
+                className="inline-flex items-center gap-2 text-sm text-msv-blue hover:text-msv-cyan transition-colors mt-auto"
+              >
+                <Mail size={16} className="flex-shrink-0" />
+                <span>{member.email}</span>
+              </a>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export function TeamContent() {
+  const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null)
+
   return (
     <>
       <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
@@ -70,9 +143,13 @@ export function TeamContent() {
                 <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                   {members.map((member) => (
                     <StaggerItem key={member.name}>
-                      <div className="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300 h-full">
+                      <button
+                        type="button"
+                        onClick={() => setSelectedMember(member)}
+                        className="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300 h-full w-full text-left cursor-pointer"
+                      >
                         <div className="flex flex-col sm:flex-row h-full">
-<div className="relative w-full sm:w-36 md:w-40 aspect-[3/4] sm:aspect-auto sm:h-full flex-shrink-0 bg-gradient-to-br from-slate-100 to-slate-50 overflow-hidden">
+                          <div className="relative w-full sm:w-36 md:w-40 aspect-[3/4] sm:aspect-auto sm:h-full flex-shrink-0 bg-gradient-to-br from-slate-100 to-slate-50 overflow-hidden">
                             <Image
                               src={member.image}
                               alt={member.name}
@@ -88,21 +165,12 @@ export function TeamContent() {
                             <p className="text-msv-blue font-semibold text-sm mb-3">
                               {member.title}
                             </p>
-                            <p className="text-sm text-slate-500 leading-relaxed mb-4 line-clamp-4 sm:line-clamp-3 flex-1">
-                              {member.bio}
+                            <p className="text-sm text-slate-500 leading-relaxed flex-1">
+                              {member.shortBio}
                             </p>
-                            {member.email && (
-                              <a 
-                                href={`mailto:${member.email}`}
-                                className="inline-flex items-center gap-2 text-sm text-msv-blue hover:text-msv-cyan transition-colors group/email"
-                              >
-                                <Mail size={16} className="group-hover/email:scale-110 transition-transform flex-shrink-0" />
-                                <span className="truncate">{member.email}</span>
-                              </a>
-                            )}
                           </div>
                         </div>
-                      </div>
+                      </button>
                     </StaggerItem>
                   ))}
                 </StaggerContainer>
@@ -111,6 +179,13 @@ export function TeamContent() {
           })}
         </Container>
       </section>
+
+      {selectedMember && (
+        <MemberModal
+          member={selectedMember}
+          onClose={() => setSelectedMember(null)}
+        />
+      )}
     </>
   )
 }
