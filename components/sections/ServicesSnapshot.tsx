@@ -30,7 +30,7 @@ const services = [
 
 export function ServicesSnapshot() {
   return (
-    <section className="py-24 bg-slate-50">
+    <section className="py-24 bg-msv-light-2-subtle">
       <Container>
         <AnimatedSection className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-msv-blue/10 rounded-full px-4 py-2 mb-6">
@@ -39,7 +39,7 @@ export function ServicesSnapshot() {
           <h2 className="text-4xl md:text-5xl font-bold text-msv-dark-2 mb-6">
             Our Services
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg text-msv-dark-2/80 max-w-2xl mx-auto">
             Integrated mining services across the full project lifecycle, 
             from early-stage exploration through to steady-state operations.
           </p>
@@ -48,8 +48,8 @@ export function ServicesSnapshot() {
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {services.map((service, index) => (
             <StaggerItem key={service.title}>
-              <div className="group relative bg-white rounded-2xl p-8 hover:shadow-2xl hover:shadow-slate-200/50 transition-all duration-500 h-full border border-slate-100 overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-slate-50 to-transparent rounded-bl-full opacity-50" />
+              <div className="group relative bg-white rounded-2xl p-8 hover:shadow-2xl hover:shadow-msv-light-2/50 transition-all duration-500 h-full border border-msv-light-2/30 overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-msv-light-2-subtle to-transparent rounded-bl-full opacity-50" />
                 
                 <div className="relative">
                   <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br from-msv-blue to-msv-cyan flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -60,7 +60,7 @@ export function ServicesSnapshot() {
                     {service.title}
                   </h3>
                   
-                  <p className="text-slate-500 leading-relaxed">
+                  <p className="text-msv-gray-blue leading-relaxed">
                     {service.description}
                   </p>
                 </div>

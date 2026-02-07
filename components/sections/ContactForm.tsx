@@ -56,7 +56,7 @@ export function ContactForm() {
           required
           disabled={isSubmitting}
           placeholder="Your full name"
-          className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-msv-blue focus:border-transparent transition-all disabled:bg-slate-100 disabled:cursor-not-allowed"
+          className="w-full px-4 py-3 border border-msv-light-2/50 rounded-xl focus:ring-2 focus:ring-msv-blue focus:border-transparent transition-all disabled:bg-msv-light-2/20 disabled:cursor-not-allowed"
         />
       </div>
 
@@ -71,7 +71,7 @@ export function ContactForm() {
           required
           disabled={isSubmitting}
           placeholder="your.email@example.com"
-          className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-msv-blue focus:border-transparent transition-all disabled:bg-slate-100 disabled:cursor-not-allowed"
+          className="w-full px-4 py-3 border border-msv-light-2/50 rounded-xl focus:ring-2 focus:ring-msv-blue focus:border-transparent transition-all disabled:bg-msv-light-2/20 disabled:cursor-not-allowed"
         />
       </div>
 
@@ -85,7 +85,7 @@ export function ContactForm() {
           required
           disabled={isSubmitting}
           defaultValue=""
-          className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-msv-blue focus:border-transparent transition-all disabled:bg-slate-100 disabled:cursor-not-allowed appearance-none bg-white"
+          className="w-full px-4 py-3 border border-msv-light-2/50 rounded-xl focus:ring-2 focus:ring-msv-blue focus:border-transparent transition-all disabled:bg-msv-light-2/20 disabled:cursor-not-allowed appearance-none bg-white"
         >
           <option value="" disabled>Select a service...</option>
           <option value="Exploration & Geological Services">Exploration & Geological Services</option>
@@ -107,12 +107,12 @@ export function ContactForm() {
           disabled={isSubmitting}
           rows={5}
           placeholder="Tell us about your project or inquiry..."
-          className="w-full px-4 py-3 border border-slate-200 rounded-xl focus:ring-2 focus:ring-msv-blue focus:border-transparent transition-all resize-none disabled:bg-slate-100 disabled:cursor-not-allowed"
+          className="w-full px-4 py-3 border border-msv-light-2/50 rounded-xl focus:ring-2 focus:ring-msv-blue focus:border-transparent transition-all resize-none disabled:bg-msv-light-2/20 disabled:cursor-not-allowed"
         />
       </div>
 
       {submitStatus === 'success' && (
-        <div className="flex items-center gap-3 p-4 bg-green-50 border border-green-200 rounded-xl text-green-700">
+        <div className="flex items-center gap-3 p-4 bg-msv-mint/10 border border-msv-mint/30 rounded-xl text-msv-green">
           <CheckCircle className="w-5 h-5 flex-shrink-0" />
           <p className="text-sm font-medium">Thank you! Your message has been sent. We&apos;ll get back to you within 24-48 hours.</p>
         </div>

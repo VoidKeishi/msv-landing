@@ -27,11 +27,11 @@ export function ContactContent() {
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">
               Contact<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-msv-gold via-amber-400 to-msv-gold">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-msv-gold via-msv-gold-light to-msv-gold">
                 Our Team
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed">
+            <p className="text-lg md:text-xl text-msv-light-2 leading-relaxed">
               Ready to discuss your mining project? We&apos;re here to help.
             </p>
           </AnimatedSection>
@@ -45,8 +45,8 @@ export function ContactContent() {
               <AnimatedSection className="flex-1 flex flex-col">
                 <h2 className="text-3xl font-bold text-msv-dark-2 mb-8">Send Us a Message</h2>
 
-                <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 flex-1 flex flex-col">
-                  <p className="text-slate-600 mb-6">
+                <div className="bg-msv-light-2-subtle rounded-2xl p-8 border border-msv-light-2/30 flex-1 flex flex-col">
+                  <p className="text-msv-dark-2/80 mb-6">
                     Fill out the form below and our team will get back to you within 24-48 business hours.
                   </p>
 
@@ -54,8 +54,8 @@ export function ContactContent() {
                     <ContactForm />
                   </div>
 
-                  <div className="pt-6 mt-6 border-t border-slate-200">
-                    <p className="text-sm text-slate-500 text-center mb-3">Or email us directly</p>
+                  <div className="pt-6 mt-6 border-t border-msv-light-2/50">
+                    <p className="text-sm text-msv-gray-blue text-center mb-3">Or email us directly</p>
                     <a
                       href="mailto:info@dma-msv.com"
                       className="inline-flex items-center gap-2 text-msv-blue hover:text-msv-blue/80 font-medium transition-colors w-full justify-center"
@@ -90,7 +90,7 @@ export function ContactContent() {
                     </div>
                   </div>
 
-                  <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+                  <div className="bg-msv-light-2-subtle rounded-2xl p-6 border border-msv-light-2/30">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-xl bg-msv-blue/10 flex items-center justify-center flex-shrink-0">
                         <Phone className="w-6 h-6 text-msv-blue" />
@@ -99,7 +99,7 @@ export function ContactContent() {
                         <p className="font-semibold text-msv-dark-2 mb-1">Phone</p>
                         <a 
                           href="tel:+842462500426"
-                          className="text-slate-600 hover:text-msv-blue transition-colors"
+                          className="text-msv-dark-2/80 hover:text-msv-blue transition-colors"
                         >
                           +84 24 62500426
                         </a>
@@ -107,14 +107,14 @@ export function ContactContent() {
                     </div>
                   </div>
 
-                  <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+                  <div className="bg-msv-light-2-subtle rounded-2xl p-6 border border-msv-light-2/30">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-xl bg-msv-blue/10 flex items-center justify-center flex-shrink-0">
                         <MapPin className="w-6 h-6 text-msv-blue" />
                       </div>
                       <div>
                         <p className="font-semibold text-msv-dark-2 mb-2">Office Address</p>
-                        <address className="text-slate-600 not-italic text-sm leading-relaxed">
+                        <address className="text-msv-dark-2/80 not-italic text-sm leading-relaxed">
                           Mining Services Vietnam JSC<br />
                           Office 5A, 23rd Floor, Tower A<br />
                           Hudtower, 37 Le Van Luong<br />
@@ -124,14 +124,14 @@ export function ContactContent() {
                     </div>
                   </div>
 
-                  <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+                  <div className="bg-msv-light-2-subtle rounded-2xl p-6 border border-msv-light-2/30">
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 rounded-xl bg-msv-blue/10 flex items-center justify-center flex-shrink-0">
                         <Clock className="w-6 h-6 text-msv-blue" />
                       </div>
                       <div>
                         <p className="font-semibold text-msv-dark-2 mb-1">Business Hours</p>
-                        <p className="text-slate-600 text-sm">
+                        <p className="text-msv-dark-2/80 text-sm">
                           Mon - Fri: 8:00 AM - 5:00 PM (ICT)
                         </p>
                       </div>
@@ -144,11 +144,11 @@ export function ContactContent() {
         </Container>
       </section>
 
-      <section className="py-16 md:py-24 bg-slate-50">
+      <section className="py-16 md:py-24 bg-msv-light-2-subtle">
         <Container>
           <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl font-bold text-msv-dark-2 mb-4">Key Contacts</h2>
-            <p className="text-slate-600">Reach out directly to our leadership team</p>
+            <p className="text-msv-dark-2/80">Reach out directly to our leadership team</p>
           </AnimatedSection>
 
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -156,14 +156,14 @@ export function ContactContent() {
               <StaggerItem key={contact.email}>
                 <a 
                   href={`mailto:${contact.email}`}
-                  className="group block bg-white rounded-2xl p-6 border border-slate-100 hover:border-msv-blue/20 hover:shadow-xl transition-all"
+                  className="group block bg-white rounded-2xl p-6 border border-msv-light-2/30 hover:border-msv-blue/20 hover:shadow-xl transition-all"
                 >
                   <div className="flex items-start justify-between mb-3">
                     <div>
                       <h3 className="font-semibold text-msv-dark-2 group-hover:text-msv-blue transition-colors">
                         {contact.name}
                       </h3>
-                      <p className="text-sm text-slate-500">{contact.title}</p>
+                      <p className="text-sm text-msv-gray-blue">{contact.title}</p>
                     </div>
                     <ArrowUpRight size={18} className="text-msv-blue opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
@@ -175,7 +175,7 @@ export function ContactContent() {
         </Container>
       </section>
 
-      <section className="pb-16 md:pb-24 bg-slate-50">
+      <section className="pb-16 md:pb-24 bg-msv-light-2-subtle">
         <Container>
           <AnimatedSection>
             <div className="rounded-3xl overflow-hidden shadow-xl">

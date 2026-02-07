@@ -44,7 +44,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.25 }}
-              className="text-sm font-semibold tracking-[0.2em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-msv-gold via-amber-300 to-msv-gold mb-6"
+              className="text-sm font-semibold tracking-[0.2em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-msv-gold via-msv-gold-light to-msv-gold mb-6"
             >
               Uncovering Potential, Driving Progress
             </motion.p>
@@ -56,7 +56,7 @@ export function Hero() {
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1] tracking-tight"
             >
               Unlocking{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-msv-gold via-amber-400 to-msv-gold">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-msv-gold via-msv-gold-light to-msv-gold">
                 Potential
               </span>
               <br />
@@ -67,7 +67,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="text-lg md:text-xl mb-8 text-slate-300 leading-relaxed"
+              className="text-lg md:text-xl mb-8 text-msv-light-2 leading-relaxed"
             >
               Practical, high-quality mining solutions from exploration to operations. 
               Western standards, local expertise.
@@ -131,7 +131,7 @@ export function Hero() {
                   </div>
                   <div className="flex items-baseline gap-2">
                     <span className="font-bold text-lg text-white">{stat.value}</span>
-                    <span className="text-xs text-slate-400 uppercase tracking-wider">{stat.label}</span>
+                    <span className="text-xs text-white/50 uppercase tracking-wider">{stat.label}</span>
                   </div>
                 </motion.div>
               ))}

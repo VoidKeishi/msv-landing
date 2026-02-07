@@ -18,7 +18,7 @@ export function FeaturedProjects() {
           <h2 className="text-4xl md:text-5xl font-bold text-msv-dark-2 mb-6">
             Current Projects
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg text-msv-dark-2/80 max-w-2xl mx-auto">
             Delivering value across multiple commodities and jurisdictions in Southeast Asia
           </p>
         </AnimatedSection>
@@ -29,7 +29,7 @@ export function FeaturedProjects() {
               <Link href="/projects" className="group relative block h-full">
                 <div className="absolute inset-0 bg-gradient-to-br from-msv-blue/5 to-msv-cyan/5 rounded-3xl transform group-hover:scale-105 transition-transform duration-500" />
                 
-                <div className="relative bg-white rounded-2xl h-full border border-slate-100 group-hover:border-msv-blue/20 group-hover:shadow-xl transition-all duration-300 overflow-hidden">
+                <div className="relative bg-white rounded-2xl h-full border border-msv-light-2/30 group-hover:border-msv-blue/20 group-hover:shadow-xl transition-all duration-300 overflow-hidden">
                   <div className="relative w-full aspect-[16/9] overflow-hidden">
                     <Image
                       src={project.images[0]}
@@ -54,11 +54,11 @@ export function FeaturedProjects() {
                       {project.client}
                     </p>
 
-                    <p className="text-slate-500 text-sm leading-relaxed mb-4">
+                    <p className="text-msv-gray-blue text-sm leading-relaxed mb-4">
                       {project.description}
                     </p>
 
-                    <div className="flex items-center gap-2 text-xs text-slate-400 mb-4">
+                    <div className="flex items-center gap-2 text-xs text-msv-gray-blue mb-4">
                       <Calendar size={14} />
                       <span>{project.status}</span>
                     </div>
@@ -67,13 +67,13 @@ export function FeaturedProjects() {
                       {project.services.slice(0, 2).map((service) => (
                         <span 
                           key={service}
-                          className="text-xs bg-slate-50 text-slate-600 px-2 py-1 rounded-md"
+                          className="text-xs bg-msv-light-2-subtle text-msv-dark-2/80 px-2 py-1 rounded-md"
                         >
                           {service}
                         </span>
                       ))}
                       {project.services.length > 2 && (
-                        <span className="text-xs text-slate-400">
+                        <span className="text-xs text-msv-gray-blue">
                           +{project.services.length - 2} more
                         </span>
                       )}

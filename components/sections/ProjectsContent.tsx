@@ -65,11 +65,11 @@ export function ProjectsContent() {
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">
               Delivering Value<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-msv-gold via-amber-400 to-msv-gold">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-msv-gold via-msv-gold-light to-msv-gold">
                 Across the Region
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed">
+            <p className="text-lg md:text-xl text-msv-light-2 leading-relaxed">
               Active projects across multiple commodities and jurisdictions in Southeast Asia
             </p>
           </AnimatedSection>
@@ -82,7 +82,7 @@ export function ProjectsContent() {
             <h2 className="text-3xl md:text-4xl font-bold text-msv-dark-2 mb-4">
               Featured Projects
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <p className="text-lg text-msv-dark-2/80 max-w-2xl mx-auto">
               Swipe or use arrows to explore our active projects
             </p>
           </AnimatedSection>
@@ -90,7 +90,7 @@ export function ProjectsContent() {
           <div className="relative">
             <button
               onClick={scrollPrev}
-              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full shadow-lg border border-slate-100 flex items-center justify-center hover:bg-slate-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed ml-0 sm:-ml-2 lg:-ml-6"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full shadow-lg border border-msv-light-2/30 flex items-center justify-center hover:bg-msv-light-2-subtle transition-colors disabled:opacity-50 disabled:cursor-not-allowed ml-0 sm:-ml-2 lg:-ml-6"
               aria-label="Previous project"
             >
               <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-msv-dark-2" />
@@ -98,7 +98,7 @@ export function ProjectsContent() {
             
             <button
               onClick={scrollNext}
-              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full shadow-lg border border-slate-100 flex items-center justify-center hover:bg-slate-50 transition-colors disabled:opacity-50 disabled:cursor-not-allowed mr-0 sm:-mr-2 lg:-mr-6"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full shadow-lg border border-msv-light-2/30 flex items-center justify-center hover:bg-msv-light-2-subtle transition-colors disabled:opacity-50 disabled:cursor-not-allowed mr-0 sm:-mr-2 lg:-mr-6"
               aria-label="Next project"
             >
               <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-msv-dark-2" />
@@ -114,7 +114,7 @@ export function ProjectsContent() {
                       key={project.id}
                       className="flex-[0_0_100%] min-w-0 px-4"
                     >
-                      <div className="bg-white rounded-3xl border border-slate-100 overflow-hidden shadow-xl">
+                      <div className="bg-white rounded-3xl border border-msv-light-2/30 overflow-hidden shadow-xl">
                         <div className="grid grid-cols-1 lg:grid-cols-5 lg:min-h-[400px]">
                           <div className="relative lg:col-span-2 min-h-[280px] overflow-hidden">
                             <Image
@@ -149,7 +149,7 @@ export function ProjectsContent() {
                           </div>
                           
                           <div className="lg:col-span-3 p-8 lg:p-12">
-                            <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                            <p className="text-lg text-msv-dark-2/80 mb-8 leading-relaxed">
                               {project.description}
                             </p>
                             
@@ -163,7 +163,7 @@ export function ProjectsContent() {
                                   {project.services.map((service) => {
                                     const Icon = serviceIcons[service] || Compass
                                     return (
-                                      <div key={service} className="flex items-center gap-3 text-sm text-slate-600">
+                                      <div key={service} className="flex items-center gap-3 text-sm text-msv-dark-2/80">
                                         <Icon size={16} className="text-msv-blue flex-shrink-0" />
                                         <span>{service}</span>
                                       </div>
@@ -207,7 +207,7 @@ export function ProjectsContent() {
                   className={`w-3 h-3 rounded-full transition-all ${
                     index === selectedIndex
                       ? 'bg-msv-blue w-8'
-                      : 'bg-slate-200 hover:bg-slate-300'
+                      : 'bg-msv-light-2/40 hover:bg-msv-light-2/60'
                   }`}
                   aria-label={`Go to project ${index + 1}`}
                 />
@@ -217,13 +217,13 @@ export function ProjectsContent() {
         </Container>
       </section>
 
-      <section className="py-16 md:py-24 bg-slate-50">
+      <section className="py-16 md:py-24 bg-msv-light-2-subtle">
         <Container>
           <AnimatedSection className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-msv-dark-2 mb-6">
               Interested in Working With Us?
             </h2>
-            <p className="text-lg text-slate-600 mb-10 leading-relaxed">
+            <p className="text-lg text-msv-dark-2/80 mb-10 leading-relaxed">
               Contact our team to discuss how MSV can support your mining project 
               from exploration through to production.
             </p>

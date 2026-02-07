@@ -31,7 +31,7 @@ export function CallToAction() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Link href="/contact" className="w-full sm:w-auto">
-              <Button className="w-full sm:w-auto bg-white text-msv-blue hover:bg-slate-50 group inline-flex items-center justify-center whitespace-nowrap min-w-max">
+              <Button className="w-full sm:w-auto bg-white text-msv-blue hover:bg-msv-light-2-subtle group inline-flex items-center justify-center whitespace-nowrap min-w-max">
                 <span>Contact Us Today</span>
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform flex-shrink-0" />
               </Button>

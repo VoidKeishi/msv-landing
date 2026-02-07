@@ -39,13 +39,13 @@ export function Footer() {
                 Mining Services Vietnam
               </span>
             </div>
-            <p className="text-slate-300 text-sm leading-relaxed mb-6">
+            <p className="text-msv-light-2 text-sm leading-relaxed mb-6">
               Practical, high-quality mining solutions across Southeast Asia. 
               Western standards, local expertise.
             </p>
             <div className="flex items-center gap-2 text-sm">
               <span className="text-msv-gold font-semibold">150,000+</span>
-              <span className="text-slate-400">metres drilled</span>
+              <span className="text-white/50">metres drilled</span>
             </div>
           </div>
 
@@ -58,7 +58,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link 
                     href={link.href} 
-                    className="text-slate-300 hover:text-white transition-colors duration-200 flex items-center gap-1 group text-sm"
+                    className="text-msv-light-2 hover:text-white transition-colors duration-200 flex items-center gap-1 group text-sm"
                   >
                     {link.label}
                     <ArrowUpRight 
@@ -77,7 +77,7 @@ export function Footer() {
             </h3>
             <ul className="space-y-3">
               {serviceLinks.map((service) => (
-                <li key={service} className="text-slate-300 text-sm">
+                <li key={service} className="text-msv-light-2 text-sm">
                   {service}
                 </li>
               ))}
@@ -92,7 +92,7 @@ export function Footer() {
               <li>
                 <a 
                   href="mailto:info@dma-msv.com" 
-                  className="flex items-start gap-3 text-slate-300 hover:text-white transition-colors group"
+                  className="flex items-start gap-3 text-msv-light-2 hover:text-white transition-colors group"
                 >
                   <Mail size={18} className="mt-0.5 flex-shrink-0 text-msv-cyan" />
                   <span className="text-sm">info@dma-msv.com</span>
@@ -101,7 +101,7 @@ export function Footer() {
               <li>
                 <a 
                   href="tel:+842462500426" 
-                  className="flex items-start gap-3 text-slate-300 hover:text-white transition-colors"
+                  className="flex items-start gap-3 text-msv-light-2 hover:text-white transition-colors"
                 >
                   <Phone size={18} className="mt-0.5 flex-shrink-0 text-msv-cyan" />
                   <span className="text-sm">+84 24 62500426</span>
@@ -109,7 +109,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="mt-0.5 flex-shrink-0 text-msv-cyan" />
-                <address className="text-slate-300 text-sm not-italic leading-relaxed">
+                <address className="text-msv-light-2 text-sm not-italic leading-relaxed">
                   Office 5A, 23rd Floor, Tower A<br />
                   Hudtower, 37 Le Van Luong<br />
                   Thanh Xuan, Hanoi, Vietnam
@@ -119,20 +119,20 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-slate-700/50 mt-12 pt-8">
+        <div className="border-t border-white/10 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-slate-400">
+            <p className="text-sm text-white/50">
               &copy; {new Date().getFullYear()} Mining Services Vietnam JSC. All rights reserved.
             </p>
-            <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm text-slate-400">
+            <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm text-white/50">
               <span>Vietnam</span>
-              <span className="hidden sm:inline text-slate-600">|</span>
+              <span className="hidden sm:inline text-white/30">|</span>
               <span>Cambodia</span>
-              <span className="hidden sm:inline text-slate-600">|</span>
+              <span className="hidden sm:inline text-white/30">|</span>
               <span>Laos</span>
-              <span className="hidden sm:inline text-slate-600">|</span>
+              <span className="hidden sm:inline text-white/30">|</span>
               <span>Thailand</span>
-              <span className="hidden sm:inline text-slate-600">|</span>
+              <span className="hidden sm:inline text-white/30">|</span>
               <span>Malaysia</span>
             </div>
           </div>

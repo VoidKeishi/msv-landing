@@ -21,6 +21,11 @@
   --color-msv-gold: #d8a337;
   --color-msv-link: #6b9f25;
   --color-msv-link-visited: #9f6715;
+
+  /* Derived theme variants */
+  --color-msv-dark-2-deep: #2a2835;
+  --color-msv-gold-light: #e8bf5a;
+  --color-msv-light-2-subtle: #f0f4f8;
 }
 
 html {

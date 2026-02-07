@@ -90,11 +90,11 @@ export function AboutContent() {
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">
               Delivering Excellence<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-msv-gold via-amber-400 to-msv-gold">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-msv-gold via-msv-gold-light to-msv-gold">
                 Across Southeast Asia
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed">
+            <p className="text-lg md:text-xl text-msv-light-2 leading-relaxed">
               Practical, high-quality mining solutions from a trusted regional partner
             </p>
           </AnimatedSection>
@@ -108,7 +108,7 @@ export function AboutContent() {
               <h2 className="text-3xl md:text-4xl font-bold text-msv-dark-2 mb-6">
                 Company Overview
               </h2>
-              <div className="space-y-6 text-slate-600 leading-relaxed">
+              <div className="space-y-6 text-msv-dark-2/80 leading-relaxed">
                 <p>
                   Mining Services Vietnam (MSV) is a Vietnam-based mining services company delivering 
                   practical, high-quality solutions to uncover potential and drive progress for our 
@@ -140,12 +140,12 @@ export function AboutContent() {
                 </p>
 
                 <div className="flex items-center gap-6 pt-6 border-t border-msv-blue/10">
-                  <div className="flex items-center gap-2 text-slate-600">
+                  <div className="flex items-center gap-2 text-msv-dark-2/80">
                     <Leaf className="w-5 h-5 text-msv-mint" />
                     <span className="text-sm">Environmental Protection</span>
                   </div>
-                  <div className="flex items-center gap-2 text-slate-600">
-                    <Heart className="w-5 h-5 text-rose-400" />
+                  <div className="flex items-center gap-2 text-msv-dark-2/80">
+                    <Heart className="w-5 h-5 text-msv-gold" />
                     <span className="text-sm">Community Safety</span>
                   </div>
                 </div>
@@ -155,7 +155,7 @@ export function AboutContent() {
         </Container>
       </section>
 
-      <section className="py-16 md:py-24 bg-slate-50">
+      <section className="py-16 md:py-24 bg-msv-light-2-subtle">
         <Container>
           <AnimatedSection className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-msv-blue/10 rounded-full px-4 py-2 mb-6">
@@ -164,7 +164,7 @@ export function AboutContent() {
             <h2 className="text-3xl md:text-4xl font-bold text-msv-dark-2 mb-4">
               Our Capabilities
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <p className="text-lg text-msv-dark-2/80 max-w-2xl mx-auto">
               Integrated mining services across the full project lifecycle
             </p>
           </AnimatedSection>
@@ -172,14 +172,14 @@ export function AboutContent() {
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {capabilities.map((capability) => (
               <StaggerItem key={capability.title}>
-                <div className="group bg-white rounded-2xl p-6 h-full border border-slate-100 hover:border-msv-blue/20 hover:shadow-xl hover:shadow-msv-blue/5 transition-all duration-300">
+                <div className="group bg-white rounded-2xl p-6 h-full border border-msv-light-2/30 hover:border-msv-blue/20 hover:shadow-xl hover:shadow-msv-blue/5 transition-all duration-300">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-msv-blue to-msv-cyan flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <capability.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-msv-dark-2 mb-2">
                     {capability.title}
                   </h3>
-                  <p className="text-sm text-slate-500 leading-relaxed">
+                  <p className="text-sm text-msv-gray-blue leading-relaxed">
                     {capability.description}
                   </p>
                 </div>
@@ -195,7 +195,7 @@ export function AboutContent() {
             <h2 className="text-3xl md:text-4xl font-bold text-msv-dark-2 mb-4">
               Why Choose MSV
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <p className="text-lg text-msv-dark-2/80 max-w-2xl mx-auto">
               What sets us apart in the Southeast Asian mining services landscape
             </p>
           </AnimatedSection>
@@ -203,14 +203,14 @@ export function AboutContent() {
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {differentiators.map((item) => (
               <StaggerItem key={item.title}>
-                <div className="group text-center p-8 bg-slate-50 rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 h-full">
+                <div className="group text-center p-8 bg-msv-light-2-subtle rounded-2xl hover:bg-white hover:shadow-xl transition-all duration-300 h-full">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white shadow-md group-hover:shadow-lg group-hover:scale-110 transition-all duration-300 mb-6">
                     <item.icon className="w-8 h-8 text-msv-blue" />
                   </div>
                   <h3 className="font-semibold text-msv-dark-2 mb-3 text-lg">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-slate-500 leading-relaxed">
+                  <p className="text-sm text-msv-gray-blue leading-relaxed">
                     {item.description}
                   </p>
                 </div>

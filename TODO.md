@@ -1,6 +1,5 @@
 Về phía dev & design:
 - Sửa màu text theo theme
-- Thêm ảnh vào projects
 Về phía MSV:
 - Làm rõ về phần hero section bên phải muốn sửa
 - Gửi lại mã màu theo theme, chỉ định màu cho text

@@ -42,14 +42,14 @@ function MemberModal({ member, onClose }: { member: TeamMember; onClose: () => v
         <button
           type="button"
           onClick={onClose}
-          className="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-white/90 hover:bg-slate-100 text-slate-500 hover:text-slate-700 transition-colors cursor-pointer shadow-sm"
+          className="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-white/90 hover:bg-msv-light-2/20 text-msv-gray-blue hover:text-msv-dark-2 transition-colors cursor-pointer shadow-sm"
           aria-label="Close"
         >
           <X size={18} />
         </button>
 
         <div className="flex flex-col sm:flex-row">
-          <div className="relative w-full sm:w-56 md:w-64 aspect-[3/4] sm:aspect-auto sm:min-h-[320px] flex-shrink-0 bg-gradient-to-br from-slate-100 to-slate-50 overflow-hidden rounded-t-2xl sm:rounded-l-2xl sm:rounded-tr-none">
+          <div className="relative w-full sm:w-56 md:w-64 aspect-[3/4] sm:aspect-auto sm:min-h-[320px] flex-shrink-0 bg-gradient-to-br from-msv-light-2/20 to-msv-light-2-subtle overflow-hidden rounded-t-2xl sm:rounded-l-2xl sm:rounded-tr-none">
             <Image
               src={member.image}
               alt={member.name}
@@ -65,7 +65,7 @@ function MemberModal({ member, onClose }: { member: TeamMember; onClose: () => v
             <p className="text-msv-blue font-semibold text-sm md:text-base mb-4">
               {member.title}
             </p>
-            <p className="text-sm md:text-base text-slate-600 leading-relaxed mb-5">
+            <p className="text-sm md:text-base text-msv-dark-2/80 leading-relaxed mb-5">
               {member.bio}
             </p>
             {member.email && (
@@ -98,11 +98,11 @@ export function TeamContent() {
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">
               Experienced Mining<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-msv-gold via-amber-400 to-msv-gold">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-msv-gold via-msv-gold-light to-msv-gold">
                 Professionals
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed">
+            <p className="text-lg md:text-xl text-msv-light-2 leading-relaxed">
               Delivering excellence across Southeast Asia with decades of combined experience
             </p>
           </AnimatedSection>
@@ -112,7 +112,7 @@ export function TeamContent() {
       <section className="py-16 md:py-24 bg-white">
         <Container>
           <AnimatedSection className="max-w-4xl mx-auto text-center mb-12 md:mb-16 px-4">
-            <p className="text-base md:text-lg text-slate-600 leading-relaxed">
+            <p className="text-base md:text-lg text-msv-dark-2/80 leading-relaxed">
               MSV has established a strong local technical and management team, supported by 
               experienced and highly respected mining professionals. The company is guided by 
               an Advisory Board of accomplished industry leaders, providing strategic oversight 
@@ -135,7 +135,7 @@ export function TeamContent() {
                       {category.title}
                     </h2>
                   </div>
-                  <p className="text-slate-500 text-center max-w-xl mx-auto text-sm md:text-base px-4">
+                  <p className="text-msv-gray-blue text-center max-w-xl mx-auto text-sm md:text-base px-4">
                     {category.description}
                   </p>
                 </AnimatedSection>
@@ -146,10 +146,10 @@ export function TeamContent() {
                       <button
                         type="button"
                         onClick={() => setSelectedMember(member)}
-                        className="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300 h-full w-full text-left cursor-pointer"
+                        className="group bg-white rounded-2xl border border-msv-light-2/50 overflow-hidden hover:shadow-xl hover:shadow-msv-light-2/50 transition-all duration-300 h-full w-full text-left cursor-pointer"
                       >
                         <div className="flex flex-col sm:flex-row h-full">
-                          <div className="relative w-full sm:w-36 md:w-40 aspect-[3/4] sm:aspect-auto sm:h-full flex-shrink-0 bg-gradient-to-br from-slate-100 to-slate-50 overflow-hidden">
+                          <div className="relative w-full sm:w-36 md:w-40 aspect-[3/4] sm:aspect-auto sm:h-full flex-shrink-0 bg-gradient-to-br from-msv-light-2/20 to-msv-light-2-subtle overflow-hidden">
                             <Image
                               src={member.image}
                               alt={member.name}
@@ -165,7 +165,7 @@ export function TeamContent() {
                             <p className="text-msv-blue font-semibold text-sm mb-3">
                               {member.title}
                             </p>
-                            <p className="text-sm text-slate-500 leading-relaxed flex-1">
+                            <p className="text-sm text-msv-gray-blue leading-relaxed flex-1">
                               {member.shortBio}
                             </p>
                           </div>

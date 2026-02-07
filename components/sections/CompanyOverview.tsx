@@ -44,12 +44,12 @@ export function CompanyOverview() {
               <span className="text-msv-blue">Vietnam</span>
             </h2>
             
-            <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+            <p className="text-lg text-msv-dark-2/80 mb-6 leading-relaxed">
               A Vietnam-based mining services company delivering practical, high-quality solutions 
               to uncover potential and drive progress for our clients across Southeast Asia.
             </p>
             
-            <p className="text-slate-500 leading-relaxed">
+            <p className="text-msv-gray-blue leading-relaxed">
               Leveraging our strong local presence, regional experience, and international technical 
               capability, MSV provides cost-effective, practical mining solutions that meet Western 
               technical and safety standards, while remaining aligned with local cost structures and 
@@ -60,14 +60,14 @@ export function CompanyOverview() {
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {features.map((feature) => (
               <StaggerItem key={feature.title}>
-                <div className="group p-6 bg-white rounded-2xl border border-slate-100 hover:border-msv-blue/20 hover:shadow-xl hover:shadow-msv-blue/5 transition-all duration-300 h-full">
+                <div className="group p-6 bg-white rounded-2xl border border-msv-light-2/30 hover:border-msv-blue/20 hover:shadow-xl hover:shadow-msv-blue/5 transition-all duration-300 h-full">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-msv-blue to-msv-cyan flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-lg font-semibold text-msv-dark-2 mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-slate-500 leading-relaxed">
+                  <p className="text-sm text-msv-gray-blue leading-relaxed">
                     {feature.description}
                   </p>
                 </div>

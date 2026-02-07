@@ -49,11 +49,11 @@ export function ServicesContent() {
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">
               Integrated Mining<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-msv-gold via-amber-400 to-msv-gold">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-msv-gold via-msv-gold-light to-msv-gold">
                 Services
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 leading-relaxed">
+            <p className="text-lg md:text-xl text-msv-light-2 leading-relaxed">
               Full project lifecycle support from exploration through to steady-state operations
             </p>
           </AnimatedSection>
@@ -67,7 +67,7 @@ export function ServicesContent() {
         return (
           <section 
             key={service.id} 
-            className={`py-16 md:py-24 ${isEven ? 'bg-white' : 'bg-slate-50'}`}
+            className={`py-16 md:py-24 ${isEven ? 'bg-white' : 'bg-msv-light-2-subtle'}`}
           >
             <Container>
               <div className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${!isEven ? 'lg:grid-flow-dense' : ''}`}>
@@ -80,7 +80,7 @@ export function ServicesContent() {
                     {service.title}
                   </h2>
                   
-                  <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                  <p className="text-lg text-msv-dark-2/80 mb-8 leading-relaxed">
                     {service.description}
                   </p>
                 </AnimatedSection>
@@ -88,11 +88,11 @@ export function ServicesContent() {
                 <StaggerContainer className={`grid gap-4 ${!isEven ? 'lg:col-start-1' : ''}`}>
                   {service.features.map((feature, featureIndex) => (
                     <StaggerItem key={featureIndex}>
-                      <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-slate-100 hover:border-msv-blue/20 hover:shadow-lg transition-all duration-300 group">
+                      <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-msv-light-2/30 hover:border-msv-blue/20 hover:shadow-lg transition-all duration-300 group">
                         <div className="w-8 h-8 rounded-lg bg-msv-green/10 flex items-center justify-center flex-shrink-0 group-hover:bg-msv-green/20 transition-colors">
                           <CheckCircle2 className="w-5 h-5 text-msv-green" />
                         </div>
-                        <span className="text-slate-700 leading-relaxed">{feature}</span>
+                        <span className="text-msv-dark-2 leading-relaxed">{feature}</span>
                       </div>
                     </StaggerItem>
                   ))}
@@ -112,7 +112,7 @@ export function ServicesContent() {
             <h2 className="text-3xl md:text-4xl font-bold text-msv-dark-2 mb-4">
               Service Delivery Model
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <p className="text-lg text-msv-dark-2/80 max-w-2xl mx-auto">
               Flexible engagement options aligned to project stage, risk profile, and client objectives
             </p>
           </AnimatedSection>
@@ -120,14 +120,14 @@ export function ServicesContent() {
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
             {deliveryModels.map((model) => (
               <StaggerItem key={model.title}>
-                <div className="group bg-white rounded-2xl p-8 h-full border border-slate-100 hover:border-msv-blue/20 hover:shadow-xl transition-all duration-300">
+                <div className="group bg-white rounded-2xl p-8 h-full border border-msv-light-2/30 hover:border-msv-blue/20 hover:shadow-xl transition-all duration-300">
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-msv-blue to-msv-cyan flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                     <model.icon className="w-7 h-7 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-msv-dark-2 mb-3">
                     {model.title}
                   </h3>
-                  <p className="text-slate-500 leading-relaxed">
+                  <p className="text-msv-gray-blue leading-relaxed">
                     {model.description}
                   </p>
                 </div>
@@ -136,7 +136,7 @@ export function ServicesContent() {
           </StaggerContainer>
 
           <AnimatedSection delay={0.3}>
-            <div className="bg-white rounded-3xl p-8 md:p-12 border border-slate-100 shadow-xl shadow-slate-100/50">
+            <div className="bg-white rounded-3xl p-8 md:p-12 border border-msv-light-2/30 shadow-xl shadow-msv-light-2/50">
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-12 h-12 rounded-xl bg-msv-gold/10 flex items-center justify-center">
                   <Clock className="w-6 h-6 text-msv-gold" />
@@ -153,7 +153,7 @@ export function ServicesContent() {
                       </span>
                       <h4 className="font-semibold text-msv-dark-2">{phase.title}</h4>
                     </div>
-                    <p className="text-sm text-slate-500 pl-11">{phase.description}</p>
+                    <p className="text-sm text-msv-gray-blue pl-11">{phase.description}</p>
                     
                     {index < phases.length - 1 && (
                       <ArrowRight className="hidden md:block absolute top-2 -right-2 w-4 h-4 text-msv-blue/30" />

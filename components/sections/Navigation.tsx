@@ -63,7 +63,8 @@ export function Navigation() {
               <span className="text-[10px] font-semibold tracking-[0.15em] uppercase">
                 <span className="text-msv-gold">Uncovering</span>{' '}
                 <span className="text-msv-blue">Potential</span>
-                <span className="text-msv-gold"> · Driving</span>{' '}
+                <span className="text-msv-blue"> · </span>
+                <span className="text-msv-gold">Driving</span>{' '}
                 <span className="text-msv-blue">Progress</span>
               </span>
             </div>
