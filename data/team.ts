@@ -48,8 +48,8 @@ export const teamMembers: TeamMember[] = [
     name: 'Jeremy Ayre',
     title: 'Advisory Board',
     category: 'advisory',
-    shortBio: 'Mining, consulting, investment, and entrepreneurial professional with over 35 years\' experience. Founder of AWR Lloyd.',
-    bio: 'Mining, consulting, investment, and entrepreneurial professional with over 35 years\' experience. Founder of AWR Lloyd, a boutique advisory firm servicing the mining sector, and an entrepreneur with a track record of founding investment funds and a renewable energy business.',
+    shortBio: 'Over 35 years\' experience spanning mining, consulting, investment, and entrepreneurship. Co-founder of AWR Lloyd.',
+    bio: 'Jeremy Ayre brings over 35 years\' experience spanning mining, consulting, investment, and entrepreneurship. He is a co-founder of AWR Lloyd, a boutique strategic consulting and M&A advisory firm operating across South-East Asia, with a strong focus on the energy and mining sectors. He has co-founded a London-listed private equity fund and, more recently, established a remote power generation business. Jeremy\'s work centres on strategic advisory, capital structuring, and the development of resilient, long-term businesses.',
     image: '/team/JeremyAyre.png',
   },
   {
