@@ -118,7 +118,7 @@ export function ProjectsContent() {
                         <div className="grid grid-cols-1 lg:grid-cols-5 lg:min-h-[400px]">
                           <div className="relative lg:col-span-2 min-h-[280px] overflow-hidden">
                             <Image
-                              src={project.images.length > 1 ? project.images[1] : project.images[0]}
+                              src={project.images[0]}
                               alt={`${project.name} project`}
                               fill
                               className="object-cover"

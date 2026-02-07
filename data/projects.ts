@@ -39,7 +39,7 @@ export const projects: Project[] = [
     description: 'Providing the client with grass roots exploration services (mapping, soils, rock chips and trenching) and drill target generation for gold.',
     services: ['Exploration & Geological Services'],
     deliveryModel: ['Advisory'],
-    images: ['/projects/cavico-pre-start.png', '/projects/cavico-stream-sampling.png'],
+    images: ['/projects/cavico-stream-sampling.png', '/projects/cavico-pre-start.png'],
   },
   {
     id: 'xuan-loc-tho',
