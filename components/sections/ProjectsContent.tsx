@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { Container } from '@/components/ui/Container'
@@ -114,30 +115,40 @@ export function ProjectsContent() {
                       className="flex-[0_0_100%] min-w-0 px-4"
                     >
                       <div className="bg-white rounded-3xl border border-slate-100 overflow-hidden shadow-xl">
-                        <div className="grid grid-cols-1 lg:grid-cols-3">
-                          <div className="p-8 lg:p-12 bg-gradient-to-br from-msv-blue to-msv-cyan text-white">
-                            <div className="flex items-center gap-3 mb-6">
-                              <span className="text-4xl">{country.flag}</span>
-                              <div>
-                                <p className="text-white/70 text-sm font-medium">{project.country}</p>
-                                <p className="text-lg font-bold">{project.commodity}</p>
+                        <div className="grid grid-cols-1 lg:grid-cols-5 lg:min-h-[400px]">
+                          <div className="relative lg:col-span-2 min-h-[280px] overflow-hidden">
+                            <Image
+                              src={project.images.length > 1 ? project.images[1] : project.images[0]}
+                              alt={`${project.name} project`}
+                              fill
+                              className="object-cover"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-slate-900/20 lg:bg-gradient-to-r lg:from-slate-900/90 lg:via-slate-900/50 lg:to-slate-900/20" />
+                            
+                            <div className="absolute inset-0 p-8 lg:p-10 flex flex-col justify-end text-white">
+                              <div className="flex items-center gap-3 mb-5">
+                                <span className="text-4xl">{country.flag}</span>
+                                <div>
+                                  <p className="text-white/70 text-sm font-medium">{project.country}</p>
+                                  <p className="text-lg font-bold">{project.commodity}</p>
+                                </div>
                               </div>
-                            </div>
-                            
-                            <h3 className="text-3xl font-bold mb-2">
-                              {project.name}
-                            </h3>
-                            <p className="text-white/80 font-medium mb-6">
-                              {project.client}
-                            </p>
-                            
-                            <div className="flex items-center gap-2 text-white/70 text-sm">
-                              <Calendar size={16} />
-                              <span>{project.status}</span>
+                              
+                              <h3 className="text-3xl lg:text-4xl font-bold mb-2 leading-tight">
+                                {project.name}
+                              </h3>
+                              <p className="text-white/80 font-medium mb-4">
+                                {project.client}
+                              </p>
+                              
+                              <div className="flex items-center gap-2 text-white/70 text-sm">
+                                <Calendar size={16} />
+                                <span>{project.status}</span>
+                              </div>
                             </div>
                           </div>
                           
-                          <div className="lg:col-span-2 p-8 lg:p-12">
+                          <div className="lg:col-span-3 p-8 lg:p-12">
                             <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                               {project.description}
                             </p>

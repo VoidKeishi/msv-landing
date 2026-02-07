@@ -8,6 +8,7 @@ export interface Project {
   description: string
   services: string[]
   deliveryModel: string[]
+  images: string[]
 }
 
 export const projects: Project[] = [
@@ -26,6 +27,7 @@ export const projects: Project[] = [
       'Operational Readiness & Support',
     ],
     deliveryModel: ['Advisory', 'EPCM'],
+    images: ['/projects/sambo-survey.png', '/projects/sambo-trench.png'],
   },
   {
     id: 'cavico-laos',
@@ -37,6 +39,7 @@ export const projects: Project[] = [
     description: 'Providing the client with grass roots exploration services (mapping, soils, rock chips and trenching) and drill target generation for gold.',
     services: ['Exploration & Geological Services'],
     deliveryModel: ['Advisory'],
+    images: ['/projects/cavico-pre-start.png', '/projects/cavico-stream-sampling.png'],
   },
   {
     id: 'xuan-loc-tho',
@@ -48,5 +51,6 @@ export const projects: Project[] = [
     description: 'MSV has 3 engineers embedded in the client\'s team to help advance permitting, licensing and project studies (including feasibility study & EIA).',
     services: ['Project Delivery (Owner\'s Team & EPCM)'],
     deliveryModel: ['Embedded Teams'],
+    images: ['/projects/xlt-working-group.png'],
   },
 ]

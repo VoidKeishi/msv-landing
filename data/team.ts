@@ -16,7 +16,7 @@ export const teamMembers: TeamMember[] = [
     shortBio: 'Process Engineer with over 31 years\' mining experience across multiple jurisdictions and a Southeast Asia focus.',
     bio: 'Process Engineer with over 31 years\' mining experience across multiple jurisdictions. Strong background in executive leadership, engineering, mining operations, and project delivery, with a Southeast Asia focus across coal, nickel, gold, and copper.',
     email: 'Lon@dma-msv.com',
-    image: '/team/LonTaranaki.jpeg',
+    image: '/team/LonTaranaki.png',
   },
   {
     name: 'Thanh Nguyen Van',
