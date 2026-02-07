@@ -34,7 +34,7 @@ export const teamMembers: TeamMember[] = [
     shortBio: 'Mining Engineer with 13 years of hands-on experience across open pit and underground operations in Vietnam, Laos, and Cambodia.',
     bio: 'Mining Engineer with 13 years of hands-on experience across open pit and underground operations in Vietnam, Laos, and Cambodia. Strong technical capability supported by proficiency across industry-standard mining software and extensive experience in permitting and licensing mining projects in Vietnam.',
     email: 'Thanh.nguyen@dma-msv.com',
-    image: '/team/ThanhNguyenVan.png',
+    image: '/team/ThanhNguyenVan.jpg',
   },
   {
     name: 'Dr. Chris Swindells',
@@ -75,7 +75,7 @@ export const teamMembers: TeamMember[] = [
     shortBio: 'Human Resources professional with a master\'s degree in HR management, providing comprehensive HR services to Vietnamese and international organisations.',
     bio: 'Human Resources professional with a master\'s degree in human resources management, providing comprehensive HR services to Vietnamese and international organisations. Extensive experience in organisational design, role and job description development, recruitment and onboarding, development of company-wide HR policies and procedures, and holding senior leadership roles.',
     email: 'Hoan.le@dma-msv.com',
-    image: '/team/HoanLeTiNgoc.png',
+    image: '/team/HoanLeTiNgoc.jpg',
   },
   {
     name: 'Hung Nguyen Phuc',
@@ -84,7 +84,7 @@ export const teamMembers: TeamMember[] = [
     shortBio: 'Mechanical Engineer with a Bachelor of Science in Mechanical Engineering and experience across engineering and process operations.',
     bio: 'Mechanical Engineer with a Bachelor of Science in Mechanical Engineering and experience across engineering and process operations. Strong capability working to international standards including ASME and ASTM. Experience in project management, studies delivery, permitting and licensing approvals, and subcontractor management. Brings deep operational experience having worked as a senior maintenance leader at a world-class tungsten operation.',
     email: 'Hung.nguyen@dma-msv.com',
-    image: '/team/HungNguyenPhuc.png',
+    image: '/team/HungNguyenPhuc.jpg',
   },
   {
     name: 'Tien Dinh Van',
@@ -93,7 +93,7 @@ export const teamMembers: TeamMember[] = [
     shortBio: 'Construction and civil works professional with a Master\'s degree in Transport Works Engineering and a strong background in infrastructure and civil design.',
     bio: 'Construction and civil works professional with a Master\'s degree in Transport Works Engineering and a strong background in infrastructure, transport, and civil design. Extensive experience in project and contract management, including delivery of multi-million-dollar construction contracts under FIDIC forms, management of consultants across Pre-FS, FS, detailed and construction design phases, and oversight of contractors and subcontractors during construction execution.',
     email: 'Tien.dinh@dma-msv.com',
-    image: '/team/TienDinhVan.png',
+    image: '/team/TienDinhVan.jpg',
   },
   {
     name: 'PhD. Minh Dinh Huu',
