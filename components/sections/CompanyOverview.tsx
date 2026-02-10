@@ -2,7 +2,7 @@
 
 import { Container } from '@/components/ui/Container'
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/AnimatedComponents'
-import { Globe, Award, TrendingUp, Shield } from 'lucide-react'
+import { Globe, Award, TrendingUp, Shield, Download } from 'lucide-react'
 
 const features = [
   {
@@ -50,11 +50,20 @@ export function CompanyOverview() {
             </p>
             
             <p className="text-msv-gray-blue leading-relaxed">
-              Leveraging our strong local presence, regional experience, and international technical 
-              capability, MSV provides cost-effective, practical mining solutions that meet Western 
-              technical and safety standards, while remaining aligned with local cost structures and 
+              Leveraging our strong local presence, regional experience, and international technical
+              capability, MSV provides cost-effective, practical mining solutions that meet Western
+              technical and safety standards, while remaining aligned with local cost structures and
               operating conditions.
             </p>
+
+            <a
+              href="/company_profiles/Mining Services Vietnam Company Profile (Feb 2026).pdf"
+              download
+              className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-md font-semibold border-2 border-msv-blue text-msv-blue hover:bg-msv-blue hover:text-white transition-all duration-200"
+            >
+              <Download className="w-5 h-5" />
+              Company Profile (Feb 2026)
+            </a>
           </AnimatedSection>
 
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-6">
