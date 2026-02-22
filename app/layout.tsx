@@ -11,9 +11,15 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Mining Services Vietnam | Exploration, EPCM & Engineering | Southeast Asia",
-  description: "Vietnam-based mining services company delivering exploration, geological services, EPCM, and resource development across Southeast Asia. JORC & NI43-101 certified.",
+  title: "Mining Services Vietnam | Exploration, EPCM & Engineering",
+  description: "Vietnam-based mining services delivering exploration, geological services, EPCM, and resource development across Southeast Asia. JORC & NI43-101 certified.",
   keywords: ["mining services vietnam", "exploration services cambodia laos", "EPCM southeast asia", "geological services", "JORC resource estimation"],
+  alternates: {
+    canonical: 'https://www.dma-msv.com',
+    languages: {
+      'en': 'https://www.dma-msv.com',
+    },
+  },
   openGraph: {
     title: "Mining Services Vietnam | Exploration, EPCM & Engineering",
     description: "Practical, high-quality mining solutions across Southeast Asia",
