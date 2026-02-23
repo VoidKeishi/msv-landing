@@ -1,84 +1,47 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { Container } from '@/components/ui/Container'
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/AnimatedComponents'
 import { Globe, Award, Shield, Users, Target, Leaf, Heart, Compass, Database, Building2, Settings, FileText, Users2 } from 'lucide-react'
 
-const differentiators = [
-  {
-    icon: Globe,
-    title: 'Regional Presence',
-    description: 'Strong local presence across 5 Southeast Asian countries with established networks and deep market knowledge.',
-  },
-  {
-    icon: Award,
-    title: 'International Standards',
-    description: 'Western technical standards with local cost structures, ensuring quality without compromise.',
-  },
-  {
-    icon: Shield,
-    title: 'JORC/NI43-101 Certified',
-    description: 'Competent Persons for resource and reserve reporting with robust governance and compliance.',
-  },
-  {
-    icon: Users,
-    title: 'Experienced Team',
-    description: '30+ years combined executive mining experience across multiple commodities and jurisdictions.',
-  },
-]
-
-const capabilities = [
-  {
-    icon: Compass,
-    title: 'Exploration & Geological Services',
-    description: 'From grassroots exploration through geophysics and drilling, including full program design, execution, and reporting.',
-  },
-  {
-    icon: Database,
-    title: 'Resource & Reserve Development',
-    description: 'Compliant with local reporting requirements as well as JORC and NI43-101 standards.',
-  },
-  {
-    icon: Building2,
-    title: 'EPCM Services',
-    description: 'Engineering, Procurement and Construction Management services across the project lifecycle.',
-  },
-  {
-    icon: Settings,
-    title: 'Engineering Services',
-    description: 'Including mining, civil, and mechanical disciplines with practical, fit-for-purpose solutions.',
-  },
-  {
-    icon: Users2,
-    title: 'HR & Admin Management',
-    description: 'Supporting both project and operational teams with local expertise and compliance.',
-  },
-  {
-    icon: FileText,
-    title: 'Operational Readiness',
-    description: 'Helping establish personnel, operating procedures, and systems for smooth transitions.',
-  },
-]
-
-const countries = [
-  { name: 'Vietnam', flag: '🇻🇳' },
-  { name: 'Cambodia', flag: '🇰🇭' },
-  { name: 'Laos', flag: '🇱🇦' },
-  { name: 'Thailand', flag: '🇹🇭' },
-  { name: 'Malaysia', flag: '🇲🇾' },
-]
-
-const commodities = [
-  { name: 'Gold', symbol: 'Au' },
-  { name: 'Copper', symbol: 'Cu' },
-  { name: 'Nickel', symbol: 'Ni' },
-  { name: 'Antimony', symbol: 'Sb' },
-  { name: 'PGE', symbol: 'Pt' },
-  { name: 'Lead', symbol: 'Pb' },
-  { name: 'Zinc', symbol: 'Zn' },
-]
-
 export function AboutContent() {
+  const t = useTranslations('AboutPage')
+
+  const differentiators = [
+    { icon: Globe, title: t('WhyChoose.presenceTitle'), description: t('WhyChoose.presenceDesc') },
+    { icon: Award, title: t('WhyChoose.standardsTitle'), description: t('WhyChoose.standardsDesc') },
+    { icon: Shield, title: t('WhyChoose.certifiedTitle'), description: t('WhyChoose.certifiedDesc') },
+    { icon: Users, title: t('WhyChoose.teamTitle'), description: t('WhyChoose.teamDesc') },
+  ]
+
+  const capabilities = [
+    { icon: Compass, title: t('Capabilities.explorationTitle'), description: t('Capabilities.explorationDesc') },
+    { icon: Database, title: t('Capabilities.resourceTitle'), description: t('Capabilities.resourceDesc') },
+    { icon: Building2, title: t('Capabilities.epcmTitle'), description: t('Capabilities.epcmDesc') },
+    { icon: Settings, title: t('Capabilities.engineeringTitle'), description: t('Capabilities.engineeringDesc') },
+    { icon: Users2, title: t('Capabilities.hrTitle'), description: t('Capabilities.hrDesc') },
+    { icon: FileText, title: t('Capabilities.operationalTitle'), description: t('Capabilities.operationalDesc') },
+  ]
+
+  const countries = [
+    { name: t('Region.countryVietnam'), flag: '\u{1F1FB}\u{1F1F3}' },
+    { name: t('Region.countryCambodia'), flag: '\u{1F1F0}\u{1F1ED}' },
+    { name: t('Region.countryLaos'), flag: '\u{1F1F1}\u{1F1E6}' },
+    { name: t('Region.countryThailand'), flag: '\u{1F1F9}\u{1F1ED}' },
+    { name: t('Region.countryMalaysia'), flag: '\u{1F1F2}\u{1F1FE}' },
+  ]
+
+  const commodities = [
+    { name: t('Region.commodityGold'), symbol: 'Au' },
+    { name: t('Region.commodityCopper'), symbol: 'Cu' },
+    { name: t('Region.commodityNickel'), symbol: 'Ni' },
+    { name: t('Region.commodityAntimony'), symbol: 'Sb' },
+    { name: t('Region.commodityPGE'), symbol: 'Pt' },
+    { name: t('Region.commodityLead'), symbol: 'Pb' },
+    { name: t('Region.commodityZinc'), symbol: 'Zn' },
+  ]
+
   return (
     <>
       <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
@@ -86,16 +49,16 @@ export function AboutContent() {
         <Container className="relative">
           <AnimatedSection className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 md:mb-8 border border-white/10">
-              <span className="text-sm font-medium text-white/90">About MSV</span>
+              <span className="text-sm font-medium text-white/90">{t('Hero.badge')}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">
-              Delivering Excellence<br />
+              {t('Hero.headingLine1')}<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-msv-gold via-msv-gold-light to-msv-gold">
-                Across Southeast Asia
+                {t('Hero.headingHighlight')}
               </span>
             </h1>
             <p className="text-lg md:text-xl text-msv-light-2 leading-relaxed">
-              Practical, high-quality mining solutions from a trusted regional partner
+              {t('Hero.subheading')}
             </p>
           </AnimatedSection>
         </Container>
@@ -106,47 +69,37 @@ export function AboutContent() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <AnimatedSection>
               <h2 className="text-3xl md:text-4xl font-bold text-msv-dark-2 mb-6">
-                Company Overview
+                {t('Overview.heading')}
               </h2>
               <div className="space-y-6 text-msv-dark-2/80 leading-relaxed">
-                <p>
-                  Mining Services Vietnam (MSV) is a Vietnam-based mining services company delivering 
-                  practical, high-quality solutions to uncover potential and drive progress for our 
-                  clients across Southeast Asia.
-                </p>
-                <p>
-                  Leveraging our strong local presence, regional experience, and international technical 
-                  capability, MSV provides cost-effective, practical mining solutions that meet Western 
-                  technical and safety standards, while remaining aligned with local cost structures and 
-                  operating conditions.
-                </p>
+                <p>{t('Overview.paragraph1')}</p>
+                <p>{t('Overview.paragraph2')}</p>
               </div>
             </AnimatedSection>
 
             <AnimatedSection delay={0.2}>
               <div className="relative bg-gradient-to-br from-msv-blue/5 to-msv-cyan/5 rounded-3xl p-8 border border-msv-blue/10">
                 <div className="absolute -top-4 -right-4 w-24 h-24 bg-msv-gold/10 rounded-full blur-2xl" />
-                
+
                 <div className="flex items-center gap-4 mb-6">
                   <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-msv-blue to-msv-cyan flex items-center justify-center">
                     <Target className="w-7 h-7 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-msv-dark-2">Our Vision</h3>
+                  <h3 className="text-2xl font-bold text-msv-dark-2">{t('Vision.heading')}</h3>
                 </div>
-                
+
                 <p className="text-lg text-msv-dark-2 leading-relaxed mb-6 font-medium">
-                  To deliver high-standard, cost-effective mining services while protecting the 
-                  environment and ensuring the safety and wellbeing of people and communities.
+                  {t('Vision.statement')}
                 </p>
 
                 <div className="flex items-center gap-6 pt-6 border-t border-msv-blue/10">
                   <div className="flex items-center gap-2 text-msv-dark-2/80">
                     <Leaf className="w-5 h-5 text-msv-mint" />
-                    <span className="text-sm">Environmental Protection</span>
+                    <span className="text-sm">{t('Vision.environmental')}</span>
                   </div>
                   <div className="flex items-center gap-2 text-msv-dark-2/80">
                     <Heart className="w-5 h-5 text-msv-gold" />
-                    <span className="text-sm">Community Safety</span>
+                    <span className="text-sm">{t('Vision.community')}</span>
                   </div>
                 </div>
               </div>
@@ -159,13 +112,13 @@ export function AboutContent() {
         <Container>
           <AnimatedSection className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-msv-blue/10 rounded-full px-4 py-2 mb-6">
-              <span className="text-sm font-semibold text-msv-blue">What We Offer</span>
+              <span className="text-sm font-semibold text-msv-blue">{t('Capabilities.badge')}</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-msv-dark-2 mb-4">
-              Our Capabilities
+              {t('Capabilities.heading')}
             </h2>
             <p className="text-lg text-msv-dark-2/80 max-w-2xl mx-auto">
-              Integrated mining services across the full project lifecycle
+              {t('Capabilities.subheading')}
             </p>
           </AnimatedSection>
 
@@ -193,10 +146,10 @@ export function AboutContent() {
         <Container>
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-msv-dark-2 mb-4">
-              Why Choose MSV
+              {t('WhyChoose.heading')}
             </h2>
             <p className="text-lg text-msv-dark-2/80 max-w-2xl mx-auto">
-              What sets us apart in the Southeast Asian mining services landscape
+              {t('WhyChoose.subheading')}
             </p>
           </AnimatedSection>
 
@@ -222,24 +175,24 @@ export function AboutContent() {
 
       <section className="py-16 md:py-24 bg-gradient-to-br from-msv-blue to-msv-cyan text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent" />
-        
+
         <Container className="relative">
           <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Operating Across Southeast Asia
+              {t('Region.heading')}
             </h2>
             <p className="text-xl text-white/80">
-              Regional expertise with international standards
+              {t('Region.subheading')}
             </p>
           </AnimatedSection>
 
           <AnimatedSection delay={0.2} className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                <h3 className="font-semibold text-lg mb-6 text-white/90">Our Jurisdictions</h3>
+                <h3 className="font-semibold text-lg mb-6 text-white/90">{t('Region.jurisdictions')}</h3>
                 <div className="flex flex-wrap gap-3">
                   {countries.map((country) => (
-                    <div 
+                    <div
                       key={country.name}
                       className="flex items-center gap-2 bg-white/10 rounded-full px-4 py-2"
                     >
@@ -251,10 +204,10 @@ export function AboutContent() {
               </div>
 
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-                <h3 className="font-semibold text-lg mb-6 text-white/90">Our Commodities</h3>
+                <h3 className="font-semibold text-lg mb-6 text-white/90">{t('Region.commodities')}</h3>
                 <div className="flex flex-wrap gap-3">
                   {commodities.map((commodity) => (
-                    <div 
+                    <div
                       key={commodity.name}
                       className="bg-white/10 rounded-full px-4 py-2 text-sm font-medium flex items-center gap-2"
                     >

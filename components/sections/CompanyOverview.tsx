@@ -1,59 +1,42 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { Container } from '@/components/ui/Container'
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/AnimatedComponents'
 import { Globe, Award, TrendingUp, Shield, Download } from 'lucide-react'
 
-const features = [
-  {
-    icon: Globe,
-    title: 'Regional Expertise',
-    description: 'Operating across Vietnam, Cambodia, Laos, Malaysia, and Thailand with deep local knowledge and established networks.',
-  },
-  {
-    icon: Award,
-    title: 'International Standards',
-    description: 'Western technical and safety standards seamlessly aligned with local cost structures and operating conditions.',
-  },
-  {
-    icon: TrendingUp,
-    title: 'Full Lifecycle',
-    description: 'Integrated services from early exploration through development, construction, and into operations.',
-  },
-  {
-    icon: Shield,
-    title: 'Certified Excellence',
-    description: 'JORC and NI 43-101 competent persons providing robust governance and technical assurance.',
-  },
-]
-
 export function CompanyOverview() {
+  const t = useTranslations('HomePage.CompanyOverview')
+
+  const features = [
+    { icon: Globe, title: t('featureRegionalTitle'), description: t('featureRegionalDesc') },
+    { icon: Award, title: t('featureStandardsTitle'), description: t('featureStandardsDesc') },
+    { icon: TrendingUp, title: t('featureLifecycleTitle'), description: t('featureLifecycleDesc') },
+    { icon: Shield, title: t('featureCertifiedTitle'), description: t('featureCertifiedDesc') },
+  ]
+
   return (
     <section className="py-24 bg-white relative overflow-hidden">
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-msv-light-2/20 to-transparent" />
-      
+
       <Container className="relative">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <AnimatedSection>
             <div className="inline-flex items-center gap-2 bg-msv-blue/10 rounded-full px-4 py-2 mb-6">
-              <span className="text-sm font-semibold text-msv-blue">About MSV</span>
+              <span className="text-sm font-semibold text-msv-blue">{t('badge')}</span>
             </div>
-            
+
             <h2 className="text-4xl md:text-5xl font-bold text-msv-dark-2 mb-6 leading-tight">
-              Mining Services <br />
-              <span className="text-msv-blue">Vietnam</span>
+              {t('headingLine1')} <br />
+              <span className="text-msv-blue">{t('headingHighlight')}</span>
             </h2>
-            
+
             <p className="text-lg text-msv-dark-2/80 mb-6 leading-relaxed">
-              A Vietnam-based mining services company delivering practical, high-quality solutions 
-              to uncover potential and drive progress for our clients across Southeast Asia.
+              {t('paragraph1')}
             </p>
-            
+
             <p className="text-msv-gray-blue leading-relaxed">
-              Leveraging our strong local presence, regional experience, and international technical
-              capability, MSV provides cost-effective, practical mining solutions that meet Western
-              technical and safety standards, while remaining aligned with local cost structures and
-              operating conditions.
+              {t('paragraph2')}
             </p>
 
             <a
@@ -62,7 +45,7 @@ export function CompanyOverview() {
               className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-md font-semibold border-2 border-msv-blue text-msv-blue hover:bg-msv-blue hover:text-white transition-all duration-200"
             >
               <Download className="w-5 h-5" />
-              Company Profile (Feb 2026)
+              {t('downloadButton')}
             </a>
           </AnimatedSection>
 

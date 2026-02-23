@@ -1,26 +1,28 @@
 'use client'
 
-import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
-import { usePathname } from 'next/navigation'
+import { useTranslations } from 'next-intl'
+import { Link, usePathname } from '@/i18n/routing'
 import { Menu, X } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Container } from '@/components/ui/Container'
-
-const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/services', label: 'Services' },
-  { href: '/team', label: 'Team' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/contact', label: 'Contact' },
-]
+import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher'
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const pathname = usePathname()
+  const t = useTranslations('Navigation')
+
+  const navLinks = [
+    { href: '/' as const, label: t('home') },
+    { href: '/about' as const, label: t('about') },
+    { href: '/services' as const, label: t('services') },
+    { href: '/team' as const, label: t('team') },
+    { href: '/projects' as const, label: t('projects') },
+    { href: '/contact' as const, label: t('contact') },
+  ]
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,8 +42,8 @@ export function Navigation() {
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg' 
+        scrolled
+          ? 'bg-white/95 backdrop-blur-md shadow-lg'
           : 'bg-white shadow-sm'
       }`}
     >
@@ -58,30 +60,29 @@ export function Navigation() {
             />
             <div className="hidden sm:flex flex-col min-w-0">
               <span className="text-lg font-bold text-msv-blue leading-tight tracking-tight">
-                Mining Services Vietnam
+                {t('companyName')}
               </span>
               <span className="text-[10px] font-semibold tracking-[0.15em] uppercase">
-                <span className="text-msv-gold">Uncovering</span>{' '}
-                <span className="text-msv-blue">Potential</span>
+                <span className="text-msv-gold">{t('sloganUncovering')}</span>{' '}
+                <span className="text-msv-blue">{t('sloganPotential')}</span>
                 <span className="text-msv-blue"> · </span>
-                <span className="text-msv-gold">Driving</span>{' '}
-                <span className="text-msv-blue">Progress</span>
+                <span className="text-msv-gold">{t('sloganDriving')}</span>{' '}
+                <span className="text-msv-blue">{t('sloganProgress')}</span>
               </span>
             </div>
           </Link>
 
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) => {
-              const isActive = pathname === link.href || 
+              const isActive = pathname === link.href ||
                 (link.href !== '/' && pathname.startsWith(link.href))
-              
               return (
                 <Link
                   key={link.href}
                   href={link.href}
                   className={`relative px-4 py-2 font-medium transition-colors duration-200 rounded-md ${
-                    isActive 
-                      ? 'text-msv-blue' 
+                    isActive
+                      ? 'text-msv-blue'
                       : 'text-msv-dark-2 hover:text-msv-blue hover:bg-msv-blue/5'
                   }`}
                 >
@@ -96,20 +97,26 @@ export function Navigation() {
                 </Link>
               )
             })}
+            <div className="ml-auto pl-6">
+              <LanguageSwitcher />
+            </div>
           </div>
 
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-msv-dark-2 hover:text-msv-blue hover:bg-msv-blue/5 rounded-md transition-colors flex-shrink-0"
-            aria-label="Toggle menu"
-          >
-            <motion.div
-              animate={{ rotate: isOpen ? 180 : 0 }}
-              transition={{ duration: 0.3 }}
+          <div className="flex items-center gap-2 md:hidden">
+            <LanguageSwitcher />
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 text-msv-dark-2 hover:text-msv-blue hover:bg-msv-blue/5 rounded-md transition-colors flex-shrink-0"
+              aria-label={t('toggleMenu')}
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </motion.div>
-          </button>
+              <motion.div
+                animate={{ rotate: isOpen ? 180 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
+                {isOpen ? <X size={24} /> : <Menu size={24} />}
+              </motion.div>
+            </button>
+          </div>
         </div>
 
         <AnimatePresence>
@@ -123,9 +130,9 @@ export function Navigation() {
             >
               <div className="pb-4 space-y-1">
                 {navLinks.map((link, index) => {
-                  const isActive = pathname === link.href || 
+                  const isActive = pathname === link.href ||
                     (link.href !== '/' && pathname.startsWith(link.href))
-                  
+
                   return (
                     <motion.div
                       key={link.href}

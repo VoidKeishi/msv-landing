@@ -1,27 +1,29 @@
 'use client'
 
-import Link from 'next/link'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/routing'
 import { Container } from '@/components/ui/Container'
 import { Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react'
-import { motion } from 'framer-motion'
-
-const quickLinks = [
-  { href: '/about', label: 'About Us' },
-  { href: '/services', label: 'Services' },
-  { href: '/team', label: 'Team' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/contact', label: 'Contact' },
-]
-
-const serviceLinks = [
-  'Exploration & Geological',
-  'Resource & Reserve',
-  'Project Delivery (EPCM)',
-  'Operational Readiness',
-]
 
 export function Footer() {
+  const t = useTranslations('Footer')
+
+  const quickLinks = [
+    { href: '/about' as const, label: t('aboutUs') },
+    { href: '/services' as const, label: t('services') },
+    { href: '/team' as const, label: t('team') },
+    { href: '/projects' as const, label: t('projects') },
+    { href: '/contact' as const, label: t('contact') },
+  ]
+
+  const serviceLinks = [
+    t('serviceExploration'),
+    t('serviceResource'),
+    t('serviceProjectDelivery'),
+    t('serviceOperational'),
+  ]
+
   return (
     <footer className="bg-gradient-to-b from-slate-800 to-slate-900 text-white mt-20">
       <Container className="py-16">
@@ -36,34 +38,33 @@ export function Footer() {
                 className="h-12 w-auto brightness-0 invert"
               />
               <span className="text-lg font-bold text-white leading-tight">
-                Mining Services Vietnam
+                {t('companyName')}
               </span>
             </div>
             <p className="text-msv-light-2 text-sm leading-relaxed mb-6">
-              Practical, high-quality mining solutions across Southeast Asia. 
-              Western standards, local expertise.
+              {t('tagline')}
             </p>
             <div className="flex items-center gap-2 text-sm">
-              <span className="text-msv-gold font-semibold">150,000+</span>
-              <span className="text-white/50">metres drilled</span>
+              <span className="text-msv-gold font-semibold">{t('metresDrilledValue')}</span>
+              <span className="text-white/50">{t('metresDrilledLabel')}</span>
             </div>
           </div>
 
           <div>
             <h3 className="font-semibold text-white mb-6 text-sm uppercase tracking-wider">
-              Quick Links
+              {t('quickLinks')}
             </h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
-                  <Link 
-                    href={link.href} 
+                  <Link
+                    href={link.href}
                     className="text-msv-light-2 hover:text-white transition-colors duration-200 flex items-center gap-1 group text-sm"
                   >
                     {link.label}
-                    <ArrowUpRight 
-                      size={14} 
-                      className="opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" 
+                    <ArrowUpRight
+                      size={14}
+                      className="opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200"
                     />
                   </Link>
                 </li>
@@ -73,7 +74,7 @@ export function Footer() {
 
           <div>
             <h3 className="font-semibold text-white mb-6 text-sm uppercase tracking-wider">
-              Services
+              {t('servicesHeading')}
             </h3>
             <ul className="space-y-3">
               {serviceLinks.map((service) => (
@@ -86,12 +87,12 @@ export function Footer() {
 
           <div>
             <h3 className="font-semibold text-white mb-6 text-sm uppercase tracking-wider">
-              Contact
+              {t('contactHeading')}
             </h3>
             <ul className="space-y-4">
               <li>
-                <a 
-                  href="mailto:info@dma-msv.com" 
+                <a
+                  href="mailto:info@dma-msv.com"
                   className="flex items-start gap-3 text-msv-light-2 hover:text-white transition-colors group"
                 >
                   <Mail size={18} className="mt-0.5 flex-shrink-0 text-msv-cyan" />
@@ -99,8 +100,8 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a 
-                  href="tel:+842462500426" 
+                <a
+                  href="tel:+842462500426"
                   className="flex items-start gap-3 text-msv-light-2 hover:text-white transition-colors"
                 >
                   <Phone size={18} className="mt-0.5 flex-shrink-0 text-msv-cyan" />
@@ -110,9 +111,9 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="mt-0.5 flex-shrink-0 text-msv-cyan" />
                 <address className="text-msv-light-2 text-sm not-italic leading-relaxed">
-                  Office 5A, 23rd Floor, Tower A<br />
-                  Hudtower, 37 Le Van Luong<br />
-                  Thanh Xuan, Hanoi, Vietnam
+                  {t('addressLine1')}<br />
+                  {t('addressLine2')}<br />
+                  {t('addressLine3')}
                 </address>
               </li>
             </ul>
@@ -122,7 +123,7 @@ export function Footer() {
         <div className="border-t border-white/10 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-white/50">
-              &copy; {new Date().getFullYear()} Mining Services Vietnam JSC. All rights reserved.
+              &copy; {new Date().getFullYear()} {t('copyright')}
             </p>
             <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-sm text-white/50">
               <span>Vietnam</span>

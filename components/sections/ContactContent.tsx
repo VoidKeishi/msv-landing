@@ -1,20 +1,23 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { Container } from '@/components/ui/Container'
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/AnimatedComponents'
 import { ContactForm } from '@/components/sections/ContactForm'
 import { Mail, Phone, MapPin, ArrowUpRight, Clock } from 'lucide-react'
 
 const keyContacts = [
-  { name: 'Lon Taranaki', email: 'Lon@dma-msv.com', title: 'General Director' },
-  { name: 'Thanh Nguyen Van', email: 'Thanh.nguyen@dma-msv.com', title: 'Director & Mining Lead' },
-  { name: 'Hai Nguyen Ngoc', email: 'Hai.nguyen@dma-msv.com', title: 'Director & Geology Lead' },
-  { name: 'Hoan Le Thi Ngoc', email: 'Hoan.le@dma-msv.com', title: 'HR Lead' },
-  { name: 'Hung Nguyen Phuc', email: 'Hung.nguyen@dma-msv.com', title: 'Senior Project Manager' },
-  { name: 'Tien Dinh Van', email: 'Tien.dinh@dma-msv.com', title: 'Senior Project Manager' },
+  { id: 'lon-taranaki', name: 'Lon Taranaki', email: 'Lon@dma-msv.com' },
+  { id: 'thanh-nguyen-van', name: 'Thanh Nguyen Van', email: 'Thanh.nguyen@dma-msv.com' },
+  { id: 'hai-nguyen-ngoc', name: 'Hai Nguyen Ngoc', email: 'Hai.nguyen@dma-msv.com' },
+  { id: 'hoan-le-thi-ngoc', name: 'Hoan Le Thi Ngoc', email: 'Hoan.le@dma-msv.com' },
+  { id: 'hung-nguyen-phuc', name: 'Hung Nguyen Phuc', email: 'Hung.nguyen@dma-msv.com' },
+  { id: 'tien-dinh-van', name: 'Tien Dinh Van', email: 'Tien.dinh@dma-msv.com' },
 ]
 
 export function ContactContent() {
+  const t = useTranslations('ContactPage')
+  const td = useTranslations('Data.contacts')
 
   return (
     <>
@@ -23,16 +26,16 @@ export function ContactContent() {
         <Container className="relative">
           <AnimatedSection className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 md:mb-8 border border-white/10">
-              <span className="text-sm font-medium text-white/90">Get in Touch</span>
+              <span className="text-sm font-medium text-white/90">{t('Hero.badge')}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">
-              Contact<br />
+              {t('Hero.headingLine1')}<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-msv-gold via-msv-gold-light to-msv-gold">
-                Our Team
+                {t('Hero.headingHighlight')}
               </span>
             </h1>
             <p className="text-lg md:text-xl text-msv-light-2 leading-relaxed">
-              Ready to discuss your mining project? We&apos;re here to help.
+              {t('Hero.subheading')}
             </p>
           </AnimatedSection>
         </Container>
@@ -43,11 +46,11 @@ export function ContactContent() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-stretch">
             <div className="lg:col-span-3 flex flex-col">
               <AnimatedSection className="flex-1 flex flex-col">
-                <h2 className="text-3xl font-bold text-msv-dark-2 mb-8">Send Us a Message</h2>
+                <h2 className="text-3xl font-bold text-msv-dark-2 mb-8">{t('Form.heading')}</h2>
 
                 <div className="bg-msv-light-2-subtle rounded-2xl p-8 border border-msv-light-2/30 flex-1 flex flex-col">
                   <p className="text-msv-dark-2/80 mb-6">
-                    Fill out the form below and our team will get back to you within 24-48 business hours.
+                    {t('Form.instructions')}
                   </p>
 
                   <div className="flex-1">
@@ -55,7 +58,7 @@ export function ContactContent() {
                   </div>
 
                   <div className="pt-6 mt-6 border-t border-msv-light-2/50">
-                    <p className="text-sm text-msv-gray-blue text-center mb-3">Or email us directly</p>
+                    <p className="text-sm text-msv-gray-blue text-center mb-3">{t('Form.emailDirect')}</p>
                     <a
                       href="mailto:info@dma-msv.com"
                       className="inline-flex items-center gap-2 text-msv-blue hover:text-msv-blue/80 font-medium transition-colors w-full justify-center"
@@ -70,7 +73,7 @@ export function ContactContent() {
 
             <div className="lg:col-span-2 flex flex-col">
               <AnimatedSection delay={0.2} className="flex-1 flex flex-col">
-                <h2 className="text-3xl font-bold text-msv-dark-2 mb-8">Contact Info</h2>
+                <h2 className="text-3xl font-bold text-msv-dark-2 mb-8">{t('Info.heading')}</h2>
 
                 <div className="space-y-6 flex-1 flex flex-col">
                   <div className="bg-gradient-to-br from-msv-blue to-msv-cyan rounded-2xl p-6 text-white">
@@ -79,8 +82,8 @@ export function ContactContent() {
                         <Mail className="w-6 h-6" />
                       </div>
                       <div>
-                        <p className="font-semibold mb-1">General Email</p>
-                        <a 
+                        <p className="font-semibold mb-1">{t('Info.generalEmail')}</p>
+                        <a
                           href="mailto:info@dma-msv.com"
                           className="text-white/90 hover:text-white transition-colors"
                         >
@@ -96,8 +99,8 @@ export function ContactContent() {
                         <Phone className="w-6 h-6 text-msv-blue" />
                       </div>
                       <div>
-                        <p className="font-semibold text-msv-dark-2 mb-1">Phone</p>
-                        <a 
+                        <p className="font-semibold text-msv-dark-2 mb-1">{t('Info.phone')}</p>
+                        <a
                           href="tel:+842462500426"
                           className="text-msv-dark-2/80 hover:text-msv-blue transition-colors"
                         >
@@ -113,12 +116,12 @@ export function ContactContent() {
                         <MapPin className="w-6 h-6 text-msv-blue" />
                       </div>
                       <div>
-                        <p className="font-semibold text-msv-dark-2 mb-2">Office Address</p>
+                        <p className="font-semibold text-msv-dark-2 mb-2">{t('Info.officeAddress')}</p>
                         <address className="text-msv-dark-2/80 not-italic text-sm leading-relaxed">
-                          Mining Services Vietnam JSC<br />
-                          Office 5A, 23rd Floor, Tower A<br />
-                          Hudtower, 37 Le Van Luong<br />
-                          Thanh Xuan, Hanoi, Vietnam
+                          {t('Info.companyName')}<br />
+                          {t('Info.addressLine1')}<br />
+                          {t('Info.addressLine2')}<br />
+                          {t('Info.addressLine3')}
                         </address>
                       </div>
                     </div>
@@ -130,9 +133,9 @@ export function ContactContent() {
                         <Clock className="w-6 h-6 text-msv-blue" />
                       </div>
                       <div>
-                        <p className="font-semibold text-msv-dark-2 mb-1">Business Hours</p>
+                        <p className="font-semibold text-msv-dark-2 mb-1">{t('Info.businessHours')}</p>
                         <p className="text-msv-dark-2/80 text-sm">
-                          Mon - Fri: 8:00 AM - 5:00 PM (ICT)
+                          {t('Info.businessHoursValue')}
                         </p>
                       </div>
                     </div>
@@ -147,14 +150,14 @@ export function ContactContent() {
       <section className="py-16 md:py-24 bg-msv-light-2-subtle">
         <Container>
           <AnimatedSection className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-msv-dark-2 mb-4">Key Contacts</h2>
-            <p className="text-msv-dark-2/80">Reach out directly to our leadership team</p>
+            <h2 className="text-3xl font-bold text-msv-dark-2 mb-4">{t('KeyContacts.heading')}</h2>
+            <p className="text-msv-dark-2/80">{t('KeyContacts.subheading')}</p>
           </AnimatedSection>
 
           <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {keyContacts.map((contact) => (
               <StaggerItem key={contact.email}>
-                <a 
+                <a
                   href={`mailto:${contact.email}`}
                   className="group block bg-white rounded-2xl p-6 border border-msv-light-2/30 hover:border-msv-blue/20 hover:shadow-xl transition-all"
                 >
@@ -163,7 +166,7 @@ export function ContactContent() {
                       <h3 className="font-semibold text-msv-dark-2 group-hover:text-msv-blue transition-colors">
                         {contact.name}
                       </h3>
-                      <p className="text-sm text-msv-gray-blue">{contact.title}</p>
+                      <p className="text-sm text-msv-gray-blue">{td(contact.id)}</p>
                     </div>
                     <ArrowUpRight size={18} className="text-msv-blue opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
@@ -186,7 +189,7 @@ export function ContactContent() {
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
-                title="MSV Office Location"
+                title={t('map')}
               />
             </div>
           </AnimatedSection>

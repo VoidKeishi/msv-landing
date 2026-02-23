@@ -1,0 +1,477 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "team": "Team",
+    "projects": "Projects",
+    "contact": "Contact",
+    "companyName": "Mining Services Vietnam",
+    "sloganUncovering": "Uncovering",
+    "sloganPotential": "Potential",
+    "sloganDriving": "Driving",
+    "sloganProgress": "Progress",
+    "toggleMenu": "Toggle menu"
+  },
+  "Footer": {
+    "companyName": "Mining Services Vietnam",
+    "tagline": "Practical, high-quality mining solutions across Southeast Asia. Western standards, local expertise.",
+    "metresDrilledValue": "150,000+",
+    "metresDrilledLabel": "metres drilled",
+    "quickLinks": "Quick Links",
+    "aboutUs": "About Us",
+    "services": "Services",
+    "team": "Team",
+    "projects": "Projects",
+    "contact": "Contact",
+    "servicesHeading": "Services",
+    "serviceExploration": "Exploration & Geological",
+    "serviceResource": "Resource & Reserve",
+    "serviceProjectDelivery": "Project Delivery (EPCM)",
+    "serviceOperational": "Operational Readiness",
+    "contactHeading": "Contact",
+    "addressLine1": "Office 5A, 23rd Floor, Tower A",
+    "addressLine2": "Hudtower, 37 Le Van Luong",
+    "addressLine3": "Thanh Xuan, Hanoi, Vietnam",
+    "copyright": "Mining Services Vietnam JSC. All rights reserved."
+  },
+  "Metadata": {
+    "home": {
+      "title": "Mining Services Vietnam | Exploration, EPCM & Engineering",
+      "description": "Vietnam-based mining services delivering exploration, geological services, EPCM, and resource development across Southeast Asia. JORC & NI43-101 certified.",
+      "keywords": "mining services vietnam, exploration services cambodia laos, EPCM southeast asia, geological services, JORC resource estimation",
+      "ogTitle": "Mining Services Vietnam | Exploration, EPCM & Engineering",
+      "ogDescription": "Practical, high-quality mining solutions across Southeast Asia"
+    },
+    "about": {
+      "title": "About MSV | Mining Services Vietnam - Regional Expertise",
+      "description": "MSV operates across Vietnam, Cambodia, Laos, Malaysia & Thailand, delivering cost-effective mining solutions to international standards."
+    },
+    "services": {
+      "title": "Mining Services | Exploration, EPCM, Engineering | MSV Vietnam",
+      "description": "Comprehensive mining services: exploration & drilling (150,000m+), resource estimation (JORC/NI43-101), EPCM project delivery, operational support."
+    },
+    "team": {
+      "title": "Leadership Team | Mining Professionals | MSV Vietnam",
+      "description": "31+ years combined expertise across mining, geology, engineering. JORC Competent Persons, regional operational experience."
+    },
+    "projects": {
+      "title": "Mining Projects | Cambodia, Laos, Vietnam | MSV",
+      "description": "Current mining projects: SAMBO Cambodia gold, Cavico Laos exploration, Vietnam nickel refinery."
+    },
+    "contact": {
+      "title": "Contact MSV | Mining Services Vietnam | Hanoi Office",
+      "description": "Contact Mining Services Vietnam for exploration, EPCM, or engineering services. Email: info@dma-msv.com | Hanoi, Vietnam"
+    }
+  },
+  "HomePage": {
+    "Hero": {
+      "badge": "Vietnam-Based Mining Services",
+      "slogan": "Uncovering Potential, Driving Progress",
+      "headingLine1": "Unlocking",
+      "headingHighlight": "Potential",
+      "headingLine2": "Across Southeast Asia",
+      "description": "Practical, high-quality mining solutions from exploration to operations. Western standards, local expertise.",
+      "ctaServices": "Explore Our Services",
+      "ctaContact": "Contact Us",
+      "trackRecord": "Our Track Record",
+      "statMetresValue": "150,000+",
+      "statMetresLabel": "Metres Drilled",
+      "statCertifiedValue": "JORC & NI43-101",
+      "statCertifiedLabel": "Certified",
+      "statOperationsValue": "Engagements across Southeast Asia",
+      "statOperationsLabel": "Active Operations"
+    },
+    "CompanyOverview": {
+      "badge": "About MSV",
+      "headingLine1": "Mining Services",
+      "headingHighlight": "Vietnam",
+      "paragraph1": "A Vietnam-based mining services company delivering practical, high-quality solutions to uncover potential and drive progress for our clients across Southeast Asia.",
+      "paragraph2": "Leveraging our strong local presence, regional experience, and international technical capability, MSV provides cost-effective, practical mining solutions that meet Western technical and safety standards, while remaining aligned with local cost structures and operating conditions.",
+      "downloadButton": "Company Profile (Feb 2026)",
+      "featureRegionalTitle": "Regional Expertise",
+      "featureRegionalDesc": "Operating across Vietnam, Cambodia, Laos, Malaysia, and Thailand with deep local knowledge and established networks.",
+      "featureStandardsTitle": "International Standards",
+      "featureStandardsDesc": "Western technical and safety standards seamlessly aligned with local cost structures and operating conditions.",
+      "featureLifecycleTitle": "Full Lifecycle",
+      "featureLifecycleDesc": "Integrated services from early exploration through development, construction, and into operations.",
+      "featureCertifiedTitle": "Certified Excellence",
+      "featureCertifiedDesc": "JORC and NI 43-101 competent persons providing robust governance and technical assurance."
+    },
+    "ServicesSnapshot": {
+      "badge": "What We Do",
+      "heading": "Our Services",
+      "subheading": "Integrated mining services across the full project lifecycle, from early-stage exploration through to steady-state operations.",
+      "serviceExplorationTitle": "Exploration & Geological Services",
+      "serviceExplorationDesc": "End-to-end exploration from grassroots through to drilling and reporting with over 150,000m delivered.",
+      "serviceResourceTitle": "Resource & Reserve Development",
+      "serviceResourceDesc": "JORC and NI 43-101 compliant resource estimation, reserve studies, and geological modelling.",
+      "serviceProjectTitle": "Project Delivery (EPCM)",
+      "serviceProjectDesc": "Owner's team or EPCM services managing engineering, procurement, construction, and commissioning.",
+      "serviceOperationalTitle": "Operational Readiness",
+      "serviceOperationalDesc": "Establishing robust, compliant operating organisations with HR, procurement, and governance systems.",
+      "viewAll": "View All Services"
+    },
+    "FeaturedProjects": {
+      "badge": "Our Work",
+      "heading": "Current Projects",
+      "subheading": "Delivering value across multiple commodities and jurisdictions in Southeast Asia",
+      "more": "+{count} more",
+      "viewAll": "View All Projects"
+    },
+    "CallToAction": {
+      "heading": "Ready to Discuss Your Project?",
+      "subheading": "Connect with our team to explore how MSV can support your mining project from exploration through to operations.",
+      "ctaPrimary": "Contact Us Today",
+      "hanoiVietnam": "Hanoi, Vietnam",
+      "servingSEA": "Serving Southeast Asia"
+    }
+  },
+  "AboutPage": {
+    "Hero": {
+      "badge": "About MSV",
+      "headingLine1": "Delivering Excellence",
+      "headingHighlight": "Across Southeast Asia",
+      "subheading": "Practical, high-quality mining solutions from a trusted regional partner"
+    },
+    "Overview": {
+      "heading": "Company Overview",
+      "paragraph1": "Mining Services Vietnam (MSV) is a Vietnam-based mining services company delivering practical, high-quality solutions to uncover potential and drive progress for our clients across Southeast Asia.",
+      "paragraph2": "Leveraging our strong local presence, regional experience, and international technical capability, MSV provides cost-effective, practical mining solutions that meet Western technical and safety standards, while remaining aligned with local cost structures and operating conditions."
+    },
+    "Vision": {
+      "heading": "Our Vision",
+      "statement": "To deliver high-standard, cost-effective mining services while protecting the environment and ensuring the safety and wellbeing of people and communities.",
+      "environmental": "Environmental Protection",
+      "community": "Community Safety"
+    },
+    "Capabilities": {
+      "badge": "What We Offer",
+      "heading": "Our Capabilities",
+      "subheading": "Integrated mining services across the full project lifecycle",
+      "explorationTitle": "Exploration & Geological Services",
+      "explorationDesc": "From grassroots exploration through geophysics and drilling, including full program design, execution, and reporting.",
+      "resourceTitle": "Resource & Reserve Development",
+      "resourceDesc": "Compliant with local reporting requirements as well as JORC and NI43-101 standards.",
+      "epcmTitle": "EPCM Services",
+      "epcmDesc": "Engineering, Procurement and Construction Management services across the project lifecycle.",
+      "engineeringTitle": "Engineering Services",
+      "engineeringDesc": "Including mining, civil, and mechanical disciplines with practical, fit-for-purpose solutions.",
+      "hrTitle": "HR & Admin Management",
+      "hrDesc": "Supporting both project and operational teams with local expertise and compliance.",
+      "operationalTitle": "Operational Readiness",
+      "operationalDesc": "Helping establish personnel, operating procedures, and systems for smooth transitions."
+    },
+    "WhyChoose": {
+      "heading": "Why Choose MSV",
+      "subheading": "What sets us apart in the Southeast Asian mining services landscape",
+      "presenceTitle": "Regional Presence",
+      "presenceDesc": "Strong local presence across 5 Southeast Asian countries with established networks and deep market knowledge.",
+      "standardsTitle": "International Standards",
+      "standardsDesc": "Western technical standards with local cost structures, ensuring quality without compromise.",
+      "certifiedTitle": "JORC/NI43-101 Certified",
+      "certifiedDesc": "Competent Persons for resource and reserve reporting with robust governance and compliance.",
+      "teamTitle": "Experienced Team",
+      "teamDesc": "30+ years combined executive mining experience across multiple commodities and jurisdictions."
+    },
+    "Region": {
+      "heading": "Operating Across Southeast Asia",
+      "subheading": "Regional expertise with international standards",
+      "jurisdictions": "Our Jurisdictions",
+      "commodities": "Our Commodities",
+      "countryVietnam": "Vietnam",
+      "countryCambodia": "Cambodia",
+      "countryLaos": "Laos",
+      "countryThailand": "Thailand",
+      "countryMalaysia": "Malaysia",
+      "commodityGold": "Gold",
+      "commodityCopper": "Copper",
+      "commodityNickel": "Nickel",
+      "commodityAntimony": "Antimony",
+      "commodityPGE": "PGE",
+      "commodityLead": "Lead",
+      "commodityZinc": "Zinc"
+    }
+  },
+  "ServicesPage": {
+    "Hero": {
+      "badge": "Our Services",
+      "headingLine1": "Integrated Mining",
+      "headingHighlight": "Services",
+      "subheading": "Full project lifecycle support from exploration through to steady-state operations"
+    },
+    "DeliveryModel": {
+      "badge": "How We Work",
+      "heading": "Service Delivery Model",
+      "subheading": "Flexible engagement options aligned to project stage, risk profile, and client objectives",
+      "advisoryTitle": "Advisory",
+      "advisoryDesc": "Technical and commercial advice, reviews, studies, and owner's team support",
+      "epcmTitle": "EPCM",
+      "epcmDesc": "Integrated delivery of engineering, procurement, construction management, and commissioning",
+      "embeddedTitle": "Embedded Teams",
+      "embeddedDesc": "MSV personnel embedded within client teams for targeted capability and continuity"
+    },
+    "Phases": {
+      "heading": "Phase-Based Support",
+      "phase1Title": "Exploration",
+      "phase1Desc": "Program design, execution, and reporting",
+      "phase2Title": "Studies & Development",
+      "phase2Desc": "Resource, reserve, mine planning, project definition",
+      "phase3Title": "Execution",
+      "phase3Desc": "EPCM delivery and owner's team representation",
+      "phase4Title": "Operations",
+      "phase4Desc": "Operational readiness, ramp-up, and optimisation"
+    },
+    "BottomCTA": {
+      "heading": "Practical, Cost-Effective Solutions",
+      "subheading": "Across all engagement models, MSV delivers practical, cost-effective solutions to international standards, aligned with local operating conditions and project objectives.",
+      "feeForService": "Fee-for-Service",
+      "feeForServiceLabel": "Primary model",
+      "equityParticipation": "Equity Participation",
+      "equityLabel": "Selective projects"
+    }
+  },
+  "TeamPage": {
+    "Hero": {
+      "badge": "Our Team",
+      "headingLine1": "Experienced Mining",
+      "headingHighlight": "Professionals",
+      "subheading": "Delivering excellence across Southeast Asia with decades of combined experience"
+    },
+    "intro": "MSV has established a strong local technical and management team, supported by experienced and highly respected mining professionals. The company is guided by an Advisory Board of accomplished industry leaders, providing strategic oversight and independent advice.",
+    "categories": {
+      "board": {
+        "title": "Board of Directors",
+        "description": "Leadership team driving MSV's strategic vision and operations"
+      },
+      "advisory": {
+        "title": "Advisory Board",
+        "description": "Industry leaders providing strategic oversight and independent advice"
+      },
+      "technical": {
+        "title": "Senior Technical Advisors",
+        "description": "JORC and NI 43-101 specialists ensuring technical excellence"
+      },
+      "executive": {
+        "title": "Executive Management Team",
+        "description": "Experienced professionals managing day-to-day operations"
+      }
+    },
+    "close": "Close"
+  },
+  "ProjectsPage": {
+    "Hero": {
+      "badge": "Our Projects",
+      "headingLine1": "Delivering Value",
+      "headingHighlight": "Across the Region",
+      "subheading": "Active projects across multiple commodities and jurisdictions in Southeast Asia"
+    },
+    "Featured": {
+      "heading": "Featured Projects",
+      "subheading": "Swipe or use arrows to explore our active projects",
+      "previousProject": "Previous project",
+      "nextProject": "Next project",
+      "goToProject": "Go to project {number}",
+      "servicesProvided": "Services Provided",
+      "deliveryModel": "Delivery Model"
+    },
+    "CTA": {
+      "heading": "Interested in Working With Us?",
+      "subheading": "Contact our team to discuss how MSV can support your mining project from exploration through to production.",
+      "button": "Get in Touch"
+    }
+  },
+  "ContactPage": {
+    "Hero": {
+      "badge": "Get in Touch",
+      "headingLine1": "Contact",
+      "headingHighlight": "Our Team",
+      "subheading": "Ready to discuss your mining project? We're here to help."
+    },
+    "Form": {
+      "heading": "Send Us a Message",
+      "instructions": "Fill out the form below and our team will get back to you within 24-48 business hours.",
+      "nameLabel": "Name",
+      "namePlaceholder": "Your full name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "your.email@example.com",
+      "serviceLabel": "Service Interest",
+      "servicePlaceholder": "Select a service...",
+      "serviceExploration": "Exploration & Geological Services",
+      "serviceResource": "Resource & Reserve Development",
+      "serviceProjectDelivery": "Project Delivery (EPCM)",
+      "serviceOperational": "Operational Readiness & Support",
+      "serviceGeneral": "General Inquiry",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell us about your project or inquiry...",
+      "submitButton": "Send Message",
+      "submitting": "Sending...",
+      "successMessage": "Thank you! Your message has been sent. We'll get back to you within 24-48 hours.",
+      "errorMessage": "Something went wrong. Please try again or email us directly.",
+      "emailDirect": "Or email us directly"
+    },
+    "Info": {
+      "heading": "Contact Info",
+      "generalEmail": "General Email",
+      "phone": "Phone",
+      "officeAddress": "Office Address",
+      "companyName": "Mining Services Vietnam JSC",
+      "addressLine1": "Office 5A, 23rd Floor, Tower A",
+      "addressLine2": "Hudtower, 37 Le Van Luong",
+      "addressLine3": "Thanh Xuan, Hanoi, Vietnam",
+      "businessHours": "Business Hours",
+      "businessHoursValue": "Mon - Fri: 8:00 AM - 5:00 PM (ICT)"
+    },
+    "KeyContacts": {
+      "heading": "Key Contacts",
+      "subheading": "Reach out directly to our leadership team"
+    },
+    "map": "MSV Office Location"
+  },
+  "Data": {
+    "services": {
+      "exploration": {
+        "title": "Exploration & Geological Services",
+        "description": "MSV provides an end-to-end exploration capability, combining program design, execution, and technical reporting using in-house teams, equipment, and specialist support delivering improved data quality, schedule control, and cost efficiency.",
+        "features": [
+          "Grassroots exploration, including geological mapping, soil and rock-chip sampling, trenching, and technical reporting",
+          "Geophysical surveys (EM, IP, and DHEM) including design, execution, interpretation and reporting",
+          "Drilling services, from target generation to execution, with over 150,000 metres of diamond drilling delivered",
+          "In-house logging, sampling, laboratory management, and data preparation to support geological modelling and reporting",
+          "Geological database management and technical reporting"
+        ]
+      },
+      "resource": {
+        "title": "Resource & Reserve Development",
+        "description": "MSV develops geological, resource, and reserve models using industry-standard software including Surpac and Micromine, compliant with local, JORC, and NI 43-101 reporting requirements.",
+        "features": [
+          "Geological modelling and resource estimation",
+          "JORC and NI 43-101 compliant reporting",
+          "Mine optimisation and reserve conversion studies",
+          "Competent Person certification available",
+          "Extensive internal cost database for accurate estimation"
+        ]
+      },
+      "project-delivery": {
+        "title": "Project Delivery (Owner's Team & EPCM)",
+        "description": "MSV operates as Owner's Representative or EPCM contractor, managing engineering, procurement, construction, and commissioning to achieve scope, cost, schedule, quality, safety, and performance objectives.",
+        "features": [
+          "Owner's Representative services",
+          "EPCM contractor capability",
+          "Engineering disciplines (mining, civil, mechanical)",
+          "Procurement and construction management",
+          "Full project lifecycle support"
+        ]
+      },
+      "operational": {
+        "title": "Operational Readiness & Support",
+        "description": "MSV supports the transition from development to steady-state operations, establishing robust, compliant operating organisations.",
+        "features": [
+          "Human resources systems and recruitment",
+          "Procurement, logistics, and warehousing",
+          "Finance, accounting, and reporting systems",
+          "Corporate governance, policies, and procedures",
+          "Safety, environmental, and compliance management"
+        ]
+      }
+    },
+    "team": {
+      "lon-taranaki": {
+        "title": "General Director",
+        "shortBio": "Process Engineer with over 31 years' mining experience across multiple jurisdictions and a Southeast Asia focus.",
+        "bio": "Process Engineer with over 31 years' mining experience across multiple jurisdictions. Strong background in executive leadership, engineering, mining operations, and project delivery, with a Southeast Asia focus across coal, nickel, gold, and copper."
+      },
+      "hai-nguyen-ngoc": {
+        "title": "Director & Geology Lead",
+        "shortBio": "Geologist with a Master of Science in Geology and over 20 years' experience across exploration and mine geology management.",
+        "bio": "Geologist with a Master of Science in Geology and over 20 years' experience across exploration and mine geology management. Strong technical capability with proficiency in industry-standard geological software, extensive experience designing and managing EM, DHEM, and 3D IP programs, and a deep understanding of Vietnamese reserve reporting requirements and JORC standards."
+      },
+      "thanh-nguyen-van": {
+        "title": "Director & Mining Lead",
+        "shortBio": "Mining Engineer with 13 years of hands-on experience across open pit and underground operations in Vietnam, Laos, and Cambodia.",
+        "bio": "Mining Engineer with 13 years of hands-on experience across open pit and underground operations in Vietnam, Laos, and Cambodia. Strong technical capability supported by proficiency across industry-standard mining software and extensive experience in permitting and licensing mining projects in Vietnam."
+      },
+      "dr-chris-swindells": {
+        "title": "Advisory Board",
+        "shortBio": "Senior engineering and environmental professional with over 45 years' experience leading technical teams across mining and infrastructure.",
+        "bio": "Senior engineering and environmental professional with over 45 years' experience leading technical teams across the mining and infrastructure sectors. Former senior executive at Golder Associates, where he held multiple leadership roles across Australia, Asia and Africa for over 32 years, including leading the Mining Services team in EMEA and APAC and globally."
+      },
+      "jeremy-ayre": {
+        "title": "Advisory Board",
+        "shortBio": "Over 35 years' experience spanning mining, consulting, investment, and entrepreneurship. Co-founder of AWR Lloyd.",
+        "bio": "Jeremy Ayre brings over 35 years' experience spanning mining, consulting, investment, and entrepreneurship. He is a co-founder of AWR Lloyd, a boutique strategic consulting and M&A advisory firm operating across South-East Asia, with a strong focus on the energy and mining sectors. He has co-founded a London-listed private equity fund and, more recently, established a remote power generation business. Jeremy's work centres on strategic advisory, capital structuring, and the development of resilient, long-term businesses."
+      },
+      "will-coverdale": {
+        "title": "Senior Technical Advisor - JORC & NI43-101 Reserves",
+        "shortBio": "Qualified Mining Engineer with an MBA and over 19 years' experience across the mining and metals sector.",
+        "bio": "Qualified Mining Engineer with an MBA and over 19 years' experience across the mining and metals sector, spanning open pit and underground operations. Extensive background in project evaluation, due diligence, M&A, project planning and development, technical and strategic consulting, and founder of a mining-related IT start-up. Recognised Competent Person for JORC & NI43-101 Reserve reporting."
+      },
+      "chris-ramsay": {
+        "title": "Senior Technical Advisor - JORC & NI43-101 Resources",
+        "shortBio": "Experienced mineral resource and mine development professional with over 25 years' global experience across the mining value chain.",
+        "bio": "Experienced mineral resource and mine development professional with over 25 years' global experience across the mining value chain. Expertise includes mineral exploration, resource estimation, project development and evaluation, resource governance, mine geology, and operational management. Recognised Competent Person for JORC and NI43-101 resource reporting."
+      },
+      "phd-minh-dinh-huu": {
+        "title": "Regional Geology Expert",
+        "shortBio": "Senior exploration and project evaluation professional with over 40 years' experience across a broad range of commodities.",
+        "bio": "Senior exploration and project evaluation professional with over 40 years' experience across a broad range of commodities, including nickel–copper (PGE), gold, copper–gold, copper, tin, and mineral sands. Extensive experience in technical review, peer evaluation, and academic supervision, including guidance of undergraduate and MSc theses and service as an examining and review board member for PhD and Master's research in gold and non-ferrous mineral systems."
+      },
+      "hung-tran-huu": {
+        "title": "EHS & Sustainability",
+        "shortBio": "Experienced EHS & Sustainability professional with 15 years' experience across electronics, electric vehicle, industrial real estate, and metal mining sectors.",
+        "bio": "Experienced EHS & Sustainability professional with 15 years' experience in electronics, electric vehicle, industrial real estate, metal mining & processing sectors. Highly proficient in international environmental and social (E&S) standards, including IFC Performance Standards, OECD guidance, ISO standards, as well as North American, European, and Vietnamese regulations."
+      },
+      "hoan-le-thi-ngoc": {
+        "title": "Executive Management & HR Lead",
+        "shortBio": "Human Resources professional with a master's degree in HR management, providing comprehensive HR services to Vietnamese and international organisations.",
+        "bio": "Human Resources professional with a master's degree in human resources management, providing comprehensive HR services to Vietnamese and international organisations. Extensive experience in organisational design, role and job description development, recruitment and onboarding, development of company-wide HR policies and procedures, and holding senior leadership roles."
+      },
+      "hung-nguyen-phuc": {
+        "title": "Executive Management & Senior Project Manager",
+        "shortBio": "Mechanical Engineer with a Bachelor of Science in Mechanical Engineering and experience across engineering and process operations.",
+        "bio": "Mechanical Engineer with a Bachelor of Science in Mechanical Engineering and experience across engineering and process operations. Strong capability working to international standards including ASME and ASTM. Experience in project management, studies delivery, permitting and licensing approvals, and subcontractor management. Brings deep operational experience having worked as a senior maintenance leader at a world-class tungsten operation."
+      },
+      "tien-dinh-van": {
+        "title": "Executive Management & Senior Project Manager",
+        "shortBio": "Construction and civil works professional with a Master's degree in Transport Works Engineering and a strong background in infrastructure and civil design.",
+        "bio": "Construction and civil works professional with a Master's degree in Transport Works Engineering and a strong background in infrastructure, transport, and civil design. Extensive experience in project and contract management, including delivery of multi-million-dollar construction contracts under FIDIC forms, management of consultants across Pre-FS, FS, detailed and construction design phases, and oversight of contractors and subcontractors during construction execution."
+      }
+    },
+    "projects": {
+      "sambo-cambodia": {
+        "name": "SAMBO Cambodia",
+        "client": "Sambo Cambodia",
+        "description": "Providing the client with a full suite of services to take their project from exploration through to production.",
+        "services": [
+          "Exploration & Geological Services",
+          "Resource & Reserve Development",
+          "Project Delivery (Owner's Team & EPCM)",
+          "Operational Readiness & Support"
+        ],
+        "deliveryModel": ["Advisory", "EPCM"]
+      },
+      "cavico-laos": {
+        "name": "Cavico Laos",
+        "client": "Cavico Laos",
+        "description": "Providing the client with grass roots exploration services (mapping, soils, rock chips and trenching) and drill target generation for gold.",
+        "services": ["Exploration & Geological Services"],
+        "deliveryModel": ["Advisory"]
+      },
+      "xuan-loc-tho": {
+        "name": "Xuan Loc Tho",
+        "client": "Xuan Loc Tho – Ta Khoa Project Joint Venture",
+        "description": "MSV has 3 engineers embedded in the client's team to help advance permitting, licensing and project studies (including feasibility study & EIA).",
+        "services": ["Project Delivery (Owner's Team & EPCM)"],
+        "deliveryModel": ["Embedded Teams"]
+      }
+    },
+    "contacts": {
+      "lon-taranaki": "General Director",
+      "thanh-nguyen-van": "Director & Mining Lead",
+      "hai-nguyen-ngoc": "Director & Geology Lead",
+      "hoan-le-thi-ngoc": "HR Lead",
+      "hung-nguyen-phuc": "Senior Project Manager",
+      "tien-dinh-van": "Senior Project Manager"
+    }
+  }
+}

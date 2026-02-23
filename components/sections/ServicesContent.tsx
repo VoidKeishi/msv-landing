@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslations } from 'next-intl'
 import { Container } from '@/components/ui/Container'
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/AnimatedComponents'
 import { services } from '@/data/services'
@@ -12,32 +13,23 @@ const serviceIcons: Record<string, typeof Compass> = {
   'operations': Settings,
 }
 
-const deliveryModels = [
-  {
-    icon: Users,
-    title: 'Advisory',
-    description: 'Technical and commercial advice, reviews, studies, and owner\'s team support',
-  },
-  {
-    icon: Building2,
-    title: 'EPCM',
-    description: 'Integrated delivery of engineering, procurement, construction management, and commissioning',
-  },
-  {
-    icon: Briefcase,
-    title: 'Embedded Teams',
-    description: 'MSV personnel embedded within client teams for targeted capability and continuity',
-  },
-]
-
-const phases = [
-  { title: 'Exploration', description: 'Program design, execution, and reporting' },
-  { title: 'Studies & Development', description: 'Resource, reserve, mine planning, project definition' },
-  { title: 'Execution', description: 'EPCM delivery and owner\'s team representation' },
-  { title: 'Operations', description: 'Operational readiness, ramp-up, and optimisation' },
-]
-
 export function ServicesContent() {
+  const t = useTranslations('ServicesPage')
+  const td = useTranslations('Data.services')
+
+  const deliveryModels = [
+    { icon: Users, title: t('DeliveryModel.advisoryTitle'), description: t('DeliveryModel.advisoryDesc') },
+    { icon: Building2, title: t('DeliveryModel.epcmTitle'), description: t('DeliveryModel.epcmDesc') },
+    { icon: Briefcase, title: t('DeliveryModel.embeddedTitle'), description: t('DeliveryModel.embeddedDesc') },
+  ]
+
+  const phases = [
+    { title: t('Phases.phase1Title'), description: t('Phases.phase1Desc') },
+    { title: t('Phases.phase2Title'), description: t('Phases.phase2Desc') },
+    { title: t('Phases.phase3Title'), description: t('Phases.phase3Desc') },
+    { title: t('Phases.phase4Title'), description: t('Phases.phase4Desc') },
+  ]
+
   return (
     <>
       <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
@@ -45,16 +37,16 @@ export function ServicesContent() {
         <Container className="relative">
           <AnimatedSection className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 md:mb-8 border border-white/10">
-              <span className="text-sm font-medium text-white/90">Our Services</span>
+              <span className="text-sm font-medium text-white/90">{t('Hero.badge')}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">
-              Integrated Mining<br />
+              {t('Hero.headingLine1')}<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-msv-gold via-msv-gold-light to-msv-gold">
-                Services
+                {t('Hero.headingHighlight')}
               </span>
             </h1>
             <p className="text-lg md:text-xl text-msv-light-2 leading-relaxed">
-              Full project lifecycle support from exploration through to steady-state operations
+              {t('Hero.subheading')}
             </p>
           </AnimatedSection>
         </Container>
@@ -63,10 +55,11 @@ export function ServicesContent() {
       {services.map((service, index) => {
         const IconComponent = serviceIcons[service.id] || Compass
         const isEven = index % 2 === 0
-        
+        const features = td.raw(`${service.id}.features`) as string[]
+
         return (
-          <section 
-            key={service.id} 
+          <section
+            key={service.id}
             className={`py-16 md:py-24 ${isEven ? 'bg-white' : 'bg-msv-light-2-subtle'}`}
           >
             <Container>
@@ -75,18 +68,18 @@ export function ServicesContent() {
                   <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-msv-blue to-msv-cyan flex items-center justify-center mb-6">
                     <IconComponent className="w-8 h-8 text-white" />
                   </div>
-                  
+
                   <h2 className="text-3xl md:text-4xl font-bold text-msv-dark-2 mb-4">
-                    {service.title}
+                    {td(`${service.id}.title`)}
                   </h2>
-                  
+
                   <p className="text-lg text-msv-dark-2/80 mb-8 leading-relaxed">
-                    {service.description}
+                    {td(`${service.id}.description`)}
                   </p>
                 </AnimatedSection>
-                
+
                 <StaggerContainer className={`grid gap-4 ${!isEven ? 'lg:col-start-1' : ''}`}>
-                  {service.features.map((feature, featureIndex) => (
+                  {features.map((feature: string, featureIndex: number) => (
                     <StaggerItem key={featureIndex}>
                       <div className="flex items-start gap-4 p-4 bg-white rounded-xl border border-msv-light-2/30 hover:border-msv-blue/20 hover:shadow-lg transition-all duration-300 group">
                         <div className="w-8 h-8 rounded-lg bg-msv-green/10 flex items-center justify-center flex-shrink-0 group-hover:bg-msv-green/20 transition-colors">
@@ -107,13 +100,13 @@ export function ServicesContent() {
         <Container>
           <AnimatedSection className="text-center mb-16">
             <div className="inline-flex items-center gap-2 bg-msv-blue/10 rounded-full px-4 py-2 mb-6">
-              <span className="text-sm font-semibold text-msv-blue">How We Work</span>
+              <span className="text-sm font-semibold text-msv-blue">{t('DeliveryModel.badge')}</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-msv-dark-2 mb-4">
-              Service Delivery Model
+              {t('DeliveryModel.heading')}
             </h2>
             <p className="text-lg text-msv-dark-2/80 max-w-2xl mx-auto">
-              Flexible engagement options aligned to project stage, risk profile, and client objectives
+              {t('DeliveryModel.subheading')}
             </p>
           </AnimatedSection>
 
@@ -141,9 +134,9 @@ export function ServicesContent() {
                 <div className="w-12 h-12 rounded-xl bg-msv-gold/10 flex items-center justify-center">
                   <Clock className="w-6 h-6 text-msv-gold" />
                 </div>
-                <h3 className="text-2xl font-bold text-msv-dark-2">Phase-Based Support</h3>
+                <h3 className="text-2xl font-bold text-msv-dark-2">{t('Phases.heading')}</h3>
               </div>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                 {phases.map((phase, index) => (
                   <div key={phase.title} className="relative">
@@ -154,7 +147,7 @@ export function ServicesContent() {
                       <h4 className="font-semibold text-msv-dark-2">{phase.title}</h4>
                     </div>
                     <p className="text-sm text-msv-gray-blue pl-11">{phase.description}</p>
-                    
+
                     {index < phases.length - 1 && (
                       <ArrowRight className="hidden md:block absolute top-2 -right-2 w-4 h-4 text-msv-blue/30" />
                     )}
@@ -168,24 +161,23 @@ export function ServicesContent() {
 
       <section className="py-16 md:py-24 bg-gradient-to-br from-msv-blue to-msv-cyan text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent" />
-        
+
         <Container className="relative">
           <AnimatedSection className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Practical, Cost-Effective Solutions
+              {t('BottomCTA.heading')}
             </h2>
             <p className="text-xl text-white/80 leading-relaxed mb-8">
-              Across all engagement models, MSV delivers practical, cost-effective solutions 
-              to international standards, aligned with local operating conditions and project objectives.
+              {t('BottomCTA.subheading')}
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/10">
-                <span className="font-semibold">Fee-for-Service</span>
-                <span className="text-white/60 ml-2">Primary model</span>
+                <span className="font-semibold">{t('BottomCTA.feeForService')}</span>
+                <span className="text-white/60 ml-2">{t('BottomCTA.feeForServiceLabel')}</span>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/10">
-                <span className="font-semibold">Equity Participation</span>
-                <span className="text-white/60 ml-2">Selective projects</span>
+                <span className="font-semibold">{t('BottomCTA.equityParticipation')}</span>
+                <span className="text-white/60 ml-2">{t('BottomCTA.equityLabel')}</span>
               </div>
             </div>
           </AnimatedSection>

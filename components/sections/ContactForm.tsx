@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useTranslations } from 'next-intl'
 import { Button } from '@/components/ui/Button'
 import { Loader2, CheckCircle, AlertCircle } from 'lucide-react'
 
@@ -9,6 +10,7 @@ const WEB3FORMS_ACCESS_KEY = '85999e51-00ef-42bd-9eea-ae615eb25e42'
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const t = useTranslations('ContactPage.Form')
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -47,7 +49,7 @@ export function ContactForm() {
 
       <div>
         <label htmlFor="name" className="block text-sm font-semibold text-msv-dark-2 mb-2">
-          Name <span className="text-red-500">*</span>
+          {t('nameLabel')} <span className="text-red-500">*</span>
         </label>
         <input
           type="text"
@@ -55,14 +57,14 @@ export function ContactForm() {
           name="name"
           required
           disabled={isSubmitting}
-          placeholder="Your full name"
+          placeholder={t('namePlaceholder')}
           className="w-full px-4 py-3 border border-msv-light-2/50 rounded-xl focus:ring-2 focus:ring-msv-blue focus:border-transparent transition-all disabled:bg-msv-light-2/20 disabled:cursor-not-allowed"
         />
       </div>
 
       <div>
         <label htmlFor="email" className="block text-sm font-semibold text-msv-dark-2 mb-2">
-          Email <span className="text-red-500">*</span>
+          {t('emailLabel')} <span className="text-red-500">*</span>
         </label>
         <input
           type="email"
@@ -70,14 +72,14 @@ export function ContactForm() {
           name="email"
           required
           disabled={isSubmitting}
-          placeholder="your.email@example.com"
+          placeholder={t('emailPlaceholder')}
           className="w-full px-4 py-3 border border-msv-light-2/50 rounded-xl focus:ring-2 focus:ring-msv-blue focus:border-transparent transition-all disabled:bg-msv-light-2/20 disabled:cursor-not-allowed"
         />
       </div>
 
       <div>
         <label htmlFor="service" className="block text-sm font-semibold text-msv-dark-2 mb-2">
-          Service Interest <span className="text-red-500">*</span>
+          {t('serviceLabel')} <span className="text-red-500">*</span>
         </label>
         <select
           id="service"
@@ -87,18 +89,18 @@ export function ContactForm() {
           defaultValue=""
           className="w-full px-4 py-3 border border-msv-light-2/50 rounded-xl focus:ring-2 focus:ring-msv-blue focus:border-transparent transition-all disabled:bg-msv-light-2/20 disabled:cursor-not-allowed appearance-none bg-white"
         >
-          <option value="" disabled>Select a service...</option>
-          <option value="Exploration & Geological Services">Exploration & Geological Services</option>
-          <option value="Resource & Reserve Development">Resource & Reserve Development</option>
-          <option value="Project Delivery (EPCM)">Project Delivery (EPCM)</option>
-          <option value="Operational Readiness & Support">Operational Readiness & Support</option>
-          <option value="General Inquiry">General Inquiry</option>
+          <option value="" disabled>{t('servicePlaceholder')}</option>
+          <option value="Exploration & Geological Services">{t('serviceExploration')}</option>
+          <option value="Resource & Reserve Development">{t('serviceResource')}</option>
+          <option value="Project Delivery (EPCM)">{t('serviceProjectDelivery')}</option>
+          <option value="Operational Readiness & Support">{t('serviceOperational')}</option>
+          <option value="General Inquiry">{t('serviceGeneral')}</option>
         </select>
       </div>
 
       <div>
         <label htmlFor="message" className="block text-sm font-semibold text-msv-dark-2 mb-2">
-          Message <span className="text-red-500">*</span>
+          {t('messageLabel')} <span className="text-red-500">*</span>
         </label>
         <textarea
           id="message"
@@ -106,7 +108,7 @@ export function ContactForm() {
           required
           disabled={isSubmitting}
           rows={5}
-          placeholder="Tell us about your project or inquiry..."
+          placeholder={t('messagePlaceholder')}
           className="w-full px-4 py-3 border border-msv-light-2/50 rounded-xl focus:ring-2 focus:ring-msv-blue focus:border-transparent transition-all resize-none disabled:bg-msv-light-2/20 disabled:cursor-not-allowed"
         />
       </div>
@@ -114,14 +116,14 @@ export function ContactForm() {
       {submitStatus === 'success' && (
         <div className="flex items-center gap-3 p-4 bg-msv-mint/10 border border-msv-mint/30 rounded-xl text-msv-green">
           <CheckCircle className="w-5 h-5 flex-shrink-0" />
-          <p className="text-sm font-medium">Thank you! Your message has been sent. We&apos;ll get back to you within 24-48 hours.</p>
+          <p className="text-sm font-medium">{t('successMessage')}</p>
         </div>
       )}
 
       {submitStatus === 'error' && (
         <div className="flex items-center gap-3 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700">
           <AlertCircle className="w-5 h-5 flex-shrink-0" />
-          <p className="text-sm font-medium">Something went wrong. Please try again or email us directly.</p>
+          <p className="text-sm font-medium">{t('errorMessage')}</p>
         </div>
       )}
 
@@ -134,10 +136,10 @@ export function ContactForm() {
         {isSubmitting ? (
           <span className="flex items-center justify-center gap-2">
             <Loader2 className="w-5 h-5 animate-spin" />
-            Sending...
+            {t('submitting')}
           </span>
         ) : (
-          'Send Message'
+          t('submitButton')
         )}
       </Button>
     </form>

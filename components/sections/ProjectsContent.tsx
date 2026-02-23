@@ -1,8 +1,9 @@
 'use client'
 
 import { useCallback, useEffect, useState } from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
+import { Link } from '@/i18n/routing'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { Container } from '@/components/ui/Container'
@@ -11,12 +12,12 @@ import { projects } from '@/data/projects'
 import { Calendar, Briefcase, ArrowRight, ChevronLeft, ChevronRight, Compass, Database, Building2, Settings } from 'lucide-react'
 
 const countryData: Record<string, { flag: string }> = {
-  'Cambodia': { flag: '🇰🇭' },
-  'Laos': { flag: '🇱🇦' },
-  'Vietnam': { flag: '🇻🇳' },
+  'Cambodia': { flag: '\u{1F1F0}\u{1F1ED}' },
+  'Laos': { flag: '\u{1F1F1}\u{1F1E6}' },
+  'Vietnam': { flag: '\u{1F1FB}\u{1F1F3}' },
 }
 
-const serviceIcons: Record<string, typeof Compass> = {
+const serviceIconKeys: Record<string, typeof Compass> = {
   'Exploration & Geological Services': Compass,
   'Resource & Reserve Development': Database,
   'Project Delivery (Owner\'s Team & EPCM)': Building2,
@@ -24,6 +25,9 @@ const serviceIcons: Record<string, typeof Compass> = {
 }
 
 export function ProjectsContent() {
+  const t = useTranslations('ProjectsPage')
+  const td = useTranslations('Data.projects')
+
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: 'center' },
     [Autoplay({ delay: 5000, stopOnInteraction: true, stopOnMouseEnter: true })]
@@ -61,16 +65,16 @@ export function ProjectsContent() {
         <Container className="relative">
           <AnimatedSection className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 md:mb-8 border border-white/10">
-              <span className="text-sm font-medium text-white/90">Our Projects</span>
+              <span className="text-sm font-medium text-white/90">{t('Hero.badge')}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">
-              Delivering Value<br />
+              {t('Hero.headingLine1')}<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-msv-gold via-msv-gold-light to-msv-gold">
-                Across the Region
+                {t('Hero.headingHighlight')}
               </span>
             </h1>
             <p className="text-lg md:text-xl text-msv-light-2 leading-relaxed">
-              Active projects across multiple commodities and jurisdictions in Southeast Asia
+              {t('Hero.subheading')}
             </p>
           </AnimatedSection>
         </Container>
@@ -80,10 +84,10 @@ export function ProjectsContent() {
         <Container>
           <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-msv-dark-2 mb-4">
-              Featured Projects
+              {t('Featured.heading')}
             </h2>
             <p className="text-lg text-msv-dark-2/80 max-w-2xl mx-auto">
-              Swipe or use arrows to explore our active projects
+              {t('Featured.subheading')}
             </p>
           </AnimatedSection>
 
@@ -91,15 +95,15 @@ export function ProjectsContent() {
             <button
               onClick={scrollPrev}
               className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full shadow-lg border border-msv-light-2/30 flex items-center justify-center hover:bg-msv-light-2-subtle transition-colors disabled:opacity-50 disabled:cursor-not-allowed ml-0 sm:-ml-2 lg:-ml-6"
-              aria-label="Previous project"
+              aria-label={t('Featured.previousProject')}
             >
               <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-msv-dark-2" />
             </button>
-            
+
             <button
               onClick={scrollNext}
               className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full shadow-lg border border-msv-light-2/30 flex items-center justify-center hover:bg-msv-light-2-subtle transition-colors disabled:opacity-50 disabled:cursor-not-allowed mr-0 sm:-mr-2 lg:-mr-6"
-              aria-label="Next project"
+              aria-label={t('Featured.nextProject')}
             >
               <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-msv-dark-2" />
             </button>
@@ -107,8 +111,10 @@ export function ProjectsContent() {
             <div className="overflow-hidden mx-4 sm:mx-8" ref={emblaRef}>
               <div className="flex">
                 {projects.map((project) => {
-                  const country = countryData[project.country] || { flag: '🌏' }
-                  
+                  const country = countryData[project.country] || { flag: '\u{1F30F}' }
+                  const projectServices = td.raw(`${project.id}.services`) as string[]
+                  const projectDeliveryModel = td.raw(`${project.id}.deliveryModel`) as string[]
+
                   return (
                     <div
                       key={project.id}
@@ -119,12 +125,12 @@ export function ProjectsContent() {
                           <div className="relative lg:col-span-2 min-h-[280px] overflow-hidden">
                             <Image
                               src={project.images[0]}
-                              alt={`${project.name} project`}
+                              alt={`${td(`${project.id}.name`)} project`}
                               fill
                               className="object-cover"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-slate-900/20 lg:bg-gradient-to-r lg:from-slate-900/90 lg:via-slate-900/50 lg:to-slate-900/20" />
-                            
+
                             <div className="absolute inset-0 p-8 lg:p-10 flex flex-col justify-end text-white">
                               <div className="flex items-center gap-3 mb-5">
                                 <span className="text-4xl">{country.flag}</span>
@@ -133,35 +139,35 @@ export function ProjectsContent() {
                                   <p className="text-lg font-bold">{project.commodity}</p>
                                 </div>
                               </div>
-                              
+
                               <h3 className="text-3xl lg:text-4xl font-bold mb-2 leading-tight">
-                                {project.name}
+                                {td(`${project.id}.name`)}
                               </h3>
                               <p className="text-white/80 font-medium mb-4">
-                                {project.client}
+                                {td(`${project.id}.client`)}
                               </p>
-                              
+
                               <div className="flex items-center gap-2 text-white/70 text-sm">
                                 <Calendar size={16} />
                                 <span>{project.status}</span>
                               </div>
                             </div>
                           </div>
-                          
+
                           <div className="lg:col-span-3 p-8 lg:p-12">
                             <p className="text-lg text-msv-dark-2/80 mb-8 leading-relaxed">
-                              {project.description}
+                              {td(`${project.id}.description`)}
                             </p>
-                            
+
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                               <div>
                                 <h4 className="text-sm font-semibold text-msv-dark-2 mb-4 flex items-center gap-2">
                                   <div className="w-1 h-4 bg-msv-blue rounded-full" />
-                                  Services Provided
+                                  {t('Featured.servicesProvided')}
                                 </h4>
                                 <div className="space-y-2">
-                                  {project.services.map((service) => {
-                                    const Icon = serviceIcons[service] || Compass
+                                  {projectServices.map((service: string) => {
+                                    const Icon = serviceIconKeys[service] || Compass
                                     return (
                                       <div key={service} className="flex items-center gap-3 text-sm text-msv-dark-2/80">
                                         <Icon size={16} className="text-msv-blue flex-shrink-0" />
@@ -171,15 +177,15 @@ export function ProjectsContent() {
                                   })}
                                 </div>
                               </div>
-                              
+
                               <div>
                                 <h4 className="text-sm font-semibold text-msv-dark-2 mb-4 flex items-center gap-2">
                                   <div className="w-1 h-4 bg-msv-cyan rounded-full" />
-                                  Delivery Model
+                                  {t('Featured.deliveryModel')}
                                 </h4>
                                 <div className="flex flex-wrap gap-2">
-                                  {project.deliveryModel.map((model) => (
-                                    <span 
+                                  {projectDeliveryModel.map((model: string) => (
+                                    <span
                                       key={model}
                                       className="inline-flex items-center gap-1.5 bg-msv-blue/10 text-msv-blue px-3 py-1.5 rounded-full text-sm font-medium"
                                     >
@@ -209,7 +215,7 @@ export function ProjectsContent() {
                       ? 'bg-msv-blue w-8'
                       : 'bg-msv-light-2/40 hover:bg-msv-light-2/60'
                   }`}
-                  aria-label={`Go to project ${index + 1}`}
+                  aria-label={t('Featured.goToProject', { number: index + 1 })}
                 />
               ))}
             </div>
@@ -221,17 +227,16 @@ export function ProjectsContent() {
         <Container>
           <AnimatedSection className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-msv-dark-2 mb-6">
-              Interested in Working With Us?
+              {t('CTA.heading')}
             </h2>
             <p className="text-lg text-msv-dark-2/80 mb-10 leading-relaxed">
-              Contact our team to discuss how MSV can support your mining project 
-              from exploration through to production.
+              {t('CTA.subheading')}
             </p>
-            <Link 
+            <Link
               href="/contact"
               className="inline-flex items-center gap-2 bg-msv-blue text-white px-8 py-4 rounded-xl font-semibold hover:bg-msv-blue/90 transition-colors group"
             >
-              <span>Get in Touch</span>
+              <span>{t('CTA.button')}</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </AnimatedSection>

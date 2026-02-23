@@ -2,19 +2,23 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
+import { useTranslations } from 'next-intl'
 import { Container } from '@/components/ui/Container'
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/AnimatedComponents'
 import { teamMembers, type TeamMember } from '@/data/team'
 import { Mail, Users, Award, Shield, Briefcase, X } from 'lucide-react'
 
-const categories = [
-  { id: 'board', title: 'Board of Directors', icon: Users, description: 'Leadership team driving MSV\'s strategic vision and operations' },
-  { id: 'advisory', title: 'Advisory Board', icon: Award, description: 'Industry leaders providing strategic oversight and independent advice' },
-  { id: 'technical', title: 'Senior Technical Advisors', icon: Shield, description: 'JORC and NI 43-101 specialists ensuring technical excellence' },
-  { id: 'executive', title: 'Executive Management Team', icon: Briefcase, description: 'Experienced professionals managing day-to-day operations' },
-] as const
+const categoryIcons = {
+  board: Users,
+  advisory: Award,
+  technical: Shield,
+  executive: Briefcase,
+} as const
 
 function MemberModal({ member, onClose }: { member: TeamMember; onClose: () => void }) {
+  const td = useTranslations('Data.team')
+  const t = useTranslations('TeamPage')
+
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
     if (e.key === 'Escape') onClose()
   }, [onClose])
@@ -43,7 +47,7 @@ function MemberModal({ member, onClose }: { member: TeamMember; onClose: () => v
           type="button"
           onClick={onClose}
           className="absolute top-4 right-4 z-10 w-8 h-8 flex items-center justify-center rounded-full bg-white/90 hover:bg-msv-light-2/20 text-msv-gray-blue hover:text-msv-dark-2 transition-colors cursor-pointer shadow-sm"
-          aria-label="Close"
+          aria-label={t('close')}
         >
           <X size={18} />
         </button>
@@ -63,10 +67,10 @@ function MemberModal({ member, onClose }: { member: TeamMember; onClose: () => v
               {member.name}
             </h3>
             <p className="text-msv-blue font-semibold text-sm md:text-base mb-4">
-              {member.title}
+              {td(`${member.id}.title`)}
             </p>
             <p className="text-sm md:text-base text-msv-dark-2/80 leading-relaxed mb-5">
-              {member.bio}
+              {td(`${member.id}.bio`)}
             </p>
             {member.email && (
               <a
@@ -86,6 +90,15 @@ function MemberModal({ member, onClose }: { member: TeamMember; onClose: () => v
 
 export function TeamContent() {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null)
+  const t = useTranslations('TeamPage')
+  const td = useTranslations('Data.team')
+
+  const categories = (['board', 'advisory', 'technical', 'executive'] as const).map((id) => ({
+    id,
+    title: t(`categories.${id}.title`),
+    icon: categoryIcons[id],
+    description: t(`categories.${id}.description`),
+  }))
 
   return (
     <>
@@ -94,16 +107,16 @@ export function TeamContent() {
         <Container className="relative">
           <AnimatedSection className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 md:mb-8 border border-white/10">
-              <span className="text-sm font-medium text-white/90">Our Team</span>
+              <span className="text-sm font-medium text-white/90">{t('Hero.badge')}</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">
-              Experienced Mining<br />
+              {t('Hero.headingLine1')}<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-msv-gold via-msv-gold-light to-msv-gold">
-                Professionals
+                {t('Hero.headingHighlight')}
               </span>
             </h1>
             <p className="text-lg md:text-xl text-msv-light-2 leading-relaxed">
-              Delivering excellence across Southeast Asia with decades of combined experience
+              {t('Hero.subheading')}
             </p>
           </AnimatedSection>
         </Container>
@@ -113,10 +126,7 @@ export function TeamContent() {
         <Container>
           <AnimatedSection className="max-w-4xl mx-auto text-center mb-12 md:mb-16 px-4">
             <p className="text-base md:text-lg text-msv-dark-2/80 leading-relaxed">
-              MSV has established a strong local technical and management team, supported by 
-              experienced and highly respected mining professionals. The company is guided by 
-              an Advisory Board of accomplished industry leaders, providing strategic oversight 
-              and independent advice.
+              {t('intro')}
             </p>
           </AnimatedSection>
 
@@ -157,16 +167,16 @@ export function TeamContent() {
                               className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                             />
                           </div>
-                          
+
                           <div className="p-4 sm:p-5 md:p-6 flex-1 flex flex-col min-w-0">
                             <h3 className="font-bold text-lg md:text-xl text-msv-dark-2 mb-1 leading-tight">
                               {member.name}
                             </h3>
                             <p className="text-msv-blue font-semibold text-sm mb-3">
-                              {member.title}
+                              {td(`${member.id}.title`)}
                             </p>
                             <p className="text-sm text-msv-gray-blue leading-relaxed flex-1">
-                              {member.shortBio}
+                              {td(`${member.id}.shortBio`)}
                             </p>
                           </div>
                         </div>
