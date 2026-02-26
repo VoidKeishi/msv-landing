@@ -39,12 +39,12 @@
     "home": {
       "title": "Mining Services Vietnam | Thăm dò, EPCM & Kỹ thuật Khai khoáng",
       "description": "Công ty dịch vụ khai khoáng tại Việt Nam chuyên thăm dò, địa chất, EPCM và phát triển tài nguyên khoáng sản tại Đông Nam Á. Đạt chuẩn JORC & NI43-101.",
-      "keywords": "dịch vụ khai khoáng việt nam, thăm dò khoáng sản campuchia lào, EPCM đông nam á, dịch vụ địa chất, ước tính tài nguyên JORC",
-      "ogTitle": "Mining Services Vietnam | Dịch vụ Khai khoáng Chuyên nghiệp",
-      "ogDescription": "Dịch vụ khai khoáng chuyên nghiệp tại Đông Nam Á"
+      "keywords": "dịch vụ khai khoáng việt nam, thăm dò khoáng sản Campuchia, Lào, EPCM Đông Nam Á, dịch vụ địa chất, ước tính tài nguyên JORC",
+      "ogTitle": "Mining Services Vietnam | Dịch vụ Khai thác khoáng sản Chuyên nghiệp",
+      "ogDescription": "Dịch vụ khai thác khoáng sản chuyên nghiệp tại Đông Nam Á"
     },
     "about": {
-      "title": "Giới thiệu MSV | Dịch vụ Khai khoáng Việt Nam - Am hiểu Khu vực",
+      "title": "Giới thiệu MSV | Dịch vụ Khai thác khoáng sản Việt Nam - Am hiểu Khu vực",
       "description": "MSV hoạt động tại Việt Nam, Campuchia, Lào, Malaysia & Thái Lan — mang đến dịch vụ khai khoáng hiệu quả, đạt chuẩn quốc tế."
     },
     "services": {
@@ -86,30 +86,30 @@
       "badge": "Về MSV",
       "headingLine1": "Mining Services",
       "headingHighlight": "Vietnam",
-      "paragraph1": "Mining Services Vietnam (MSV) là công ty dịch vụ khai khoáng có trụ sở tại Việt Nam, chuyên mang đến các giải pháp thiết thực, chất lượng cao — giúp khách hàng khai phá tiềm năng khoáng sản và thúc đẩy tăng trưởng trên toàn khu vực Đông Nam Á.",
-      "paragraph2": "Nhờ sự hiện diện vững chắc tại địa phương, kinh nghiệm khu vực phong phú và năng lực kỹ thuật quốc tế, MSV mang đến dịch vụ khai khoáng tối ưu chi phí — đáp ứng tiêu chuẩn kỹ thuật và an toàn phương Tây, đồng thời phù hợp với điều kiện thực tế và cơ cấu chi phí tại địa phương.",
+      "paragraph1": "Mining Services Vietnam (MSV) là công ty dịch vụ khai thác khoáng sản có trụ sở tại Việt Nam. Chúng tôi cung cấp các giải pháp thực tiễn, chất lượng cao nhằm khai phá tiềm năng và thúc đẩy sự phát triển cho khách hàng trên khắp khu vực Đông Nam Á.",
+      "paragraph2": "Nhờ sự hiện diện vững chắc tại địa phương, kinh nghiệm sâu rộng trong khu vực và năng lực kỹ thuật quốc tế, MSV mang đến các giải pháp khai thác thực tiễn, tối ưu chi phí, phù hợp với cơ cấu ngân sách và điều kiện vận hành tại địa phương. Các giải pháp của chúng tôi luôn đảm bảo đáp ứng các tiêu chuẩn kỹ thuật và an toàn khắt khe của phương Tây, đồng thời vẫn duy trì sự tương thích tối đa với bối cảnh khu vực.",
       "downloadButton": "Hồ sơ Công ty (Tháng 2/2026)",
       "featureRegionalTitle": "Am hiểu Khu vực",
-      "featureRegionalDesc": "Hoạt động tại Việt Nam, Campuchia, Lào, Malaysia và Thái Lan — am hiểu thị trường, mạng lưới rộng khắp.",
-      "featureStandardsTitle": "Chuẩn Quốc tế",
+      "featureRegionalDesc": "Hoạt động tại Việt Nam, Campuchia, Lào, Malaysia và Thái Lan — am hiểu thị trường địa phương, mạng lưới quan hệ bền chặt.",
+      "featureStandardsTitle": "Tiêu chuẩn Quốc tế",
       "featureStandardsDesc": "Áp dụng tiêu chuẩn kỹ thuật và an toàn phương Tây, phù hợp với cơ cấu chi phí và điều kiện vận hành địa phương.",
-      "featureLifecycleTitle": "Trọn Vòng đời Dự án",
-      "featureLifecycleDesc": "Dịch vụ tích hợp từ thăm dò ban đầu, qua phát triển, xây dựng cho đến vận hành.",
-      "featureCertifiedTitle": "Chất lượng Được Chứng nhận",
-      "featureCertifiedDesc": "Chuyên gia JORC và NI 43-101 đảm bảo quản trị chặt chẽ và năng lực kỹ thuật vượt trội."
+      "featureLifecycleTitle": "Trọn vòng đời Dự án",
+      "featureLifecycleDesc": "Dịch vụ tích hợp từ thăm dò ban đầu, qua các bước phát triển, xây dựng và đi đến vận hành sản xuất.",
+      "featureCertifiedTitle": "Chất lượng đã được Chứng nhận",
+      "featureCertifiedDesc": "Đã được thẩm định bởi các Chuyên gia theo tiêu chuẩn JORC và NI 43-101 về việc đảm bảo quản trị chặt chẽ và năng lực kỹ thuật vượt trội."
     },
     "ServicesSnapshot": {
       "badge": "Năng lực",
       "heading": "Dịch vụ Của Chúng tôi",
       "subheading": "Dịch vụ khai khoáng tích hợp xuyên suốt vòng đời dự án — từ thăm dò giai đoạn đầu đến vận hành ổn định.",
-      "serviceExplorationTitle": "Thăm dò & Địa chất",
+      "serviceExplorationTitle": "Dịch vụ Thăm dò & Địa chất",
       "serviceExplorationDesc": "Triển khai thăm dò toàn diện từ khảo sát ban đầu đến khoan thăm dò và báo cáo — hơn 150.000m đã hoàn thành.",
-      "serviceResourceTitle": "Tài nguyên & Trữ lượng",
-      "serviceResourceDesc": "Ước tính tài nguyên đạt chuẩn JORC và NI 43-101, nghiên cứu trữ lượng và mô hình hóa địa chất.",
+      "serviceResourceTitle": "Phát triển Tài nguyên & Trữ lượng",
+      "serviceResourceDesc": "Ước tính tài nguyên, nghiên cứu trữ lượng và lập mô hình địa chất tuân thủ các tiêu chuẩn JORC và NI 43-101.",
       "serviceProjectTitle": "Quản lý Dự án (EPCM)",
-      "serviceProjectDesc": "Đại diện chủ đầu tư hoặc EPCM — quản lý kỹ thuật, mua sắm, xây dựng và chạy thử.",
-      "serviceOperationalTitle": "Hỗ trợ Vận hành",
-      "serviceOperationalDesc": "Xây dựng bộ máy vận hành bài bản với nhân sự, mua sắm và hệ thống quản trị.",
+      "serviceProjectDesc": "Đại diện chủ đầu tư hoặc EPCM — quản lý toàn diện các khâu thiết kế, thu mua, thi công và chạy thử bàn giao.",
+      "serviceOperationalTitle": "Sẵn sàng Vận hành",
+      "serviceOperationalDesc": "Xây dựng bộ máy vận hành bài bản và tuân thủ đầy đủ quy định, bao gồm các hệ thống về Nhân sự (HR), Thu mua và Quản trị doanh nghiệp.",
       "viewAll": "Xem tất cả Dịch vụ"
     },
     "FeaturedProjects": {
@@ -132,16 +132,16 @@
       "badge": "Về MSV",
       "headingLine1": "Kiến tạo Giá trị",
       "headingHighlight": "Khắp Đông Nam Á",
-      "subheading": "Dịch vụ khai khoáng chuyên nghiệp từ đối tác khu vực đáng tin cậy"
+      "subheading": "Đối tác khu vực đáng tin cậy cung cấp các giải pháp khai thác mỏ thực tiễn, chất lượng cao"
     },
     "Overview": {
       "heading": "Tổng quan Công ty",
-      "paragraph1": "Mining Services Vietnam (MSV) là công ty dịch vụ khai khoáng có trụ sở tại Việt Nam, chuyên mang đến các giải pháp thiết thực, chất lượng cao — giúp khách hàng khai phá tiềm năng khoáng sản và thúc đẩy tăng trưởng trên toàn khu vực Đông Nam Á.",
-      "paragraph2": "Nhờ sự hiện diện vững chắc tại địa phương, kinh nghiệm khu vực phong phú và năng lực kỹ thuật quốc tế, MSV mang đến dịch vụ khai khoáng tối ưu chi phí — đáp ứng tiêu chuẩn kỹ thuật và an toàn phương Tây, đồng thời phù hợp với điều kiện thực tế và cơ cấu chi phí tại địa phương."
+      "paragraph1": "Mining Services Vietnam (MSV) là công ty dịch vụ khai thác khoáng sản có trụ sở tại Việt Nam. Chúng tôi cung cấp các giải pháp thực tiễn, chất lượng cao nhằm khai phá tiềm năng và thúc đẩy sự phát triển cho khách hàng trên khắp khu vực Đông Nam Á.",
+      "paragraph2": "Nhờ sự hiện diện vững chắc tại địa phương, kinh nghiệm sâu rộng trong khu vực và năng lực kỹ thuật quốc tế, MSV mang đến các giải pháp khai thác thực tiễn, tối ưu chi phí, phù hợp với cơ cấu ngân sách và điều kiện vận hành tại địa phương. Các giải pháp của chúng tôi luôn đảm bảo đáp ứng các tiêu chuẩn kỹ thuật và an toàn khắt khe của phương Tây, đồng thời vẫn duy trì sự tương thích tối đa với bối cảnh khu vực."
     },
     "Vision": {
       "heading": "Tầm nhìn",
-      "statement": "Mang đến dịch vụ khai khoáng đạt chuẩn quốc tế, tối ưu chi phí — song hành cùng trách nhiệm bảo vệ môi trường và đảm bảo an toàn, sức khỏe cho con người và cộng đồng.",
+      "statement": "Cung cấp các dịch vụ khai thác mỏ tiêu chuẩn cao, tối ưu hóa chi phí, đồng thời bảo vệ môi trường và đảm bảo an toàn, phúc lợi cho con người cũng như cộng đồng.",
       "environmental": "Bảo vệ Môi trường",
       "community": "An toàn Cộng đồng"
     },
@@ -150,13 +150,13 @@
       "heading": "Năng lực Chuyên môn",
       "subheading": "Dịch vụ khai khoáng tích hợp xuyên suốt vòng đời dự án",
       "explorationTitle": "Thăm dò & Địa chất",
-      "explorationDesc": "Từ khảo sát giai đoạn đầu, vật lý địa chất đến khoan thăm dò — bao gồm thiết kế, triển khai và báo cáo chương trình.",
+      "explorationDesc": "Từ khảo sát giai đoạn đầu thông qua địa vật lý và khoan, bao gồm toàn bộ các khâu thiết kế chương trình, thực thi và lập báo cáo.",
       "resourceTitle": "Tài nguyên & Trữ lượng",
       "resourceDesc": "Đáp ứng yêu cầu báo cáo trong nước lẫn tiêu chuẩn JORC và NI43-101.",
       "epcmTitle": "Dịch vụ EPCM",
       "epcmDesc": "Kỹ thuật, Mua sắm và Quản lý Xây dựng xuyên suốt vòng đời dự án.",
       "engineeringTitle": "Dịch vụ Kỹ thuật",
-      "engineeringDesc": "Khai khoáng, dân dụng và cơ khí — giải pháp thiết thực, đúng mục đích.",
+      "engineeringDesc": "Bao gồm các chuyên ngành khai thác mỏ, xây dựng dân dụng và cơ khí với các giải pháp thực tiễn, phù hợp với mục đích sử dụng.",
       "hrTitle": "Nhân sự & Hành chính",
       "hrDesc": "Hỗ trợ đội ngũ dự án và vận hành với chuyên môn địa phương, tuân thủ quy định.",
       "operationalTitle": "Hỗ trợ Vận hành",
@@ -166,13 +166,13 @@
       "heading": "Vì sao nên Chọn MSV",
       "subheading": "Điều tạo nên sự khác biệt của MSV trong ngành dịch vụ khai khoáng Đông Nam Á",
       "presenceTitle": "Vững chắc tại Khu vực",
-      "presenceDesc": "Hiện diện tại 5 quốc gia Đông Nam Á với mạng lưới đối tác rộng khắp và hiểu biết thị trường sâu sắc.",
+      "presenceDesc": "Hiện diện tại 5 quốc gia Đông Nam Á với mạng lưới đối tác rộng khắp và hiểu biết thị trường sâu rộng.",
       "standardsTitle": "Chuẩn Quốc tế",
-      "standardsDesc": "Tiêu chuẩn kỹ thuật phương Tây, chi phí hợp lý tại địa phương — chất lượng không thỏa hiệp.",
+      "standardsDesc": "Tiêu chuẩn kỹ thuật phương Tây, chi phí hợp lý tại địa phương, đảm bảo chất lượng mà không cần đánh đổi.",
       "certifiedTitle": "Chuyên gia JORC/NI43-101",
-      "certifiedDesc": "Đội ngũ Competent Person cho báo cáo tài nguyên và trữ lượng — quản trị minh bạch, tuân thủ chặt chẽ.",
+      "certifiedDesc": "Các chuyên gia có thẩm quyền thực hiện báo cáo tài nguyên và trữ lượng với hệ thống quản trị chặt chẽ và tính tuân thủ cao.",
       "teamTitle": "Đội ngũ Giàu Kinh nghiệm",
-      "teamDesc": "Hơn 30 năm kinh nghiệm quản lý cấp cao trong khai khoáng, đa dạng khoáng sản và quốc gia."
+      "teamDesc": "Hơn 30 năm kinh nghiệm quản lý cấp cao trong khai khoáng, nhiều loại khoáng sản và quốc gia khác nhau."
     },
     "Region": {
       "heading": "Hoạt động Khắp Đông Nam Á",
@@ -205,26 +205,26 @@
       "heading": "Mô hình Cung cấp Dịch vụ",
       "subheading": "Hình thức hợp tác linh hoạt, tùy theo giai đoạn dự án, mức độ rủi ro và mục tiêu của khách hàng",
       "advisoryTitle": "Tư vấn",
-      "advisoryDesc": "Tư vấn kỹ thuật & thương mại, đánh giá, nghiên cứu và hỗ trợ đội ngũ chủ đầu tư",
+      "advisoryDesc": "Tư vấn kỹ thuật & thương mại, đánh giá, nghiên cứu và hỗ trợ đội ngũ của chủ đầu tư",
       "epcmTitle": "EPCM",
-      "epcmDesc": "Triển khai tích hợp: kỹ thuật, mua sắm, quản lý xây dựng và chạy thử",
+      "epcmDesc": "Thực hiện tích hợp thiết kế, thu mua, quản lý thi công và chạy thử bàn giao.",
       "embeddedTitle": "Đội ngũ Tích hợp",
-      "embeddedDesc": "Chuyên gia MSV làm việc trực tiếp trong đội ngũ khách hàng để bổ sung năng lực và đảm bảo liên tục"
+      "embeddedDesc": "Nhân sự MSV được cử biệt phái vào đội ngũ của khách hàng để tập trung nâng cao năng lực và đảm bảo tính liên tục."
     },
     "Phases": {
       "heading": "Hỗ trợ theo Giai đoạn",
       "phase1Title": "Thăm dò",
-      "phase1Desc": "Thiết kế, triển khai và báo cáo chương trình",
+      "phase1Desc": "Thiết kế phương án, triển khai và báo cáo",
       "phase2Title": "Nghiên cứu & Phát triển",
       "phase2Desc": "Tài nguyên, trữ lượng, quy hoạch mỏ, xác định phạm vi dự án",
       "phase3Title": "Thực hiện",
-      "phase3Desc": "Triển khai EPCM và đại diện chủ đầu tư",
+      "phase3Desc": "Nhà thầu EPCM và đại diện chủ đầu tư",
       "phase4Title": "Vận hành",
       "phase4Desc": "Chuẩn bị vận hành, nâng công suất và tối ưu hóa"
     },
     "BottomCTA": {
       "heading": "Thiết thực. Tối ưu Chi phí.",
-      "subheading": "Dù ở mô hình hợp tác nào, MSV luôn mang đến giải pháp thiết thực, tối ưu chi phí — đạt chuẩn quốc tế và phù hợp với điều kiện vận hành thực tế cùng mục tiêu dự án.",
+      "subheading": "Dù ở mô hình hợp tác nào, MSV cung cấp các giải pháp thực tiễn, tối ưu chi phí theo tiêu chuẩn quốc tế, phù hợp với điều kiện vận hành tại địa phương và mục tiêu của dự án.",
       "feeForService": "Phí dịch vụ",
       "feeForServiceLabel": "Mô hình chính",
       "equityParticipation": "Góp vốn",
@@ -238,7 +238,7 @@
       "headingHighlight": "Dày dạn Kinh nghiệm",
       "subheading": "Kiến tạo giá trị khắp Đông Nam Á với hàng thập kỷ kinh nghiệm thực chiến"
     },
-    "intro": "MSV đã xây dựng được đội ngũ kỹ thuật và quản lý vững mạnh tại địa phương, cùng sự đồng hành của các chuyên gia khai khoáng giàu kinh nghiệm và uy tín trong ngành. Công ty còn được định hướng bởi Hội đồng Cố vấn gồm những nhà lãnh đạo ngành đã được kiểm chứng, mang đến tầm nhìn chiến lược và tư vấn độc lập.",
+    "intro": "MSV đã xây dựng được đội ngũ kỹ thuật và quản lý vững mạnh tại địa phương, được hỗ trợ bởi các chuyên gia khai thác mỏ dày dạn kinh nghiệm và uy tín. Công ty được dẫn dắt bởi Hội đồng Cố vấn gồm những nhà lãnh đạo xuất sắc trong ngành, mang đến tầm nhìn chiến lược và đưa ra những tư vấn độc lập.",
     "categories": {
       "board": {
         "title": "Hội đồng Quản trị",
@@ -264,7 +264,7 @@
       "badge": "Dự án",
       "headingLine1": "Tạo dựng Giá trị",
       "headingHighlight": "Khắp Khu vực",
-      "subheading": "Các dự án đang triển khai tại nhiều quốc gia và khoáng sản khác nhau ở Đông Nam Á"
+      "subheading": "Các dự án khai thác khoáng sản khác nhau đang triển khai tại nhiều quốc gia ở Đông Nam Á"
     },
     "Featured": {
       "heading": "Dự án Tiêu biểu",
@@ -331,8 +331,8 @@
   "Data": {
     "services": {
       "exploration": {
-        "title": "Thăm dò & Địa chất",
-        "description": "MSV triển khai dịch vụ thăm dò trọn gói — từ thiết kế chương trình, thực hiện đến báo cáo kỹ thuật — bằng đội ngũ nội bộ, thiết bị riêng và hỗ trợ chuyên gia. Nhờ đó kiểm soát tốt hơn chất lượng dữ liệu, tiến độ và chi phí.",
+        "title": "Dịch vụ Thăm dò & Địa chất",
+        "description": "MSV cung cấp dịch vụ thăm dò trọn gói, kết hợp chặt chẽ từ khâu thiết kế chương trình, thực thi hiện trường đến lập báo cáo kỹ thuật. Bằng việc sử dụng đội ngũ chuyên gia nội bộ, hệ thống trang thiết bị riêng biệt và sự hỗ trợ chuyên sâu, cách tiếp cận tích hợp này của chúng tôi giúp nâng cao chất lượng dữ liệu, kiểm soát tiến độ và tối ưu hóa chi phí.",
         "features": [
           "Thăm dò giai đoạn đầu: lập bản đồ địa chất, lấy mẫu đất và đá, đào rãnh, báo cáo kỹ thuật",
           "Khảo sát vật lý địa chất (EM, IP, DHEM): thiết kế, triển khai, phân tích và báo cáo",
@@ -342,19 +342,19 @@
         ]
       },
       "resource": {
-        "title": "Tài nguyên & Trữ lượng",
-        "description": "MSV xây dựng mô hình địa chất, tài nguyên và trữ lượng bằng phần mềm tiêu chuẩn ngành (Surpac, Micromine) — đáp ứng yêu cầu báo cáo trong nước, JORC và NI 43-101.",
+        "title": "Phát triển Tài nguyên & Trữ lượng",
+        "description": "MSV xây dựng các mô hình địa chất, tài nguyên và trữ lượng bằng các phần mềm tiêu chuẩn trong ngành bao gồm Surpac và Micromine, tuân thủ các yêu cầu báo cáo của địa phương cũng như tiêu chuẩn JORC và NI 43-101.",
         "features": [
           "Mô hình hóa địa chất và ước tính tài nguyên",
           "Báo cáo đạt chuẩn JORC và NI 43-101",
           "Nghiên cứu tối ưu hóa mỏ và chuyển đổi trữ lượng",
-          "Cung cấp Competent Person (Chuyên gia có năng lực)",
+          "Cung cấp Chuyên gia có năng lực",
           "Cơ sở dữ liệu chi phí nội bộ phong phú, hỗ trợ ước tính chính xác"
         ]
       },
       "project-delivery": {
         "title": "Quản lý Dự án (Đại diện Chủ đầu tư & EPCM)",
-        "description": "MSV đảm nhận vai trò Đại diện Chủ đầu tư hoặc nhà thầu EPCM — quản lý kỹ thuật, mua sắm, xây dựng và chạy thử nhằm đạt mục tiêu về phạm vi, chi phí, tiến độ, chất lượng, an toàn và hiệu suất.",
+        "description": "MSV đảm nhận vai trò Đại diện Chủ đầu tư hoặc nhà thầu EPCM — quản lý thiết kế, thu mua, thi công và chạy thử nhằm đạt được các mục tiêu về phạm vi, chi phí, tiến độ, chất lượng, an toàn và hiệu suất.",
         "features": [
           "Dịch vụ Đại diện Chủ đầu tư",
           "Năng lực nhà thầu EPCM",
@@ -384,12 +384,12 @@
       "hai-nguyen-ngoc": {
         "title": "Giám đốc & Trưởng bộ phận Địa chất",
         "shortBio": "Thạc sĩ Địa chất, hơn 20 năm kinh nghiệm thăm dò và quản lý địa chất mỏ.",
-        "bio": "Thạc sĩ Địa chất với hơn 20 năm kinh nghiệm trong thăm dò và quản lý địa chất mỏ. Thành thạo phần mềm địa chất tiêu chuẩn ngành, dày dạn kinh nghiệm thiết kế và quản lý chương trình EM, DHEM, 3D IP. Am hiểu sâu sắc yêu cầu báo cáo trữ lượng Việt Nam và tiêu chuẩn JORC."
+        "bio": "Thạc sĩ Địa chất với hơn 20 năm kinh nghiệm trong thăm dò và quản lý địa chất mỏ. Sử dụng thành thạo các phần mềm địa chất tiêu chuẩn công nghiệp, có kinh nghiệm chuyên sâu trong việc thiết kế và quản lý các chương trình đo điện từ (EM), điện từ lỗ khoan (DHEM), điện trở suất cắt lớp 3D (3D IP), đồng thời am hiểu tường tận các quy định báo cáo trữ lượng của Việt Nam cũng như tiêu chuẩn JORC."
       },
       "thanh-nguyen-van": {
         "title": "Giám đốc & Trưởng bộ phận Khai khoáng",
         "shortBio": "Kỹ sư Khai khoáng, 13 năm kinh nghiệm thực tế tại mỏ lộ thiên và hầm lò ở Việt Nam, Lào, Campuchia.",
-        "bio": "Kỹ sư Khai khoáng với 13 năm kinh nghiệm thực tế tại mỏ lộ thiên và hầm lò ở Việt Nam, Lào và Campuchia. Thành thạo phần mềm khai khoáng tiêu chuẩn ngành, giàu kinh nghiệm trong cấp phép dự án khai khoáng tại Việt Nam."
+        "bio": "Kỹ sư Khai khoáng với 13 năm kinh nghiệm thực tế tại mỏ lộ thiên và hầm lò ở Việt Nam, Lào và Campuchia. Thành thạo phần mềm khai khoáng tiêu chuẩn ngành, giàu kinh nghiệm trong cấp phép dự án khai thác khoáng sản tại Việt Nam."
       },
       "dr-chris-swindells": {
         "title": "Hội đồng Cố vấn",
@@ -404,17 +404,17 @@
       "will-coverdale": {
         "title": "Cố vấn Kỹ thuật Cấp cao - Trữ lượng JORC & NI43-101",
         "shortBio": "Kỹ sư Khai khoáng, MBA, hơn 19 năm kinh nghiệm trong ngành khai khoáng và kim loại.",
-        "bio": "Kỹ sư Khai khoáng có bằng MBA và hơn 19 năm kinh nghiệm trong ngành khai khoáng và kim loại — cả mỏ lộ thiên lẫn hầm lò. Nền tảng chuyên sâu về đánh giá dự án, thẩm định M&A, lập kế hoạch và phát triển dự án, tư vấn kỹ thuật – chiến lược. Đồng thời là nhà sáng lập startup công nghệ trong ngành khai khoáng. Competent Person được công nhận cho báo cáo Trữ lượng JORC & NI43-101."
+        "bio": "Kỹ sư Khai khoáng có bằng MBA và hơn 19 năm kinh nghiệm trong ngành khai khoáng và kim loại — cả mỏ lộ thiên lẫn hầm lò. Nền tảng chuyên sâu về đánh giá dự án, thẩm định M&A, lập kế hoạch và phát triển dự án, tư vấn kỹ thuật – chiến lược. Đồng thời là nhà sáng lập startup công nghệ trong ngành khai khoáng. Ông được công nhận là Chuyên gia có thẩm quyền trong việc lập báo cáo Trữ lượng theo tiêu chuẩn JORC và NI 43-101."
       },
       "chris-ramsay": {
         "title": "Cố vấn Kỹ thuật Cấp cao - Tài nguyên JORC & NI43-101",
         "shortBio": "Chuyên gia tài nguyên khoáng sản và phát triển mỏ, hơn 25 năm kinh nghiệm toàn cầu.",
-        "bio": "Chuyên gia tài nguyên khoáng sản và phát triển mỏ với hơn 25 năm kinh nghiệm toàn cầu xuyên suốt chuỗi giá trị khai khoáng. Chuyên môn bao gồm: thăm dò khoáng sản, ước tính tài nguyên, phát triển và đánh giá dự án, quản trị tài nguyên, địa chất mỏ và quản lý vận hành. Competent Person được công nhận cho báo cáo tài nguyên JORC và NI43-101."
+        "bio": "Chuyên gia tài nguyên khoáng sản và phát triển mỏ với hơn 25 năm kinh nghiệm toàn cầu xuyên suốt chuỗi giá trị khai khoáng. Chuyên môn bao gồm: thăm dò khoáng sản, ước tính tài nguyên, phát triển và đánh giá dự án, quản trị tài nguyên, địa chất mỏ và quản lý vận hành. Ông được công nhận là Chuyên gia có thẩm quyền trong việc lập báo cáo Trữ lượng theo tiêu chuẩn JORC và NI 43-101."
       },
       "phd-minh-dinh-huu": {
         "title": "Chuyên gia Địa chất Khu vực",
         "shortBio": "Chuyên gia thăm dò và đánh giá dự án cấp cao, hơn 40 năm kinh nghiệm với đa dạng loại khoáng sản.",
-        "bio": "Chuyên gia thăm dò và đánh giá dự án cấp cao với hơn 40 năm kinh nghiệm trên nhiều loại khoáng sản: niken–đồng (PGE), vàng, đồng–vàng, đồng, thiếc và cát khoáng. Giàu kinh nghiệm đánh giá kỹ thuật, phản biện chuyên môn và hướng dẫn học thuật — bao gồm hướng dẫn luận văn đại học, thạc sĩ và tham gia hội đồng chấm luận án tiến sĩ trong nghiên cứu về vàng và hệ thống khoáng sản phi sắt."
+        "bio": "Chuyên gia thăm dò và đánh giá dự án cấp cao với hơn 40 năm kinh nghiệm trên nhiều loại khoáng sản: niken–đồng (PGE), vàng, đồng–vàng, đồng, thiếc và cát khoáng. Giàu kinh nghiệm đánh giá kỹ thuật, phản biện chuyên môn và hướng dẫn học thuật — bao gồm hướng dẫn luận văn đại học, thạc sĩ và tham gia hội đồng chấm luận án tiến sĩ trong nghiên cứu về vàng và kim loại màu."
       },
       "hung-tran-huu": {
         "title": "An toàn – Sức khỏe – Môi trường & Phát triển Bền vững",
@@ -460,7 +460,7 @@
       "xuan-loc-tho": {
         "name": "Xuân Lộc Thọ",
         "client": "Xuân Lộc Thọ – Liên doanh Dự án Ta Khoa",
-        "description": "MSV cử 3 kỹ sư tham gia trực tiếp đội ngũ khách hàng để hỗ trợ cấp phép và nghiên cứu dự án (bao gồm nghiên cứu khả thi & ĐTM).",
+        "description": "MSV có 03 kỹ sư biệt phái làm việc trực tiếp trong đội ngũ của khách hàng để hỗ trợ thúc đẩy các thủ tục xin phép, cấp giấy phép và các báo cáo nghiên cứu dự án (bao gồm Nghiên cứu khả thi - FS và Đánh giá tác động môi trường - EIA).",
         "services": ["Quản lý Dự án (Đại diện Chủ đầu tư & EPCM)"],
         "deliveryModel": ["Đội ngũ Tích hợp"]
       }
