@@ -39,14 +39,24 @@ export function CompanyOverview() {
               {t('paragraph2')}
             </p>
 
-            <a
-              href="/company_profiles/Mining Services Vietnam Company Profile (Feb 2026).pdf"
-              download
-              className="inline-flex items-center gap-2 mt-6 px-6 py-3 rounded-md font-semibold border-2 border-msv-blue text-msv-blue hover:bg-msv-blue hover:text-white transition-all duration-200"
-            >
-              <Download className="w-5 h-5" />
-              {t('downloadButton')}
-            </a>
+            <div className="flex flex-wrap gap-3 mt-6">
+              <a
+                href="/company_profiles/Mining Services Vietnam Company Profile (Feb 2026).pdf"
+                download
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md text-sm font-semibold border-2 border-msv-blue bg-msv-blue text-white hover:bg-msv-blue/90 hover:border-msv-blue/90 transition-all duration-200"
+              >
+                <Download className="w-4 h-4" />
+                {t('downloadProfile')}
+              </a>
+              <a
+                href="/company_profiles/Mining Services Vietnam Capability Statement (Mar 26).pdf"
+                download
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md text-sm font-semibold border-2 border-msv-blue text-msv-blue hover:bg-msv-blue hover:text-white transition-all duration-200"
+              >
+                <Download className="w-4 h-4" />
+                {t('downloadCapability')}
+              </a>
+            </div>
           </AnimatedSection>
 
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-6">
