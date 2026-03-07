@@ -41,7 +41,7 @@ export function CompanyOverview() {
 
             <div className="flex flex-wrap gap-3 mt-6">
               <a
-                href="/company_profiles/Mining Services Vietnam Company Profile (Feb 2026).pdf"
+                href="https://gdp0phlejbs9naup.public.blob.vercel-storage.com/Mining%20Services%20Vietnam%20Company%20Profile%20%28Feb%202026%29.pdf"
                 download
                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md text-sm font-semibold border-2 border-msv-blue bg-msv-blue text-white hover:bg-msv-blue/90 hover:border-msv-blue/90 transition-all duration-200"
               >
@@ -49,7 +49,7 @@ export function CompanyOverview() {
                 {t('downloadProfile')}
               </a>
               <a
-                href="/company_profiles/Mining Services Vietnam Capability Statement (Mar 26).pdf"
+                href="https://gdp0phlejbs9naup.public.blob.vercel-storage.com/Mining%20Services%20Vietnam%20Capability%20Statement%20%28Mar%2026%29.pdf"
                 download
                 className="inline-flex items-center gap-2 px-4 py-2.5 rounded-md text-sm font-semibold border-2 border-msv-blue text-msv-blue hover:bg-msv-blue hover:text-white transition-all duration-200"
               >
