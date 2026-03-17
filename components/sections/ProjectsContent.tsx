@@ -8,7 +8,8 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { Container } from '@/components/ui/Container'
 import { AnimatedSection } from '@/components/ui/AnimatedComponents'
-import { projects } from '@/data/projects'
+import { urlFor } from '@/sanity/lib/image'
+import type { SanityProject } from '@/sanity/lib/types'
 import { Calendar, Briefcase, ArrowRight, ChevronLeft, ChevronRight, Compass, Database, Building2, Settings } from 'lucide-react'
 
 const countryData: Record<string, { flag: string }> = {
@@ -17,16 +18,17 @@ const countryData: Record<string, { flag: string }> = {
   'Vietnam': { flag: '\u{1F1FB}\u{1F1F3}' },
 }
 
-const serviceIconKeys: Record<string, typeof Compass> = {
-  'Exploration & Geological Services': Compass,
-  'Resource & Reserve Development': Database,
-  'Project Delivery (Owner\'s Team & EPCM)': Building2,
-  'Operational Readiness & Support': Settings,
+const serviceIcons: Record<string, typeof Compass> = {
+  exploration: Compass,
+  resource: Database,
+  'project-delivery': Building2,
+  operational: Settings,
 }
 
-export function ProjectsContent() {
+export function ProjectsContent({ projects }: { projects: SanityProject[] }) {
   const t = useTranslations('ProjectsPage')
-  const td = useTranslations('Data.projects')
+  const ts = useTranslations('Data.services')
+  const tdm = useTranslations('ServicesPage.DeliveryModel')
 
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, align: 'center' },
@@ -57,6 +59,12 @@ export function ProjectsContent() {
       emblaApi.off('reInit', onSelect)
     }
   }, [emblaApi, onSelect])
+
+  const deliveryModelLabels: Record<string, string> = {
+    advisory: tdm('advisoryTitle'),
+    epcm: tdm('epcmTitle'),
+    embedded: tdm('embeddedTitle'),
+  }
 
   return (
     <>
@@ -112,23 +120,23 @@ export function ProjectsContent() {
               <div className="flex">
                 {projects.map((project) => {
                   const country = countryData[project.country] || { flag: '\u{1F30F}' }
-                  const projectServices = td.raw(`${project.id}.services`) as string[]
-                  const projectDeliveryModel = td.raw(`${project.id}.deliveryModel`) as string[]
 
                   return (
                     <div
-                      key={project.id}
+                      key={project._id}
                       className="flex-[0_0_100%] min-w-0 px-4"
                     >
                       <div className="bg-white rounded-3xl border border-msv-light-2/30 overflow-hidden shadow-xl">
                         <div className="grid grid-cols-1 lg:grid-cols-5 lg:min-h-[400px]">
                           <div className="relative lg:col-span-2 min-h-[280px] overflow-hidden">
-                            <Image
-                              src={project.images[0]}
-                              alt={`${td(`${project.id}.name`)} project`}
-                              fill
-                              className="object-cover"
-                            />
+                            {project.coverImage && (
+                              <Image
+                                src={urlFor(project.coverImage).width(800).auto('format').url()}
+                                alt={`${project.title} project`}
+                                fill
+                                className="object-cover"
+                              />
+                            )}
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-slate-900/20 lg:bg-gradient-to-r lg:from-slate-900/90 lg:via-slate-900/50 lg:to-slate-900/20" />
 
                             <div className="absolute inset-0 p-8 lg:p-10 flex flex-col justify-end text-white">
@@ -141,10 +149,10 @@ export function ProjectsContent() {
                               </div>
 
                               <h3 className="text-3xl lg:text-4xl font-bold mb-2 leading-tight">
-                                {td(`${project.id}.name`)}
+                                {project.title}
                               </h3>
                               <p className="text-white/80 font-medium mb-4">
-                                {td(`${project.id}.client`)}
+                                {project.client}
                               </p>
 
                               <div className="flex items-center gap-2 text-white/70 text-sm">
@@ -156,7 +164,7 @@ export function ProjectsContent() {
 
                           <div className="lg:col-span-3 p-8 lg:p-12">
                             <p className="text-lg text-msv-dark-2/80 mb-8 leading-relaxed">
-                              {td(`${project.id}.description`)}
+                              {project.description}
                             </p>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -166,12 +174,12 @@ export function ProjectsContent() {
                                   {t('Featured.servicesProvided')}
                                 </h4>
                                 <div className="space-y-2">
-                                  {projectServices.map((service: string) => {
-                                    const Icon = serviceIconKeys[service] || Compass
+                                  {project.services.map((serviceId) => {
+                                    const Icon = serviceIcons[serviceId] || Compass
                                     return (
-                                      <div key={service} className="flex items-center gap-3 text-sm text-msv-dark-2/80">
+                                      <div key={serviceId} className="flex items-center gap-3 text-sm text-msv-dark-2/80">
                                         <Icon size={16} className="text-msv-blue flex-shrink-0" />
-                                        <span>{service}</span>
+                                        <span>{ts(`${serviceId}.title`)}</span>
                                       </div>
                                     )
                                   })}
@@ -184,13 +192,13 @@ export function ProjectsContent() {
                                   {t('Featured.deliveryModel')}
                                 </h4>
                                 <div className="flex flex-wrap gap-2">
-                                  {projectDeliveryModel.map((model: string) => (
+                                  {project.deliveryModel.map((modelId) => (
                                     <span
-                                      key={model}
+                                      key={modelId}
                                       className="inline-flex items-center gap-1.5 bg-msv-blue/10 text-msv-blue px-3 py-1.5 rounded-full text-sm font-medium"
                                     >
                                       <Briefcase size={14} />
-                                      {model}
+                                      {deliveryModelLabels[modelId] || modelId}
                                     </span>
                                   ))}
                                 </div>

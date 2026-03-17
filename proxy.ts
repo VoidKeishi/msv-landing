@@ -8,5 +8,5 @@ export function proxy(request: import('next/server').NextRequest) {
 }
 
 export const config = {
-  matcher: '/((?!api|trpc|_next|_vercel|.*\\..*).*)',
+  matcher: '/((?!api|trpc|_next|_vercel|studio|.*\\..*).*)',
 }

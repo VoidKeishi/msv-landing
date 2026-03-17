@@ -7,7 +7,8 @@ import { notFound } from "next/navigation"
 import { routing } from "@/i18n/routing"
 import { Navigation } from "@/components/sections/Navigation"
 import { Footer } from "@/components/sections/Footer"
-import "../globals.css"
+import { getCompanyInfo } from "@/sanity/lib/fetch"
+import "../../globals.css"
 
 const montserrat = Montserrat({
   subsets: ["latin", "vietnamese"],
@@ -64,7 +65,10 @@ export default async function LocaleLayout({ children, params }: Props) {
   }
   setRequestLocale(locale)
 
-  const messages = await getMessages()
+  const [messages, companyInfo] = await Promise.all([
+    getMessages(),
+    getCompanyInfo(locale),
+  ])
 
   return (
     <html lang={locale}>
@@ -72,7 +76,7 @@ export default async function LocaleLayout({ children, params }: Props) {
         <NextIntlClientProvider messages={messages}>
           <Navigation />
           <main className="pt-20">{children}</main>
-          <Footer />
+          <Footer companyInfo={companyInfo} />
         </NextIntlClientProvider>
       </body>
     </html>

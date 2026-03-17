@@ -5,7 +5,8 @@ import Image from 'next/image'
 import { useTranslations } from 'next-intl'
 import { Container } from '@/components/ui/Container'
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/AnimatedComponents'
-import { teamMembers, type TeamMember } from '@/data/team'
+import { urlFor } from '@/sanity/lib/image'
+import type { SanityTeamMember } from '@/sanity/lib/types'
 import { Mail, Users, Award, Shield, Briefcase, X } from 'lucide-react'
 
 const categoryIcons = {
@@ -15,8 +16,7 @@ const categoryIcons = {
   executive: Briefcase,
 } as const
 
-function MemberModal({ member, onClose }: { member: TeamMember; onClose: () => void }) {
-  const td = useTranslations('Data.team')
+function MemberModal({ member, onClose }: { member: SanityTeamMember; onClose: () => void }) {
   const t = useTranslations('TeamPage')
 
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
@@ -54,12 +54,14 @@ function MemberModal({ member, onClose }: { member: TeamMember; onClose: () => v
 
         <div className="flex flex-col sm:flex-row">
           <div className="relative w-full sm:w-56 md:w-64 aspect-[3/4] sm:aspect-auto sm:min-h-[320px] flex-shrink-0 bg-gradient-to-br from-msv-light-2/20 to-msv-light-2-subtle overflow-hidden rounded-t-2xl sm:rounded-l-2xl sm:rounded-tr-none">
-            <Image
-              src={member.image}
-              alt={member.name}
-              fill
-              className="object-cover object-top"
-            />
+            {member.photo && (
+              <Image
+                src={urlFor(member.photo).width(512).auto('format').url()}
+                alt={member.name}
+                fill
+                className="object-cover object-top"
+              />
+            )}
           </div>
 
           <div className="p-6 md:p-8 flex-1 flex flex-col min-w-0">
@@ -67,10 +69,10 @@ function MemberModal({ member, onClose }: { member: TeamMember; onClose: () => v
               {member.name}
             </h3>
             <p className="text-msv-blue font-semibold text-sm md:text-base mb-4">
-              {td(`${member.id}.title`)}
+              {member.jobTitle}
             </p>
             <p className="text-sm md:text-base text-msv-dark-2/80 leading-relaxed mb-5">
-              {td(`${member.id}.bio`)}
+              {member.fullBio}
             </p>
             {member.email && (
               <a
@@ -88,10 +90,9 @@ function MemberModal({ member, onClose }: { member: TeamMember; onClose: () => v
   )
 }
 
-export function TeamContent() {
-  const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null)
+export function TeamContent({ members }: { members: SanityTeamMember[] }) {
+  const [selectedMember, setSelectedMember] = useState<SanityTeamMember | null>(null)
   const t = useTranslations('TeamPage')
-  const td = useTranslations('Data.team')
 
   const categories = (['board', 'advisory', 'technical', 'executive'] as const).map((id) => ({
     id,
@@ -131,8 +132,8 @@ export function TeamContent() {
           </AnimatedSection>
 
           {categories.map((category, categoryIndex) => {
-            const members = teamMembers.filter(m => m.category === category.id)
-            if (members.length === 0) return null
+            const categoryMembers = members.filter(m => m.category === category.id)
+            if (categoryMembers.length === 0) return null
 
             return (
               <div key={category.id} className={categoryIndex > 0 ? 'mt-16 md:mt-24' : ''}>
@@ -151,8 +152,8 @@ export function TeamContent() {
                 </AnimatedSection>
 
                 <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-                  {members.map((member) => (
-                    <StaggerItem key={member.name}>
+                  {categoryMembers.map((member) => (
+                    <StaggerItem key={member._id}>
                       <button
                         type="button"
                         onClick={() => setSelectedMember(member)}
@@ -160,12 +161,14 @@ export function TeamContent() {
                       >
                         <div className="flex flex-col sm:flex-row h-full">
                           <div className="relative w-full sm:w-36 md:w-40 aspect-[3/4] sm:aspect-auto sm:h-full flex-shrink-0 bg-gradient-to-br from-msv-light-2/20 to-msv-light-2-subtle overflow-hidden">
-                            <Image
-                              src={member.image}
-                              alt={member.name}
-                              fill
-                              className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                            />
+                            {member.photo && (
+                              <Image
+                                src={urlFor(member.photo).width(320).auto('format').url()}
+                                alt={member.name}
+                                fill
+                                className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                              />
+                            )}
                           </div>
 
                           <div className="p-4 sm:p-5 md:p-6 flex-1 flex flex-col min-w-0">
@@ -173,10 +176,10 @@ export function TeamContent() {
                               {member.name}
                             </h3>
                             <p className="text-msv-blue font-semibold text-sm mb-3">
-                              {td(`${member.id}.title`)}
+                              {member.jobTitle}
                             </p>
                             <p className="text-sm text-msv-gray-blue leading-relaxed flex-1">
-                              {td(`${member.id}.shortBio`)}
+                              {member.shortBio}
                             </p>
                           </div>
                         </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { ProjectsContent } from '@/components/sections/ProjectsContent'
+import { getProjects } from '@/sanity/lib/fetch'
 
 type Props = {
   params: Promise<{ locale: string }>
@@ -26,5 +27,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ProjectsPage({ params }: Props) {
   const { locale } = await params
   setRequestLocale(locale)
-  return <ProjectsContent />
+  const projects = await getProjects(locale)
+  return <ProjectsContent projects={projects} />
 }

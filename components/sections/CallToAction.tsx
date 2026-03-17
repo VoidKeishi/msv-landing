@@ -6,9 +6,13 @@ import { Button } from '@/components/ui/Button'
 import { Container } from '@/components/ui/Container'
 import { AnimatedSection } from '@/components/ui/AnimatedComponents'
 import { ArrowRight, Mail, Phone } from 'lucide-react'
+import type { SanityCompanyInfo } from '@/sanity/lib/types'
 
-export function CallToAction() {
+export function CallToAction({ companyInfo }: { companyInfo?: SanityCompanyInfo | null }) {
   const t = useTranslations('HomePage.CallToAction')
+
+  const email = companyInfo?.email || 'info@dma-msv.com'
+  const phone = companyInfo?.phone || '+84 24 62500426'
 
   return (
     <section className="py-24 relative overflow-hidden">
@@ -37,10 +41,10 @@ export function CallToAction() {
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform flex-shrink-0" />
               </Button>
             </Link>
-            <a href="mailto:info@dma-msv.com" className="w-full sm:w-auto">
+            <a href={`mailto:${email}`} className="w-full sm:w-auto">
               <Button variant="outline" className="w-full sm:w-auto border-white/30 text-white hover:bg-white/10 inline-flex items-center justify-center whitespace-nowrap min-w-max">
                 <Mail className="mr-2 w-4 h-4 flex-shrink-0" />
-                <span>info@dma-msv.com</span>
+                <span>{email}</span>
               </Button>
             </a>
           </div>
@@ -48,7 +52,7 @@ export function CallToAction() {
           <div className="flex flex-wrap items-center justify-center gap-8 text-white/60 text-sm">
             <div className="flex items-center gap-2">
               <Phone size={16} />
-              <span>+84 24 62500426</span>
+              <span>{phone}</span>
             </div>
             <span className="hidden sm:block">|</span>
             <span>{t('hanoiVietnam')}</span>

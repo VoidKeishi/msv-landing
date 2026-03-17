@@ -5,9 +5,16 @@ import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/routing'
 import { Container } from '@/components/ui/Container'
 import { Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react'
+import type { SanityCompanyInfo } from '@/sanity/lib/types'
 
-export function Footer() {
+export function Footer({ companyInfo }: { companyInfo?: SanityCompanyInfo | null }) {
   const t = useTranslations('Footer')
+
+  const email = companyInfo?.email || 'info@dma-msv.com'
+  const phone = companyInfo?.phone || '+84 24 62500426'
+  const addressLine1 = companyInfo?.addressLine1 || t('addressLine1')
+  const addressLine2 = companyInfo?.addressLine2 || t('addressLine2')
+  const addressLine3 = companyInfo?.addressLine3 || t('addressLine3')
 
   const quickLinks = [
     { href: '/about' as const, label: t('aboutUs') },
@@ -92,28 +99,28 @@ export function Footer() {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="mailto:info@dma-msv.com"
+                  href={`mailto:${email}`}
                   className="flex items-start gap-3 text-msv-light-2 hover:text-white transition-colors group"
                 >
                   <Mail size={18} className="mt-0.5 flex-shrink-0 text-msv-cyan" />
-                  <span className="text-sm">info@dma-msv.com</span>
+                  <span className="text-sm">{email}</span>
                 </a>
               </li>
               <li>
                 <a
-                  href="tel:+842462500426"
+                  href={`tel:${phone.replace(/\s/g, '')}`}
                   className="flex items-start gap-3 text-msv-light-2 hover:text-white transition-colors"
                 >
                   <Phone size={18} className="mt-0.5 flex-shrink-0 text-msv-cyan" />
-                  <span className="text-sm">+84 24 62500426</span>
+                  <span className="text-sm">{phone}</span>
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="mt-0.5 flex-shrink-0 text-msv-cyan" />
                 <address className="text-msv-light-2 text-sm not-italic leading-relaxed">
-                  {t('addressLine1')}<br />
-                  {t('addressLine2')}<br />
-                  {t('addressLine3')}
+                  {addressLine1}<br />
+                  {addressLine2}<br />
+                  {addressLine3}
                 </address>
               </li>
             </ul>

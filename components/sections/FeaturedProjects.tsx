@@ -6,11 +6,12 @@ import { Link } from '@/i18n/routing'
 import { Container } from '@/components/ui/Container'
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/AnimatedComponents'
 import { Calendar, ArrowRight } from 'lucide-react'
-import { projects } from '@/data/projects'
+import { urlFor } from '@/sanity/lib/image'
+import type { SanityProject } from '@/sanity/lib/types'
 
-export function FeaturedProjects() {
+export function FeaturedProjects({ projects }: { projects: SanityProject[] }) {
   const t = useTranslations('HomePage.FeaturedProjects')
-  const td = useTranslations('Data.projects')
+  const ts = useTranslations('Data.services')
 
   return (
     <section className="py-24 bg-white">
@@ -28,69 +29,67 @@ export function FeaturedProjects() {
         </AnimatedSection>
 
         <StaggerContainer className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-          {projects.map((project) => {
-            const services = td.raw(`${project.id}.services`) as string[]
+          {projects.map((project) => (
+            <StaggerItem key={project._id}>
+              <Link href="/projects" className="group relative block h-full">
+                <div className="absolute inset-0 bg-gradient-to-br from-msv-blue/5 to-msv-cyan/5 rounded-3xl transform group-hover:scale-105 transition-transform duration-500" />
 
-            return (
-              <StaggerItem key={project.id}>
-                <Link href="/projects" className="group relative block h-full">
-                  <div className="absolute inset-0 bg-gradient-to-br from-msv-blue/5 to-msv-cyan/5 rounded-3xl transform group-hover:scale-105 transition-transform duration-500" />
-
-                  <div className="relative bg-white rounded-2xl h-full border border-msv-light-2/30 group-hover:border-msv-blue/20 group-hover:shadow-xl transition-all duration-300 overflow-hidden">
-                    <div className="relative w-full aspect-[16/9] overflow-hidden">
+                <div className="relative bg-white rounded-2xl h-full border border-msv-light-2/30 group-hover:border-msv-blue/20 group-hover:shadow-xl transition-all duration-300 overflow-hidden">
+                  <div className="relative w-full aspect-[16/9] overflow-hidden">
+                    {project.coverImage && (
                       <Image
-                        src={project.images[0]}
-                        alt={`${td(`${project.id}.name`)} project`}
+                        src={urlFor(project.coverImage).width(640).auto('format').url()}
+                        alt={`${project.title} project`}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent" />
-                      <div className="absolute bottom-4 left-4 right-4">
-                        <span className="text-xs font-medium text-white/80 bg-white/20 backdrop-blur-sm px-2.5 py-1 rounded-full">
-                          {project.commodity}
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="p-6">
-                      <h3 className="text-xl font-bold text-msv-dark-2 mb-2 group-hover:text-msv-blue transition-colors">
-                        {td(`${project.id}.name`)}
-                      </h3>
-
-                      <p className="text-msv-blue font-medium text-sm mb-3">
-                        {td(`${project.id}.client`)}
-                      </p>
-
-                      <p className="text-msv-gray-blue text-sm leading-relaxed mb-4">
-                        {td(`${project.id}.description`)}
-                      </p>
-
-                      <div className="flex items-center gap-2 text-xs text-msv-gray-blue mb-4">
-                        <Calendar size={14} />
-                        <span>{project.status}</span>
-                      </div>
-
-                      <div className="flex flex-wrap gap-2">
-                        {services.slice(0, 2).map((service: string) => (
-                          <span
-                            key={service}
-                            className="text-xs bg-msv-light-2-subtle text-msv-dark-2/80 px-2 py-1 rounded-md"
-                          >
-                            {service}
-                          </span>
-                        ))}
-                        {services.length > 2 && (
-                          <span className="text-xs text-msv-gray-blue">
-                            {t('more', { count: services.length - 2 })}
-                          </span>
-                        )}
-                      </div>
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 to-transparent" />
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <span className="text-xs font-medium text-white/80 bg-white/20 backdrop-blur-sm px-2.5 py-1 rounded-full">
+                        {project.commodity}
+                      </span>
                     </div>
                   </div>
-                </Link>
-              </StaggerItem>
-            )
-          })}
+
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-msv-dark-2 mb-2 group-hover:text-msv-blue transition-colors">
+                      {project.title}
+                    </h3>
+
+                    <p className="text-msv-blue font-medium text-sm mb-3">
+                      {project.client}
+                    </p>
+
+                    <p className="text-msv-gray-blue text-sm leading-relaxed mb-4">
+                      {project.description}
+                    </p>
+
+                    <div className="flex items-center gap-2 text-xs text-msv-gray-blue mb-4">
+                      <Calendar size={14} />
+                      <span>{project.status}</span>
+                    </div>
+
+                    <div className="flex flex-wrap gap-2">
+                      {project.services.slice(0, 2).map((serviceId) => (
+                        <span
+                          key={serviceId}
+                          className="text-xs bg-msv-light-2-subtle text-msv-dark-2/80 px-2 py-1 rounded-md"
+                        >
+                          {ts(`${serviceId}.title`)}
+                        </span>
+                      ))}
+                      {project.services.length > 2 && (
+                        <span className="text-xs text-msv-gray-blue">
+                          {t('more', { count: project.services.length - 2 })}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </StaggerItem>
+          ))}
         </StaggerContainer>
 
         <AnimatedSection delay={0.4} className="text-center">

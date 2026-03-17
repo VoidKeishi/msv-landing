@@ -7,15 +7,38 @@ import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/Button'
 import { Container } from '@/components/ui/Container'
 import { ChevronDown, MapPin, Award, Pickaxe } from 'lucide-react'
+import type { SanityHeroSection } from '@/sanity/lib/types'
 
-export function Hero() {
+const iconMap = {
+  pickaxe: Pickaxe,
+  award: Award,
+  mapPin: MapPin,
+} as const
+
+export function Hero({ data }: { data?: SanityHeroSection | null }) {
   const t = useTranslations('HomePage.Hero')
 
-  const stats = [
-    { value: t('statMetresValue'), label: t('statMetresLabel'), icon: Pickaxe },
-    { value: t('statCertifiedValue'), label: t('statCertifiedLabel'), icon: Award },
-    { value: t('statOperationsValue'), label: t('statOperationsLabel'), icon: MapPin },
-  ]
+  const badge = data?.badge || t('badge')
+  const slogan = data?.slogan || t('slogan')
+  const headingLine1 = data?.headingLine1 || t('headingLine1')
+  const headingHighlight = data?.headingHighlight || t('headingHighlight')
+  const headingLine2 = data?.headingLine2 || t('headingLine2')
+  const description = data?.description || t('description')
+  const ctaServices = data?.ctaServicesLabel || t('ctaServices')
+  const ctaContact = data?.ctaContactLabel || t('ctaContact')
+  const trackRecord = data?.trackRecordLabel || t('trackRecord')
+
+  const stats = data?.stats?.length
+    ? data.stats.map((s) => ({
+        value: s.value,
+        label: s.label,
+        icon: iconMap[s.icon as keyof typeof iconMap] || Pickaxe,
+      }))
+    : [
+        { value: t('statMetresValue'), label: t('statMetresLabel'), icon: Pickaxe },
+        { value: t('statCertifiedValue'), label: t('statCertifiedLabel'), icon: Award },
+        { value: t('statOperationsValue'), label: t('statOperationsLabel'), icon: MapPin },
+      ]
 
   return (
     <section className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
@@ -40,7 +63,7 @@ export function Hero() {
               className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-4 border border-white/10"
             >
               <span className="w-2 h-2 bg-msv-mint rounded-full animate-pulse" />
-              <span className="text-sm font-medium text-white/90">{t('badge')}</span>
+              <span className="text-sm font-medium text-white/90">{badge}</span>
             </motion.div>
 
             <motion.p
@@ -49,7 +72,7 @@ export function Hero() {
               transition={{ duration: 0.5, delay: 0.25 }}
               className="text-sm font-semibold tracking-[0.2em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-msv-gold via-msv-gold-light to-msv-gold mb-6"
             >
-              {t('slogan')}
+              {slogan}
             </motion.p>
 
             <motion.h1
@@ -58,12 +81,12 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1] tracking-tight"
             >
-              {t('headingLine1')}{' '}
+              {headingLine1}{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-msv-gold via-msv-gold-light to-msv-gold">
-                {t('headingHighlight')}
+                {headingHighlight}
               </span>
               <br />
-              {t('headingLine2')}
+              {headingLine2}
             </motion.h1>
 
             <motion.p
@@ -72,7 +95,7 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="text-lg md:text-xl mb-8 text-msv-light-2 leading-relaxed"
             >
-              {t('description')}
+              {description}
             </motion.p>
 
             <motion.div
@@ -83,12 +106,12 @@ export function Hero() {
             >
               <Link href="/services">
                 <Button variant="primary" className="w-full sm:w-auto bg-msv-blue hover:bg-msv-blue/90 text-white transition-colors">
-                  {t('ctaServices')}
+                  {ctaServices}
                 </Button>
               </Link>
               <Link href="/contact">
                 <Button variant="outline" className="w-full sm:w-auto border-white/30 text-white hover:bg-white/10 backdrop-blur-sm">
-                  {t('ctaContact')}
+                  {ctaContact}
                 </Button>
               </Link>
             </motion.div>
@@ -117,7 +140,7 @@ export function Hero() {
               />
             </div>
 
-            <h3 className="text-xs font-medium text-white/50 mb-3 uppercase tracking-widest">{t('trackRecord')}</h3>
+            <h3 className="text-xs font-medium text-white/50 mb-3 uppercase tracking-widest">{trackRecord}</h3>
             <div className="space-y-3">
               {stats.map((stat, index) => (
                 <motion.div
