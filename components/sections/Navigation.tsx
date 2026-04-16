@@ -21,6 +21,7 @@ export function Navigation() {
     { href: '/services' as const, label: t('services') },
     { href: '/team' as const, label: t('team') },
     { href: '/projects' as const, label: t('projects') },
+    { href: '/careers' as const, label: t('careers') },
     { href: '/contact' as const, label: t('contact') },
   ]
 

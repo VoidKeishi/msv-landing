@@ -90,6 +90,37 @@ export const heroSectionQuery = groq`
   }
 `
 
+export const jobsQuery = groq`
+  *[_type == "job" && isActive == true] | order(displayOrder asc, postedAt desc) {
+    _id,
+    jobCode,
+    "slug": slug.current,
+    "title": title[$locale],
+    "location": location[$locale],
+    "description": description[$locale],
+    recruitmentEmail,
+    postedAt,
+    closingDate,
+  }
+`
+
+export const jobBySlugQuery = groq`
+  *[_type == "job" && isActive == true && slug.current == $slug][0] {
+    _id,
+    jobCode,
+    "slug": slug.current,
+    "title": title[$locale],
+    "location": location[$locale],
+    "description": description[$locale],
+    "requirements": requirements[$locale],
+    "benefits": benefits[$locale],
+    recruitmentEmail,
+    "closingNote": closingNote[$locale],
+    postedAt,
+    closingDate,
+  }
+`
+
 export const companyOverviewQuery = groq`
   *[_id == "companyOverview"][0] {
     "badge": badge[$locale],

@@ -5,6 +5,7 @@ import { project } from './project'
 import { companyInfo } from './companyInfo'
 import { heroSection } from './heroSection'
 import { companyOverview } from './companyOverview'
+import { job } from './job'
 
 export const schemaTypes = [
   localeString,
@@ -14,4 +15,5 @@ export const schemaTypes = [
   companyInfo,
   heroSection,
   companyOverview,
+  job,
 ]

@@ -5,6 +5,7 @@
     "services": "Dịch vụ",
     "team": "Đội ngũ",
     "projects": "Dự án",
+    "careers": "Tuyển dụng",
     "contact": "Liên hệ",
     "companyName": "Mining Services Vietnam",
     "sloganUncovering": "Khai mở",
@@ -62,6 +63,18 @@
     "contact": {
       "title": "Liên hệ MSV | Dịch vụ Khai khoáng Việt Nam | Văn phòng Hà Nội",
       "description": "Liên hệ Mining Services Vietnam về thăm dò, EPCM hoặc kỹ thuật khai khoáng. Email: info@dma-msv.com | Hà Nội, Việt Nam"
+    },
+    "careers": {
+      "title": "Tuyển dụng tại MSV | Mining Services Vietnam",
+      "description": "Các vị trí đang tuyển tại Mining Services Vietnam: thăm dò, địa chất, kỹ thuật, quản lý dự án và vận hành."
+    },
+    "careerDetail": {
+      "titleTemplate": "{title} | Tuyển dụng tại MSV",
+      "description": "Ứng tuyển vị trí {title} tại Mining Services Vietnam. Xem mô tả công việc, yêu cầu và thông tin ứng tuyển."
+    },
+    "recruitmentPrivacy": {
+      "title": "Thông báo Bảo mật Tuyển dụng | MSV",
+      "description": "Cách Mining Services Vietnam thu thập, sử dụng, lưu trữ và bảo vệ dữ liệu cá nhân trong quá trình tuyển dụng."
     }
   },
   "HomePage": {
@@ -474,5 +487,116 @@
       "hung-nguyen-phuc": "Quản lý Dự án Cấp cao",
       "tien-dinh-van": "Quản lý Dự án Cấp cao"
     }
+  },
+  "CareersPage": {
+    "Hero": {
+      "badge": "Gia nhập MSV",
+      "headingLine1": "Phát triển Sự nghiệp",
+      "headingHighlight": "Cùng MSV",
+      "subheading": "Các vị trí đang tuyển trong thăm dò, địa chất, kỹ thuật, quản lý dự án và vận hành — tại Việt Nam và khắp Đông Nam Á."
+    },
+    "list": {
+      "sectionTitle": "Vị trí Đang tuyển",
+      "sectionLead": "Khám phá các cơ hội hiện tại bên dưới. Chúng tôi xét duyệt hồ sơ liên tục.",
+      "cardLocationLabel": "Địa điểm",
+      "cardPostedLabel": "Ngày đăng",
+      "cardClosingLabel": "Hạn nộp",
+      "cardCta": "Xem chi tiết",
+      "emptyTitle": "Hiện chưa có vị trí nào đang tuyển",
+      "emptyBody": "Chúng tôi tạm thời không tuyển dụng. Vui lòng quay lại sau hoặc gửi hồ sơ dự phòng qua trang Liên hệ.",
+      "emptyCta": "Liên hệ với chúng tôi"
+    },
+    "detail": {
+      "backToList": "Quay lại danh sách",
+      "jobCodeLabel": "Mã vị trí",
+      "locationLabel": "Nơi làm việc",
+      "postedLabel": "Ngày đăng",
+      "closingLabel": "Hạn nộp",
+      "sectionDescription": "Mô tả Công việc",
+      "sectionRequirements": "Yêu cầu",
+      "sectionBenefits": "Quyền lợi",
+      "sectionHowToApply": "Cách Ứng tuyển",
+      "howToApplyLead": "Bấm nút Ứng tuyển bên dưới để gửi CV cho chúng tôi, hoặc gửi email trực tiếp.",
+      "applyCta": "Ứng tuyển vị trí này",
+      "emailFallbackLabel": "Hoặc gửi email đến",
+      "privacyNoticeLink": "Thông báo Bảo mật Tuyển dụng"
+    },
+    "modal": {
+      "title": "Ứng tuyển {title}",
+      "subtitle": "Vui lòng giới thiệu đôi nét về bạn và đính kèm CV.",
+      "close": "Đóng",
+      "fields": {
+        "fullName": {
+          "label": "Họ và tên",
+          "placeholder": "Họ và tên đầy đủ"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "ban@example.com"
+        },
+        "phone": {
+          "label": "Số điện thoại",
+          "placeholder": "+84 …"
+        },
+        "currentPosition": {
+          "label": "Vị trí hiện tại",
+          "placeholder": "Ví dụ: Kỹ sư Địa chất tại XYZ"
+        },
+        "yearsExperience": {
+          "label": "Số năm kinh nghiệm",
+          "placeholder": "Ví dụ: 5"
+        },
+        "coverLetter": {
+          "label": "Thư ứng tuyển",
+          "placeholder": "Không bắt buộc — chia sẻ lý do bạn phù hợp với vị trí này."
+        },
+        "cv": {
+          "label": "CV / Hồ sơ"
+        },
+        "consent": {
+          "labelPre": "Tôi đã đọc và đồng ý với",
+          "labelLink": "Thông báo Bảo mật Tuyển dụng",
+          "labelPost": "và đồng ý cho MSV xử lý dữ liệu cá nhân của tôi phục vụ mục đích tuyển dụng."
+        }
+      },
+      "cvHelp": "Định dạng PDF, DOC hoặc DOCX — tối đa 8 MB.",
+      "submit": "Gửi hồ sơ",
+      "submitting": "Đang gửi…",
+      "successTitle": "Cảm ơn bạn — đây là cách hoàn tất ứng tuyển",
+      "successFallbackBody": "Hệ thống nộp hồ sơ trực tuyến chưa sẵn sàng. Vui lòng gửi CV và thông tin của bạn đến {email}, chúng tôi sẽ tiếp nhận từ đó.",
+      "mailtoCta": "Gửi email ứng tuyển",
+      "mailtoSubject": "Ứng tuyển: {title} — {name}",
+      "errors": {
+        "required": "Vui lòng điền mục này.",
+        "email": "Vui lòng nhập email hợp lệ.",
+        "phone": "Vui lòng nhập số điện thoại hợp lệ.",
+        "fileSize": "Tệp quá lớn. Kích thước tối đa 8 MB.",
+        "fileType": "Định dạng tệp không được hỗ trợ. Vui lòng tải lên PDF, DOC hoặc DOCX.",
+        "consent": "Vui lòng xác nhận bạn đã đọc và đồng ý với thông báo bảo mật.",
+        "generic": "Đã có lỗi xảy ra. Vui lòng thử lại, hoặc gửi email trực tiếp cho chúng tôi."
+      }
+    }
+  },
+  "RecruitmentPrivacyPage": {
+    "heading": "Thông báo Bảo mật Tuyển dụng",
+    "lastUpdatedLabel": "Cập nhật lần cuối",
+    "lastUpdated": "Tháng 4/2026",
+    "intro": "Thông báo này giải thích cách Công ty Cổ phần Mining Services Vietnam thu thập, sử dụng, lưu trữ và bảo vệ dữ liệu cá nhân bạn cung cấp khi ứng tuyển.",
+    "purposeHeading": "Mục đích xử lý",
+    "purposeBody": "Chúng tôi xử lý dữ liệu cá nhân bạn cung cấp chỉ để đánh giá hồ sơ ứng tuyển, trao đổi với bạn trong quá trình tuyển dụng và — nếu bạn được tuyển — để hoàn tất thủ tục nhận việc. Dữ liệu tuyển dụng không được sử dụng cho mục đích marketing hay bất kỳ mục đích nào khác.",
+    "dataCollectedHeading": "Dữ liệu thu thập",
+    "dataCollectedBody": "Dữ liệu cá nhân chúng tôi xử lý bao gồm: họ tên, thông tin liên hệ (email, số điện thoại), vị trí công việc hiện tại, số năm kinh nghiệm, thư ứng tuyển (nếu có) và nội dung CV — bao gồm học vấn, quá trình công tác, chứng chỉ và người tham chiếu.",
+    "retentionHeading": "Thời gian lưu trữ",
+    "retentionBody": "Chúng tôi lưu dữ liệu ứng tuyển trong {months} tháng kể từ ngày nộp hồ sơ, sau đó sẽ xóa trừ khi có căn cứ pháp lý để lưu lâu hơn (ví dụ: bạn được tuyển và dữ liệu trở thành một phần hồ sơ nhân sự). [CLIENT TO CONFIRM thời gian lưu trữ]",
+    "controllerHeading": "Đơn vị kiểm soát dữ liệu",
+    "controllerName": "[CLIENT TO CONFIRM] Công ty Cổ phần Mining Services Vietnam",
+    "controllerEmailLabel": "Email",
+    "controllerEmail": "[CLIENT TO CONFIRM] privacy@dma-msv.com",
+    "controllerAddressLabel": "Địa chỉ",
+    "controllerAddress": "[CLIENT TO CONFIRM] Phòng 5A, Tầng 23, Tòa A, Hudtower, 37 Lê Văn Lương, Thanh Xuân, Hà Nội, Việt Nam",
+    "rightsHeading": "Quyền của bạn",
+    "rightsBody": "Theo Nghị định 13/2023/NĐ-CP về Bảo vệ Dữ liệu Cá nhân và pháp luật hiện hành, bạn có quyền truy cập, chỉnh sửa, xóa dữ liệu cá nhân và rút lại sự đồng ý bất kỳ lúc nào. Để thực hiện các quyền này, vui lòng liên hệ chúng tôi qua thông tin phía trên.",
+    "contactHeading": "Liên hệ",
+    "contactBody": "Nếu bạn có bất kỳ câu hỏi nào về thông báo này hoặc cách chúng tôi xử lý dữ liệu cá nhân, vui lòng liên hệ đơn vị kiểm soát dữ liệu qua email ở trên."
   }
 }

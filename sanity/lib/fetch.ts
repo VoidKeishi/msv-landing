@@ -6,6 +6,8 @@ import {
   companyInfoQuery,
   heroSectionQuery,
   companyOverviewQuery,
+  jobsQuery,
+  jobBySlugQuery,
 } from './queries'
 import type {
   SanityTeamMember,
@@ -13,6 +15,8 @@ import type {
   SanityCompanyInfo,
   SanityHeroSection,
   SanityCompanyOverview,
+  SanityJob,
+  SanityJobListItem,
 } from './types'
 
 export async function getTeamMembers(locale: string): Promise<SanityTeamMember[]> {
@@ -37,4 +41,12 @@ export async function getHeroSection(locale: string): Promise<SanityHeroSection 
 
 export async function getCompanyOverview(locale: string): Promise<SanityCompanyOverview | null> {
   return client.fetch(companyOverviewQuery, { locale })
+}
+
+export async function getJobs(locale: string): Promise<SanityJobListItem[]> {
+  return client.fetch(jobsQuery, { locale })
+}
+
+export async function getJobBySlug(slug: string, locale: string): Promise<SanityJob | null> {
+  return client.fetch(jobBySlugQuery, { slug, locale })
 }

@@ -65,6 +65,33 @@ export interface SanityHeroSection {
   }[]
 }
 
+export interface SanityJobListItem {
+  _id: string
+  jobCode: string
+  slug: string
+  title: string
+  location: string
+  description: string
+  recruitmentEmail: string
+  postedAt: string
+  closingDate: string | null
+}
+
+export interface SanityJob {
+  _id: string
+  jobCode: string
+  slug: string
+  title: string
+  location: string
+  description: string
+  requirements: string
+  benefits: string | null
+  recruitmentEmail: string
+  closingNote: string | null
+  postedAt: string
+  closingDate: string | null
+}
+
 export interface SanityCompanyOverview {
   badge: string
   headingLine1: string

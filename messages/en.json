@@ -5,6 +5,7 @@
     "services": "Services",
     "team": "Team",
     "projects": "Projects",
+    "careers": "Careers",
     "contact": "Contact",
     "companyName": "Mining Services Vietnam",
     "sloganUncovering": "Uncovering",
@@ -62,6 +63,18 @@
     "contact": {
       "title": "Contact MSV | Mining Services Vietnam | Hanoi Office",
       "description": "Contact Mining Services Vietnam for exploration, EPCM, or engineering services. Email: info@dma-msv.com | Hanoi, Vietnam"
+    },
+    "careers": {
+      "title": "Careers at MSV | Mining Services Vietnam",
+      "description": "Open roles at Mining Services Vietnam across exploration, geology, engineering, project delivery, and operations."
+    },
+    "careerDetail": {
+      "titleTemplate": "{title} | Careers at MSV",
+      "description": "Apply for {title} at Mining Services Vietnam. See the full role description, requirements, and application details."
+    },
+    "recruitmentPrivacy": {
+      "title": "Recruitment Privacy Notice | MSV",
+      "description": "How Mining Services Vietnam collects, uses, retains, and protects personal data submitted through our recruitment process."
     }
   },
   "HomePage": {
@@ -474,5 +487,116 @@
       "hung-nguyen-phuc": "Senior Project Manager",
       "tien-dinh-van": "Senior Project Manager"
     }
+  },
+  "CareersPage": {
+    "Hero": {
+      "badge": "Join Us",
+      "headingLine1": "Build a Career",
+      "headingHighlight": "With MSV",
+      "subheading": "Open roles across exploration, geology, engineering, project delivery, and operations — in Vietnam and across Southeast Asia."
+    },
+    "list": {
+      "sectionTitle": "Open Positions",
+      "sectionLead": "Explore current opportunities below. We review applications on a rolling basis.",
+      "cardLocationLabel": "Location",
+      "cardPostedLabel": "Posted",
+      "cardClosingLabel": "Closes",
+      "cardCta": "View role",
+      "emptyTitle": "No open positions right now",
+      "emptyBody": "We're not hiring at the moment. Check back soon, or send a speculative enquiry via our contact page.",
+      "emptyCta": "Contact us"
+    },
+    "detail": {
+      "backToList": "Back to all roles",
+      "jobCodeLabel": "Job code",
+      "locationLabel": "Location",
+      "postedLabel": "Posted",
+      "closingLabel": "Closing",
+      "sectionDescription": "Job Description",
+      "sectionRequirements": "Requirements",
+      "sectionBenefits": "Benefits",
+      "sectionHowToApply": "How to Apply",
+      "howToApplyLead": "Use the Apply button below to send us your CV, or email us directly.",
+      "applyCta": "Apply for this role",
+      "emailFallbackLabel": "Or email",
+      "privacyNoticeLink": "Recruitment Privacy Notice"
+    },
+    "modal": {
+      "title": "Apply for {title}",
+      "subtitle": "Tell us a bit about yourself and attach your CV.",
+      "close": "Close",
+      "fields": {
+        "fullName": {
+          "label": "Full name",
+          "placeholder": "Your full name"
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "you@example.com"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "+84 …"
+        },
+        "currentPosition": {
+          "label": "Current position",
+          "placeholder": "e.g. Senior Geologist at XYZ"
+        },
+        "yearsExperience": {
+          "label": "Years of experience",
+          "placeholder": "e.g. 5"
+        },
+        "coverLetter": {
+          "label": "Cover letter",
+          "placeholder": "Optional — tell us why you're a good fit."
+        },
+        "cv": {
+          "label": "CV / Résumé"
+        },
+        "consent": {
+          "labelPre": "I have read and agree to the",
+          "labelLink": "Recruitment Privacy Notice",
+          "labelPost": "and consent to MSV processing my personal data for recruitment purposes."
+        }
+      },
+      "cvHelp": "PDF, DOC, or DOCX — max 8 MB.",
+      "submit": "Submit application",
+      "submitting": "Submitting…",
+      "successTitle": "Thanks — here's how to finish applying",
+      "successFallbackBody": "Our online submission isn't live yet. Please email your CV and details to {email} and we'll pick it up from there.",
+      "mailtoCta": "Email my application",
+      "mailtoSubject": "Application: {title} — {name}",
+      "errors": {
+        "required": "This field is required.",
+        "email": "Please enter a valid email address.",
+        "phone": "Please enter a valid phone number.",
+        "fileSize": "File is too large. Maximum size is 8 MB.",
+        "fileType": "Unsupported file type. Please upload a PDF, DOC, or DOCX.",
+        "consent": "Please confirm you've read and agree to the privacy notice.",
+        "generic": "Something went wrong. Please try again, or email us directly."
+      }
+    }
+  },
+  "RecruitmentPrivacyPage": {
+    "heading": "Recruitment Privacy Notice",
+    "lastUpdatedLabel": "Last updated",
+    "lastUpdated": "April 2026",
+    "intro": "This notice explains how Mining Services Vietnam JSC collects, uses, retains, and protects personal data you submit to us when you apply for a role.",
+    "purposeHeading": "Purpose of processing",
+    "purposeBody": "We process the personal data you provide solely to evaluate your application, communicate with you during the recruitment process, and — if you are hired — to onboard you as an employee or contractor. We do not use recruitment data for marketing or any unrelated purpose.",
+    "dataCollectedHeading": "Data we collect",
+    "dataCollectedBody": "The personal data we process includes: your name, contact details (email, phone), current position, years of experience, cover letter (if provided), and the contents of your CV, which may include education, employment history, certifications, and references.",
+    "retentionHeading": "Retention period",
+    "retentionBody": "We retain your application data for {months} months from the date of submission, after which it is deleted unless we have a lawful basis to keep it longer (for example, if you are hired and the data becomes part of your employment record). [CLIENT TO CONFIRM retention period wording]",
+    "controllerHeading": "Data controller",
+    "controllerName": "[CLIENT TO CONFIRM] Mining Services Vietnam JSC",
+    "controllerEmailLabel": "Email",
+    "controllerEmail": "[CLIENT TO CONFIRM] privacy@dma-msv.com",
+    "controllerAddressLabel": "Address",
+    "controllerAddress": "[CLIENT TO CONFIRM] Office 5A, 23rd Floor, Tower A, Hudtower, 37 Le Van Luong, Thanh Xuan, Hanoi, Vietnam",
+    "rightsHeading": "Your rights",
+    "rightsBody": "Under Vietnam's Personal Data Protection Decree (Decree 13/2023/ND-CP) and applicable law, you have the right to access, correct, or delete your personal data, and to withdraw your consent at any time. To exercise these rights, contact us using the details above.",
+    "contactHeading": "Contact",
+    "contactBody": "For any questions about this notice or how we handle your personal data, please contact the data controller at the email address above."
   }
 }
