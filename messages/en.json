@@ -501,7 +501,9 @@
       "cardLocationLabel": "Location",
       "cardPostedLabel": "Posted",
       "cardClosingLabel": "Closes",
-      "cardCta": "View role",
+      "cardOpenings": "{count, plural, =1 {# opening} other {# openings}}",
+      "cardCta": "View details",
+      "cardApplyCta": "Apply now",
       "emptyTitle": "No open positions right now",
       "emptyBody": "We're not hiring at the moment. Check back soon, or send a speculative enquiry via our contact page.",
       "emptyCta": "Contact us"
@@ -512,6 +514,7 @@
       "locationLabel": "Location",
       "postedLabel": "Posted",
       "closingLabel": "Closing",
+      "openingsLabel": "{count, plural, =1 {# opening} other {# openings}}",
       "sectionDescription": "Job Description",
       "sectionRequirements": "Requirements",
       "sectionBenefits": "Benefits",

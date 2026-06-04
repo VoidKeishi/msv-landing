@@ -121,6 +121,14 @@ export const job = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'openings',
+      title: 'Number of Openings',
+      type: 'number',
+      description: 'How many candidates are being hired for this role.',
+      initialValue: 1,
+      validation: (rule) => rule.min(1).integer(),
+    }),
+    defineField({
       name: 'displayOrder',
       title: 'Display Order',
       type: 'number',

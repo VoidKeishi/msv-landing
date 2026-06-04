@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base target="_top">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue:       #3494BA;
+      --blue-hover: #2a7a9e;
+      --cyan:       #58B6C0;
+      --dark:       #373545;
+      --light-2:    #CEDBE6;
+      --subtle:     #f0f4f8;
+      --gray-blue:  #7A8C8E;
+      --green:      #6B9F25;
+      --red:        #dc2626;
+    }
+
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: #fff;
+      color: var(--dark);
+      font-size: 14px;
+      line-height: 1.5;
+      padding: 28px 24px 32px;
+    }
+
+    /* ── Job badge ── */
+    .job-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(52,148,186,0.10);
+      color: var(--blue);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      padding: 4px 12px;
+      margin-bottom: 10px;
+    }
+
+    .form-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 4px;
+      letter-spacing: -0.01em;
+    }
+
+    .form-subtitle {
+      color: var(--gray-blue);
+      font-size: 13px;
+      margin-bottom: 22px;
+    }
+
+    .divider {
+      height: 1px;
+      background: var(--light-2);
+      opacity: 0.5;
+      margin-bottom: 22px;
+    }
+
+    /* ── Fields ── */
+    .field { margin-bottom: 16px; }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+
+    label .req { color: var(--red); margin-left: 2px; }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1.5px solid rgba(206,219,230,0.7);
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: 14px;
+      color: var(--dark);
+      background: #fff;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(52,148,186,0.15);
+    }
+
+    input::placeholder { color: var(--gray-blue); font-size: 13px; }
+
+    /* ── File input ── */
+    .file-wrapper {
+      position: relative;
+    }
+
+    input[type="file"] {
+      width: 100%;
+      font-family: inherit;
+      font-size: 13px;
+      color: var(--dark);
+      cursor: pointer;
+    }
+
+    input[type="file"]::file-selector-button {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--blue);
+      background: rgba(52,148,186,0.10);
+      border: none;
+      border-radius: 8px;
+      padding: 8px 14px;
+      margin-right: 12px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    input[type="file"]::file-selector-button:hover {
+      background: rgba(52,148,186,0.20);
+    }
+
+    .file-hint {
+      font-size: 12px;
+      color: var(--gray-blue);
+      margin-top: 5px;
+    }
+
+    /* ── Field error ── */
+    .field-error {
+      font-size: 12px;
+      color: var(--red);
+      margin-top: 5px;
+      display: none;
+    }
+
+    .field-error.show { display: block; }
+
+    /* ── Submit button ── */
+    .btn-submit {
+      width: 100%;
+      padding: 13px;
+      background: var(--blue);
+      color: #fff;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.2s, opacity 0.2s;
+      margin-top: 6px;
+      letter-spacing: 0.01em;
+    }
+
+    .btn-submit:hover:not(:disabled) { background: var(--blue-hover); }
+    .btn-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    /* ── Status states ── */
+    .status-box {
+      display: none;
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 16px;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+
+    .status-box.error {
+      display: flex;
+      gap: 10px;
+      background: #fef2f2;
+      border: 1.5px solid #fecaca;
+      color: var(--red);
+    }
+
+    .status-box.success {
+      display: block;
+      background: #f0fdf4;
+      border: 1.5px solid #bbf7d0;
+      color: #166534;
+      text-align: center;
+    }
+
+    .status-box.success .success-icon {
+      font-size: 28px;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .status-box.success strong {
+      display: block;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    /* ── Two-col grid for name/email ── */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    @media (max-width: 440px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      body { padding: 20px 16px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="formView">
+    <!-- Job badge (hidden when no jobCode) -->
+    <? if (jobCode) { ?>
+    <div class="job-badge">📋 <?= jobCode ?></div>
+    <? } ?>
+
+    <h1 class="form-title">Apply for this position</h1>
+    <p class="form-subtitle">Fill in your details and attach your CV. We'll be in touch.</p>
+    <div class="divider"></div>
+
+    <form id="cvForm" novalidate>
+      <input type="hidden" name="jobCode" value="<?= jobCode ?>">
+
+      <div class="grid-2">
+        <div class="field">
+          <label for="f-name">Full name <span class="req">*</span></label>
+          <input id="f-name" name="name" type="text" placeholder="Your full name" required autocomplete="name">
+          <div class="field-error" id="err-name">Please enter your full name.</div>
+        </div>
+        <div class="field">
+          <label for="f-email">Email <span class="req">*</span></label>
+          <input id="f-email" name="email" type="email" placeholder="you@example.com" required autocomplete="email">
+          <div class="field-error" id="err-email">Please enter a valid email.</div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="f-phone">Phone number <span class="req">*</span></label>
+        <input id="f-phone" name="phone" type="tel" placeholder="+84 …" required autocomplete="tel">
+        <div class="field-error" id="err-phone">Please enter your phone number.</div>
+      </div>
+
+      <div class="field">
+        <label for="f-cv">CV / Résumé <span class="req">*</span></label>
+        <div class="file-wrapper">
+          <input id="f-cv" name="cv" type="file" accept=".pdf,.doc,.docx" required>
+        </div>
+        <div class="file-hint">PDF, DOC, or DOCX — max 10 MB</div>
+        <div class="field-error" id="err-cv">Please attach your CV.</div>
+      </div>
+
+      <div id="statusError" class="status-box error" style="display:none">
+        <span>⚠</span>
+        <span id="errorMsg">Something went wrong. Please try again.</span>
+      </div>
+
+      <button type="submit" class="btn-submit" id="submitBtn">Submit Application</button>
+    </form>
+  </div>
+
+  <div id="successView" style="display:none">
+    <div class="status-box success" style="display:block">
+      <span class="success-icon">✅</span>
+      <strong>Application submitted!</strong>
+      Thank you — we've received your CV and will be in touch soon.
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('cvForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const statusError = document.getElementById('statusError');
+    const errorMsg = document.getElementById('errorMsg');
+
+    function showError(id, show, msg) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      if (msg) el.textContent = msg;
+      show ? el.classList.add('show') : el.classList.remove('show');
+    }
+
+    function validate() {
+      let valid = true;
+      const nameEl  = document.getElementById('f-name');
+      const emailEl = document.getElementById('f-email');
+      const phoneEl = document.getElementById('f-phone');
+      const cvEl    = document.getElementById('f-cv');
+
+      const name  = nameEl.value.trim();
+      const email = emailEl.value.trim();
+      const phone = phoneEl.value.trim();
+      const file  = cvEl.files[0];
+
+      showError('err-name', !name || name.length < 2);
+      if (!name || name.length < 2) valid = false;
+
+      const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      showError('err-email', !emailOk);
+      if (!emailOk) valid = false;
+
+      showError('err-phone', !phone);
+      if (!phone) valid = false;
+
+      if (!file) {
+        showError('err-cv', true, 'Please attach your CV.');
+        valid = false;
+      } else if (file.size > 10 * 1024 * 1024) {
+        showError('err-cv', true, 'File too large — max 10 MB.');
+        valid = false;
+      } else {
+        showError('err-cv', false);
+      }
+
+      return valid;
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      statusError.style.display = 'none';
+
+      if (!validate()) return;
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Submitting…';
+
+      const file = document.getElementById('f-cv').files[0];
+      const reader = new FileReader();
+
+      reader.onload = function() {
+        const payload = {
+          jobCode: document.querySelector('[name="jobCode"]').value,
+          name: document.getElementById('f-name').value.trim(),
+          email: document.getElementById('f-email').value.trim(),
+          phone: document.getElementById('f-phone').value.trim(),
+          fileName: file.name,
+          mimeType: file.type || 'application/octet-stream',
+          fileData: reader.result
+        };
+
+        google.script.run
+          .withSuccessHandler(function() {
+            document.getElementById('formView').style.display = 'none';
+            document.getElementById('successView').style.display = 'block';
+          })
+          .withFailureHandler(function(err) {
+            errorMsg.textContent = err.message || 'Something went wrong. Please try again.';
+            statusError.style.display = 'flex';
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Submit Application';
+          })
+          .uploadCV(payload);
+      };
+
+      reader.readAsDataURL(file);
+    });
+  </script>
+</body>
+</html>

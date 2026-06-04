@@ -1,9 +1,12 @@
+'use client'
+
 import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/routing'
 import { Container } from '@/components/ui/Container'
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/ui/AnimatedComponents'
 import { Button } from '@/components/ui/Button'
-import { ArrowRight, Briefcase, Calendar, MapPin } from 'lucide-react'
+import { ApplyButton } from '@/components/sections/careers/ApplyButton'
+import { Briefcase, Calendar, MapPin, Users } from 'lucide-react'
 import type { SanityJobListItem } from '@/sanity/lib/types'
 
 function formatDate(iso: string, locale: string) {
@@ -18,7 +21,7 @@ function formatDate(iso: string, locale: string) {
   }
 }
 
-function excerpt(text: string, max = 180) {
+function excerpt(text: string, max = 160) {
   if (!text) return ''
   const flat = text.replace(/\s+/g, ' ').trim()
   return flat.length <= max ? flat : `${flat.slice(0, max - 1).trimEnd()}…`
@@ -36,6 +39,7 @@ export function CareersListContent({
 
   return (
     <>
+      {/* Hero */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-msv-blue/20 via-transparent to-transparent" />
         <Container className="relative">
@@ -56,6 +60,7 @@ export function CareersListContent({
         </Container>
       </section>
 
+      {/* Job list */}
       <section className="py-16 md:py-24 bg-white">
         <Container>
           <AnimatedSection className="max-w-3xl mb-10 md:mb-14">
@@ -88,47 +93,60 @@ export function CareersListContent({
             <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
               {jobs.map((job) => (
                 <StaggerItem key={job._id}>
-                  <Link
-                    href={`/careers/${job.slug}`}
-                    className="group block h-full bg-white rounded-2xl border border-msv-light-2/60 p-6 md:p-7 hover:shadow-xl hover:shadow-msv-light-2/40 hover:border-msv-blue/30 transition-all duration-300"
-                  >
-                    <div className="flex flex-col h-full">
-                      <div className="flex items-start justify-between gap-3 mb-3">
-                        <span className="inline-flex items-center text-[11px] tracking-wider uppercase font-semibold text-msv-blue bg-msv-blue/10 rounded-full px-2.5 py-1">
-                          {job.jobCode}
+                  <div className="group flex flex-col h-full bg-white rounded-2xl border border-msv-light-2/60 p-6 md:p-7 hover:shadow-xl hover:shadow-msv-light-2/40 hover:border-msv-blue/30 transition-all duration-300">
+                    {/* Top meta row */}
+                    <div className="flex items-start justify-between gap-3 mb-3">
+                      <span className="inline-flex items-center text-[11px] tracking-wider uppercase font-semibold text-msv-blue bg-msv-blue/10 rounded-full px-2.5 py-1">
+                        {job.jobCode}
+                      </span>
+                      {job.closingDate && (
+                        <span className="inline-flex items-center gap-1 text-xs text-msv-gray-blue">
+                          <Calendar className="w-3.5 h-3.5" />
+                          {t('cardClosingLabel')}: {formatDate(job.closingDate, locale)}
                         </span>
-                        {job.closingDate && (
-                          <span className="inline-flex items-center gap-1 text-xs text-msv-gray-blue">
-                            <Calendar className="w-3.5 h-3.5" />
-                            {t('cardClosingLabel')}: {formatDate(job.closingDate, locale)}
-                          </span>
-                        )}
-                      </div>
-
-                      <h3 className="font-bold text-lg md:text-xl text-msv-dark-2 mb-2 leading-tight group-hover:text-msv-blue transition-colors">
-                        {job.title}
-                      </h3>
-
-                      <div className="flex items-center gap-1.5 text-sm text-msv-gray-blue mb-4">
-                        <MapPin className="w-4 h-4 flex-shrink-0" />
-                        <span>{job.location}</span>
-                      </div>
-
-                      <p className="text-sm text-msv-dark-2/75 leading-relaxed flex-1 mb-5">
-                        {excerpt(job.description)}
-                      </p>
-
-                      <div className="flex items-center justify-between text-sm">
-                        <span className="text-msv-gray-blue">
-                          {t('cardPostedLabel')}: {formatDate(job.postedAt, locale)}
-                        </span>
-                        <span className="inline-flex items-center gap-1 font-semibold text-msv-blue group-hover:gap-2 transition-all">
-                          {t('cardCta')}
-                          <ArrowRight className="w-4 h-4" />
-                        </span>
-                      </div>
+                      )}
                     </div>
-                  </Link>
+
+                    {/* Title */}
+                    <h3 className="font-bold text-lg md:text-xl text-msv-dark-2 mb-2 leading-tight group-hover:text-msv-blue transition-colors">
+                      {job.title}
+                    </h3>
+
+                    {/* Location + openings */}
+                    <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-msv-gray-blue mb-4">
+                      <span className="inline-flex items-center gap-1.5">
+                        <MapPin className="w-4 h-4 flex-shrink-0" />
+                        {job.location}
+                      </span>
+                      {job.openings && (
+                        <span className="inline-flex items-center gap-1.5">
+                          <Users className="w-4 h-4 flex-shrink-0" />
+                          {t('cardOpenings', { count: job.openings })}
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Description excerpt */}
+                    <p className="text-sm text-msv-dark-2/75 leading-relaxed flex-1 mb-5">
+                      {excerpt(job.description)}
+                    </p>
+
+                    {/* Actions */}
+                    <div className="flex items-center gap-3 mt-auto">
+                      <ApplyButton
+                        jobCode={job.jobCode}
+                        jobTitle={job.title}
+                        ctaLabel={t('cardApplyCta')}
+                        className="flex-1 py-2.5 text-sm"
+                      />
+                      <Link
+                        href={`/careers/${job.slug}`}
+                        className="flex-1 inline-flex items-center justify-center py-2.5 px-4 text-sm font-semibold text-msv-blue border border-msv-blue/30 rounded-md hover:bg-msv-blue/5 transition-colors"
+                      >
+                        {t('cardCta')}
+                      </Link>
+                    </div>
+                  </div>
                 </StaggerItem>
               ))}
             </StaggerContainer>

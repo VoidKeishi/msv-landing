@@ -2,7 +2,7 @@ import { useTranslations } from 'next-intl'
 import { Link } from '@/i18n/routing'
 import { Container } from '@/components/ui/Container'
 import { AnimatedSection } from '@/components/ui/AnimatedComponents'
-import { ArrowLeft, Calendar, CalendarX, Mail, MapPin } from 'lucide-react'
+import { ArrowLeft, Calendar, CalendarX, Mail, MapPin, Users } from 'lucide-react'
 import { ApplyButton } from '@/components/sections/careers/ApplyButton'
 import type { SanityJob } from '@/sanity/lib/types'
 
@@ -76,6 +76,12 @@ export function CareersDetailContent({
                   {t('closingLabel')}: {formatDate(job.closingDate, locale)}
                 </span>
               )}
+              {job.openings && (
+                <span className="inline-flex items-center gap-1.5">
+                  <Users className="w-4 h-4" />
+                  {t('openingsLabel', { count: job.openings })}
+                </span>
+              )}
             </div>
           </AnimatedSection>
         </Container>
@@ -106,10 +112,8 @@ export function CareersDetailContent({
                 </p>
 
                 <ApplyButton
-                  jobSlug={job.slug}
                   jobCode={job.jobCode}
                   jobTitle={job.title}
-                  recruitmentEmail={job.recruitmentEmail}
                   ctaLabel={t('applyCta')}
                 />
 
