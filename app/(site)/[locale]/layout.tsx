@@ -16,6 +16,10 @@ const montserrat = Montserrat({
   display: "swap",
 })
 
+// Pages are prerendered but regenerate at most once a minute, so content
+// published in the Sanity Studio goes live without a redeploy.
+export const revalidate = 60
+
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }))
 }
