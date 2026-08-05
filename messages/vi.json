@@ -501,7 +501,9 @@
       "cardLocationLabel": "Địa điểm",
       "cardPostedLabel": "Ngày đăng",
       "cardClosingLabel": "Hạn nộp",
+      "cardOpenings": "Tuyển {count} người",
       "cardCta": "Xem chi tiết",
+      "cardApplyCta": "Ứng tuyển",
       "emptyTitle": "Hiện chưa có vị trí nào đang tuyển",
       "emptyBody": "Chúng tôi tạm thời không tuyển dụng. Vui lòng quay lại sau hoặc gửi hồ sơ dự phòng qua trang Liên hệ.",
       "emptyCta": "Liên hệ với chúng tôi"
@@ -512,6 +514,7 @@
       "locationLabel": "Nơi làm việc",
       "postedLabel": "Ngày đăng",
       "closingLabel": "Hạn nộp",
+      "openingsLabel": "Tuyển {count} người",
       "sectionDescription": "Mô tả Công việc",
       "sectionRequirements": "Yêu cầu",
       "sectionBenefits": "Quyền lợi",

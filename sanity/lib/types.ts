@@ -72,6 +72,7 @@ export interface SanityJobListItem {
   title: string
   location: string
   description: string
+  openings: number | null
   recruitmentEmail: string
   postedAt: string
   closingDate: string | null
@@ -86,6 +87,7 @@ export interface SanityJob {
   description: string
   requirements: string
   benefits: string | null
+  openings: number | null
   recruitmentEmail: string
   closingNote: string | null
   postedAt: string
